@@ -1,0 +1,155 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{epsfig}
+
+\newtheorem{defn}{Definition}[section]
+\newtheorem{lemma}[defn]{Lemma}
+\newtheorem{proposition}[defn]{Proposition}
+\newtheorem{theorem}[defn]{Theorem}
+\newtheorem{corollary}[defn]{Corollary}
+\newtheorem{example}[defn]{Example}
+\newtheorem{notation}[defn]{Notation}
+\newtheorem{definition}[defn]{Definition}
+\newtheorem{algorithm}[defn]{Algorithm}
+\newtheorem{remark}[defn]{Remark}
+
+\newcommand{\slex}{\pi}
+\newcommand{\path}[2]{\vec{#1#2}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\myside}[2]{[#1#2]}
+\newcommand{\mytriangle}[3]{#1\hat{#2}#3}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+\setlength{\unitlength}{20mm}
+\newcommand{\geoword}[6]{
+	\put(#1,#2){\vector(#3,#4){#5}}
+	\put(#1,#2){\line(#3,#4){#6}}
+}
+
+\begin{document}
+
+\title{Some Constructions in Coset Cayley Graphs in Hyperbolic Groups}
+
+\author{David Buckley}
+
+Prerequisites:
+
+\begin{proposition}
+\label{prop:short_conj}
+Define $L := 34\delta + 1$. Let $w$ be some short-lex least word, and let $w = w_Lw_R$ with $|w_L| \le |w_R| \le |w_L| + 1$. Let $w_C$ be the short-lex least representative of $w_Rw_L$. If $w_C$ has length strictly greater than $2L$, then all positive powers of $w_C$ label $L$-local $(1, 2\delta)$-quasigeodesics, and there exists some integer $0 < k \le Q^2$ and some word $a$ whose length is less than $4\delta$ such that $((w_C)^k)^a$ is short-lex straight.
+
+Moreover, $k$ and $a$ can be computed in time linear in $|w|$.
+
+%TODO needed?
+In particular, if $w$ is of finite order, then $|w_C|_G \le 2L$.
+\end{proposition}
+
+\begin{proposition}
+\label{prop:high_power_long_conj}
+Let $M := 26000\delta^5L^3V^4$, where $V$ is the volume of the $2\delta$-ball in $\Gamma$ and let $w$ be any infinite order $\Gamma$-geodesic word with $|w| \le 2L$. Let $w'$ be the short-lex least representative of $w^M$. Then $|(w')_C| > 2L$.
+\end{proposition}
+
+New stuff:
+
+\begin{lemma}
+\label{lemma:extend_long_coset}
+Suppose that $w =_G w_1w_2$ is some shortest word representing an element of $G$. Let $k := (w_1^{-1}, w_2)_1$, and $K := d(H,Hw_1) - k - 3\delta - \epsilon$. If $K > 0$ then $d(H,Hw) \ge K + |w_2| - k$.
+\end{lemma}
+
+\begin{proof}
+Let $w_1 =_G h_1w_1'$ and $w =_G h_2w_2'$ where $h_1, h_2 \in H$ and $w_1'$ and $w_2'$ are of minimal length words for expressions of this form. Then $|w_1'| = d(H, Hw_1)$ and $|w_2'| = d(H, Hw)$.
+
+Let $d_1 = (1, w_1)_{h_1}$, $d_2 = (1, w)_{h_2}$, $s_1 = (h_1, w_1)_1$ and $s_2 = (h_2, w)_1$. Note that $d_i \le \delta + \epsilon$, or $w_i'$ would not be minimal as defined above. We aim to show that $s_2$ is not much larger than $s_1$.
+
+Suppose $K' := s_2 - s_1 + d_1 - 3\delta - \epsilon > 0$. Let $K'' = min\{3\delta + \epsilon + K', |w_1'| - k\} > 3\delta + \epsilon$, and let $p$ be the point on $[h_1,w_1]$ with $d(p, h_1) = K''$. As $d(p, h_1) > 3\delta + \epsilon > d_1$, $p$ corresponds to a point $q$ on $[1,w_1]$. As $d(q, w_1) = d(p, w_1) = |w_1'| - K'' \ge k$, $q$ must correspond to a point $q'$ on $[1,w]$.
+
+Note that \begin{eqnarray*}
+d(1, q') &  =  & d(1, q) \\
+         &  =  & d(h_1, p) - d_1 + s_1 \\
+		 & \le & K' - 3\delta - \epsilon - d_1 + s_1 \\
+		 &  =  & s_2
+\end{eqnarray*} so $q'$ corresponds to a point on $[1,h_2]$ and we have $d(p, H) \le 3\delta + 3\epsilon$ since $h_2 \in H$. But $w_1'$ was picked to be minimal so $d(p, H) = d(p, h_1) = K'' > 3\delta + \epsilon$, a contradiction. Thus we must have $K' \le 0$, ie. $s_2 \le s_1 - d_1 + 3\delta + \epsilon$.
+
+Note by observing corresponding lengths that $s_1 = |h_1| - d_1 = (|w_1| - |w_1'| + 2d_1) - d_1$. Similarly, we find $|w_2'| = |w| - s_2 + d_2|$ and $|w| = |w_1| + |w_2| - 2k$, so \begin{eqnarray*}
+d(H,Hw) & =  & |w_2'| \\
+       &  =  & |w| - s_2 + d_2 \\
+       & \ge & |w| - s_1 + d_1 - 3\delta - \epsilon + d_2 \\
+	   &  =  & (|w_1| + |w_2| - 2k) - (|w_1| - |w_1'| + d_1) + d_1 - 3\delta - \epsilon + d_2 \\
+	   &  =  & |w_2| - 2k + |w_1'| - 3\delta - \epsilon + d_2 \\
+	   &  =  & |w_2| - k + K + d_2 \\
+	   & \ge & |w_2| - k + K
+\end{eqnarray*} as required.
+\end{proof}
+
+\begin{theorem}
+Suppose that $g \in G$ with $g^n \in H$ for some $n \in \mathbb{N}$. Then $g^{n'} \in H$ for some $n' \le MQ^2R$ where $Q$ is as in Proposition \ref{prop:short_conj}, $M$ is as in Proposition \ref{prop:high_power_long_conj} and $R$ is the number of vertices in the $B_{5\delta + \epsilon}(H)$ in the coset Cayley graph of $H$.
+\end{theorem}
+
+\begin{proof}
+Note that for some $0 < m \le MQ^2$, $g^m$ has a short-lex straight conjugate by Propositions \ref{prop:high_power_long_conj} and \ref{prop:short_conj}. Let $x = ag^ma^{-1}$ be a short-lex straight conjugate word with $a$ of minimal length. We first aim to show that there is little cancellation between $a$ and $x$.
+
+Suppose $j := (x^{-1}a, a)_1 > 2\delta$. Let $p$ be the point on $[1, x]$ at distance $j$ from $1$, and let $q$ be the point on $[1,p]$ which 2-corresponds to $p$ (this exists by choice of $j$). Let $w = p^{-1}q$, and $b = p^{-1}a$, so that $|b| = |a| - |q| + |w| < |a|$. But the short-lex reduction of $bg^mb^{-1}$ is just a cyclic conjugate of $x$, hence is short-lex straight which contradicts minimality of $a$.
+
+Similarly if $(x, p)_1 > \delta$ we will get a contradiction. Therefore, $(x, p)_1 \le \delta$ and $(x^{-1}p, p)_1 \le 2\delta$. We actually want to show that $(x^{-n}p, x^lp)_1 \le 2\delta$.
+
+Now suppose for some $n$ that $d(H, Hp^{-1}x^n) > 5\delta + \epsilon$. Then by Lemma \ref{lemma:extend_long_coset} we have $d(H, Hp^{-1}x^{n+l}p) > 0$ for all $l > 0$, and so no power of $g^m = p^{-1}xp$ can be an element of $H$. Thus $d(H, Hp^{-1}x^np) \le 5\delta + \epsilon$ for all $n$.
+
+If $Hp^{-1}x^ip = Hp^{-1}x^jp$ for some $i$ and $j$, then $p^{-1}x^{i-j}p$ is in $H$, so if $g^{mk} \in H$ with $k$ minimal, we must have $Hp^{-1}x^ip \ne Hp^{-1}x^jp$ for all $0 \le i < j < mk$. Since $d(H, Hp^{-1}x^ip) \le 5\delta + \epsilon$ for all $i \in \mathbb{N}$, we must have $k \le R$. Let $n' = mk \le MQ^2R$ and we are done.
+\end{proof}
+
+\begin{lemma}
+\label{lemma:inner_product_mc_small}
+Suppose $s$ is a word of in the generators of $G$ of minimal length under conjugation, and $g \in G$. Then $\min\{(s^{-1}, g)_1, (sg, g)_1, (s, sg)_1\} \le \frac{3}{2}\delta$.
+\end{lemma}
+
+\begin{proof}
+Suppose not, so all three inner products are strictly greater than $\frac{3}{2}\delta$; let $i$ be the minimum. Construct a quadrilateral with corners $1$, $s$, $sg$, and $g$ and pick a geodesic $\alpha$ connecting $1$ to $sg$. Now let $p$ be the point on $[s,sg]$ at distance $i$ from $s$ and $q$ be the point on $[1,g]$ at distance $i$ from $1$.
+
+Note that $p$ corresponds to a point $p'$ on $[1,s]$ and $q$ 2-corresponds to a point $q'$ on $[1, s]$. Now we have \begin{eqnarray*}
+|s| & \le & |g(i)^{-1}sg(i)|_G \\
+    &  =  & d(p, q) \\
+	& \le & d(p, p') + d(p', q') + d(q', q) \\
+	& \le & \delta + |s| - 2i + 2\delta \\
+	&  =  & |s| - 2i + 3\delta
+\end{eqnarray*} where the first inequality is due to $s$ being short-lex straight (hence a minimal length conjugate), and the third uses corresponding sides, as in Figure \ref{figure:inner_product_mc_small}. Now it is clear that $i \le \frac{3}{2}\delta$, as required.
+\end{proof}
+
+\begin{proposition}
+Suppose that $w$ is short-lex straight word in $G$ with $awa^{-1} \in H$ for $a$ some word of minimal length. Then either both $|h| \le 3\delta + 2\epsilon$ and $|w| \le 5\delta$ or $|a| \le \frac{7}{2}\delta + \epsilon$.
+\end{proposition}
+
+\begin{proof}
+Let $h = awa^{-1}$ be a geodesic, so that every point on $[1,h]$ lies within $\epsilon$ of a point in $H$. Construct a quadrilateral in the Cayley graph of $G$ with corners $1$, $h$, $a$, $ag$. Divide this quadrilateral into two triangles by taking a geodesic $\alpha$ connecting $h$ to $a$. Note that by minimality of $a$, $(h, a)_1 \le \delta + \epsilon$ and by Lemma \ref{lemma:inner_product_mc_small}, $\min\{(a, h)_{aw}, (h, 1)_a, (aw, h)_a\} = \min\{(w^{-1}, a^{-1})_1, (wa^{-1}, a^{-1})_1, (w, wa^{-1})_1\} \le \frac{3}{2}\delta$.
+
+Now suppose that $(aw, h)_a \ge (h, 1)_a$, that is, the meeting point on $\alpha$ opposite $aw$ is further from $a$ than the meeting point opposite $1$. Points on $[h, aw]$ which correspond to points on $\alpha$ must 2-correspond to points on $[1, h]$, so $(aw, a)_h \le 2\delta + \epsilon$ by minimality of $a$.
+
+Since $(h, 1)_a \le (aw, h)$, we must have either $(a, h)_{aw} \le \frac{3}{2}\delta$, so $|a| = (aw, a)_h + (a, h)_{aw} \le \frac{7}{2}\delta + \epsilon$, or $(h, 1)_a \le \frac{3}{2}\delta$, giving $|a| \le \frac{5}{2}\delta + \epsilon$. Either way, we satisfy the second case in the statement of the proposition, so we are done.
+
+On the other hand, if $(aw, h)_a \le (h, 1)_a$, then we find any point of $h$ which corresponds to a point on $\alpha$ 2-corresponds to a point on $[h,aw]$, so by minimality of $a$ we have $(1, a)_h \le 2\delta + \epsilon$. Now $|h| \le (1, a)_h + (h, a)_1 \le 3\delta + 2\epsilon$.
+
+At least one point $p$ on $[h, aw]$ 2-corresponds to a point $q$ on $[1, a]$. Note that since $a$ is of minimal length, $|d(p, h) - d(q, 1)| \le 2\delta$ or there would be a shorter path from $p$ or $q$ to an element of $H$. But $|d(p, h) - d(q, 1)| = |d(p, aw) - d(q, a)| = |(a, h)_{aw} - (h, 1)_a|$, and so $|w| = (a, h)_{aw} + (h, 1)_a \le 2\min\{(a, h)_{aw}, (h, 1)_a\} + 2\delta \le 5\delta$. Thus both inequalities in the first case in the statement of the proposition are satisfied.
+\end{proof}
+
+\begin{corollary}
+Given a word $w$ in the generators of $G$, we can test if there exists, and return, some $a \in G$ such that $awa^{-1} \in H$ in time $O(|w|_G)$.
+\end{corollary}
+
+\begin{proof}
+First, the problem can in linear time be reduced to solving conjugacy of short-lex straight words, so suppose $w$ is short-lex straight.
+
+Test, for all $|a| \le \frac{7}{2}\delta + \epsilon$ if $awa^{-1} \in H$ (a bounded number of linear time checks). If $|w| \le 5\delta$, test for each $|h| \le 3\delta + 2\epsilon$ if there exists $a \in G$ such that $awa^{-1} = h$ (a bounded number of bounded time checks, since the lengths of all words are now bounded).
+
+If any of these tests succeed, we have found such an $a$, and if all of them fail, by the previous proposition there can be no such $a$.
+\end{proof}
+
+\begin{theorem}
+Suppose $K$ is a $\zeta$-quasiconvex subgroup and that $g \in G$ with $w^{-1}gw \in H$ for some $w \in G$. Then either $|h| \le ...$ or $|w| \le ...$.
+\end{theorem}
+
+\end{document}

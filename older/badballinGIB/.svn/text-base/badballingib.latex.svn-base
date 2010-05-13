@@ -1,0 +1,443 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{epsfig}
+
+\newtheorem{defn}{Definition}[section]
+\newtheorem{lemma}[defn]{Lemma}
+\newtheorem{proposition}[defn]{Proposition}
+\newtheorem{theorem}[defn]{Theorem}
+\newtheorem{corollary}[defn]{Corollary}
+\newtheorem{example}[defn]{Example}
+\newtheorem{notation}[defn]{Notation}
+\newtheorem{definition}[defn]{Definition}
+\newtheorem{algorithm}[defn]{Algorithm}
+\newtheorem{remark}[defn]{Remark}
+
+\newcommand{\slex}{\pi}
+\newcommand{\path}[2]{\vec{#1#2}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\myside}[2]{[#1#2]}
+\newcommand{\mytriangle}[3]{#1\hat{#2}#3}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+
+\setlength{\unitlength}{20mm}
+\newcommand{\geoword}[6]{
+	\put(#1,#2){\vector(#3,#4){#5}}
+	\put(#1,#2){\line(#3,#4){#6}}
+}
+
+\begin{document}
+
+\title{Some Constructions in Coset Cayley Graphs in Hyperbolic Groups}
+
+\author{David Buckley}
+
+\maketitle
+
+\begin{abstract}
+
+Inside the coset Cayley graph of a quasiconvex subgroup with a specific property, there is a ball about the origin such that if $w$ is a geodesic word based at some point $p$ so that $w$ lies entirely outside of the ball, and $p'$ is some other point such that $w$ also lies outside of the ball when based at $p'$, then $w$ is also geodesic based at $p'$.
+
+\end{abstract}
+
+\section{Introduction}
+
+This note is largely based on work by Foord in his PhD thesis. In it, some interesting properties of coset Cayley graphs are discussed, relating to the properties as one moves further from the group in question. In fact, the constructions take place inside something more general than Cayley graphs; we will use the term ``Cayley-like'' here:
+
+\begin{definition}
+Suppose $\Gamma$ is a labelled directed graph with labels in some set $X$ and the path metric. Then $\Gamma$ is \textbf{Cayley-like} if, for each vertex $p \in \Gamma$ and each $x \in X$, there are edges $e$ and $e'$ labelled by $x$, so that $e$ starts at $p$ and $e'$ terminates at $p$.
+\end{definition}
+
+In such a graph, for each vertex $p \in \Gamma$ each word $w$ in $X^*$, there is a path based at $p$ labelled by $w$. Clearly Cayley graphs and coset Cayley graphs are Cayley-like. We can define a concept of isomorphism in these graphs:
+
+\begin{definition}
+\label{def:isomorphic}
+Suppose $\Gamma_1'$ and $\Gamma_2'$ are subgraphs of Cayley-like graphs $\Gamma_1$ and $\Gamma_2$ respectively, that both have the same alphabet, and that $p \in \Gamma_1'$ and $q \in \Gamma_2'$ are vertices. We construct a partial map $\tau_{p,q} : \Gamma_1' \to \Gamma_2'$ as follows:
+
+Given a word $w$ in the alphabet of $\Gamma_1$, let $\tau'(w)$ be the vertex in $\Gamma_2$ reached by following the path starting from $q$ and labelled by $w$. Given $x \in B_k(p)$, if we have $\tau'(w) = \tau'(u) \in \Gamma_2'$ for all words $w$ and $u$ labelling paths from $p$ to $x$ which lie entirely inside $\Gamma_1'$, let $\tau_{p,q}(x) = \tau'(w)$. If $\tau_{p,q}(x)$ is defined for all vertices in $\Gamma_1'$ and we can perform the same construction when exchanging $\Gamma_1'$ and $\Gamma_2'$, we say $\Gamma_1'$ and $\Gamma_2'$ are isomorphic about $p$ and $q$.
+
+For a vertex $p \in \Gamma_1$ we define the ball $B^{\Gamma_1}_k(p)$ to be the subgraph of $\Gamma_1$ containing all vertices $v$ such that $d(v, p) \le k$, and all edges which connect two vertices in $B_k(p)$. We will omit the superscript if the graph is clear. If $q$ is a vertex in $\Gamma_2$, we say the balls $B^{\Gamma_1}_k(p)$ and $B^{\Gamma_2}_k(q)$ are isomorphic if they are isomorphic about $p$ and $q$.
+\end{definition}
+
+With Cayley graphs there is a natural base point of the identity element, and with coset Cayley graphs the natural base point is the sugroup in question. This allows us to make the following definitions:
+
+\begin{definition}
+Suppose that $\Gamma$ is a Cayley-like graph with base point $b$. Then for non-negative $k \in \mathbb{Z}$ we say:
+
+$\Gamma$ has \textbf{IB($k$)} if there exists some $K$ such that if $p, q \in \Gamma$ are vertices with $d(b, p) \ge K$ and $d(b, q) \ge K$ then $B_k(p)$ and $B_k(q)$ are isomorphic.
+
+Suppose $G$ is some finitely generated group with the same alphabet as $\Gamma$ and Cayley graph $\Gamma_G$. Then $\Gamma$ has \textbf{GIB($k$)} if there exists some $K$ such that if $p \in \Gamma$ is a vertex with $d(b, p) \ge K$, then $B^\Gamma_k(p)$ and $B^{\Gamma_G}_k(1)$ are isomorphic.
+\end{definition}
+
+These properties can be regarded to be some indication that the space made up by the coset Cayley graph is ``locally homogeneous.'' Where the presentation is understood, we will refer to a subgroup of a hyperbolic group as having IB($k$) or GIB($k$) if its associate coset Cayley graph does.
+
+In his thesis, Foord proves that a quasiconvex subgroup $H$ of a hyperbolic group $G$ has GIB($k$) for all non-negative $k \in \mathbb{Z}$ (Foord refers to this as GIB($\infty$)) if and only if the index $|C_G(h) : C_G(h) \cap H|$ is finite for any $h \in H$. In particular, this is true of any torsion free quasiconvex subgroup. However, no bounds on the constants involved are given, and the notions are only explored as far as is required to show some growth properties. It is the aim of this note to further expand this work.
+
+\section{A Tighter Bound on the Thinness of Triangles}
+
+Foord proves that the coset Cayley graph of a $\epsilon$-quasiconvex subgroup of a hyperbolic group is hyperbolic, and that the slim triangles constant is at worst exponential in $\epsilon$. We demonstrate here that by noting that certain sections of a triangle must be short if they are to be geodesic, one can reduce this to linear. The following proposition illustrates a method of securing such a bound. It is possible to reduce this to $30\delta + 4\epsilon$ (and perhaps lower) by directly proving that triangles are thin, however the proof is much longer.
+
+\begin{proposition}
+\label{prop:thin_triangles}
+Suppose $G = <\!\!X|R\!\!>$ is a finitely presented group and that all triangles in its Cayley graph $\Gamma$ are $\delta$-thin. Suppose that $H$ is a $\epsilon$-quasiconvex subgroup. Then all triangles in the coset Cayley graph $\Gamma'$ of $H$ are $12\delta+\epsilon$-slim.
+
+\end{proposition}
+
+\begin{figure}
+\begin{center}
+\input coset_thin_general.pstex_t
+\caption{Dividing up the hexagon}
+\label{figure:coset_thin_general}
+\end{center}
+\end{figure}
+
+\begin{proof}
+
+Suppose we are given a geodesic triangle $\alpha'$ in $\Gamma'$ with corners $A'$, $B'$ and $C'$, and side labels $a$ from $A'$ to $B'$, $b$ from $B'$ to $C'$ and $c$ from $C'$ to $A'$. Suppose that we are given some point $x'$ on the side labelled by $a$. Our aim is to find some point on $b$ or $c$ within $12\delta + \epsilon$ of $x'$.
+
+Pick a geodesic path from $H$ to $A'$, and let $w$ be its label. Since a triangle is in particular a loop, it is clear that $Hwabcw^{-1} = H$, hence we can pick some $h \in H$ so that $wabcw^{-1} =_G h$. Let $d$ be a geodesic path from $1$ to $h$ in $\Gamma$. Then, since any geodesic word based at a point in $\Gamma'$ is a geodesic in $\Gamma$ based at any point, we have a geodesic hexagon in $\Gamma$.
+
+Label the corners of this hexagon by $A := hw$, $B := hwa$, $C := hwab$, $D := hwabc =_G w$, $E := 1$, and $F := h$. We will refer to the sides by their labels, with $w_1$ referring to the side connecting $1$ and $p$ and $w_2$ referring to the remaining side labelled $w$. Divide the hexagon into 4 triangles by picking geodesic paths with labels $e$ from $E$ to $A$, $f$ from $A$ to $D$ and $g$ from $D$ to $B$.
+
+It is useful at this point to introduce a map $\phi: \alpha' \to \Gamma$. We define this map in the obvious way, mapping points on the side labelled $a$ in $\Gamma'$ to points on the side labelled $a$ in $\Gamma$ etc., and mapping $A'$ to $A$. It should be clear that the map $y' \mapsto H\phi(y')$ is the identity map on $\alpha'$.
+
+%Let $m_a$, $m_b$, $m_c$, $m_d$, $m_{w_1}$ and $m_{w_2}$ be the meeting points in $\Gamma$ on sides $a$, $b$, $c$, $d$, $w_1$, $w_2$ respectively. Let $m_{bcf}$and $m_1'$ be the meeting point of the same triangle on the path connecting $r$ and $p$. Let $m_2$ be the meeting point on $a$, and $m_2'$ the meeting point on the same side as $m_1'$.
+
+We will slightly abuse the term ``corresponding points'' in this proof to mean any two points which can be connected by using a chain of corresponding points, so if $y$ 2-corresponds to $z$ then $y$ corresponds to some $y'$ using one triangle, which in turn corresponds to $z$ using another triangle and we find $d(y, z) \le 2\delta$.
+
+Having constructed this triangle, recall we have some point $x'$ in $\Gamma'$ on the side labelled $a$. Let $x = \phi(x')$. We now branch into a number of cases, based on which side of the hexagon $x$ corresponds to. We can first eliminate the need to deal with correspondances to the side $w_2$ as follows:
+
+Let $m_{fE}$ be the meeting point on $f$ resulting from the triangle connecting $A$, $E$ and $D$, and let $m_{fB}$ be the remaining meeting point on $f$ (from the triangle with corners $A$, $B$ and $D$). Note that $|e| = |hw|_\Gamma \ge |hw|_{\Gamma'} = |w|_{\Gamma'} = |w|$, and similarly $|g| \ge |a|$. Then
+
+\begin{eqnarray*}
+d(A, m_{fD}) &  =  & \frac{d(A, D) + d(A, E) - d(D, E)}{2} \\
+             &  =  & \frac{d(A, D) + |e| - |w|}{2} \\
+             & \ge & \frac{d(A, D)}{2}
+\end{eqnarray*} and
+
+\begin{eqnarray*}
+d(A, m_{fB}) &  =  & \frac{d(A, D) + d(A, B) - d(B, D)}{2} \\
+             &  =  & \frac{d(A, D) + |a| - |g|}{2} \\
+             & \le & \frac{d(A, D)}{2}
+\end{eqnarray*} so if $x$ $2$-corresponds to a point on $w_1$ it also $3$-corresponds to a point on either $d$ or $w_2$.
+
+So we need only consider the cases where $x$ corresponds to a point on the remaining three sides.
+
+Case 1: Suppose $x$ $2$-corresponds to a point $y$ on $b$ or $c$. Then $y' = Hy$ is on a different side of $\alpha'$ to $x'$ and $d(x', y') \le d(x, y) \le 2\delta$.
+
+Case 2: Suppose $x$ $3$-corresponds to some point on $d$. Then $d(Hx, H) \le 3\delta + \epsilon$, since $d$ labels a geodesic element of $H$, which is $\epsilon$-quasiconvex. This case will be combined into Case 5.
+
+It remains to cover those $x$ which $3$-correspond to some point $y$ on $w_2$. Letting $z := h^{-1}y$ we find that $Hy = Hh^{-1}y = Hz$, and we find since $w_1$ and $w_2$ have the same label, $z$ is on $w_1$ and $d(F, y) = d(E, z)$. We branch into further cases depending on which side $z$ corresponds to. Observe that by the above arguments about meeting points, if $z$ $2$-corresponds to a point on $a$ it also $3$-corresponds to a point on $b$ or $c$.
+
+Case 3: Suppose $z$ $3$-corresponds to a point $t$ on $b$ or $c$. Then $t' = Ht$ is on a different side of $\alpha'$ to $x'$, and $d(x', t') \le d(Hx, Hy) + d(Hy, Hz) + d(Hz, Ht) \le 3\delta + 0 + 3\delta = 6\delta$.
+
+Case 4: Suppose $z$ $2$-corresponds to a point $t$ on $w_2$. Then $d(Hy, Ht) \le d(Hy, Hz) + d(Hz, Ht) \le 0 + 2\delta$. If $m_{eD}$ is the meeting point on $e$ from the triangle connecting $A$, $D$ and $E$, we have $d(A, y) \le d(A, m_{eD})$ (since $x$ $3$-corresponds to $y$), and $d(A, t) \ge d(A, m_{eD})$ (since $z$ $2$-corresponds to $t$). Putting these three inequalities together, we see $d(A, y) - 2\delta \le d(A, m_{eD} \le d(A, y)$. In particular, if $u$ and $v$ are points on $a$ lying in Case 5 then $d(u, v) \le 2\delta$. We will use this fact after Case 5.
+
+Case 5: Suppose $z$ $2$-corresponds to a point on $d$. Then similarly to Case 2, $d(Hx, H) \le 5\delta + \epsilon$. Now if $u$ and $v$ are points on $a$ lying in either Case 2 or Case 3 then $d(u, v) = d(Hu, Hv) \le d(Hu, H) + d(Hv, H) \le 10\delta + 2\epsilon$.
+
+Combining Case 4 and Case 5, we find that the maximum length of an interval of point on $a$ not lying in Case 1 or Case 3 is $12\delta + 2\epsilon$. Since $A$ lies in Case 3 and $B$ lies in Case 1, we see that if $x$ lies in Case 2, 4 or 5, it must lie within $6\delta + \epsilon$ of a point $u$ in Case 1 or Case 2. In particular, there is a point $v'$ on a different side of $\alpha'$ to $x'$ such that $d(v', x') \le d(x', Hu) + d(Hu, v') \le 6\delta + \epsilon + 6\delta = 12\delta + \epsilon$, and we are done.
+\end{proof}
+
+\begin{corollary}
+
+Suppose $G = <\!\!X|R\!\!>$ is a finitely presented group and that all triangles in its Cayley graph $\Gamma$ are $\delta$-thin. Suppose that $H$ is a $\epsilon$-quasiconvex subgroup. Then all triangles in the coset Cayley graph $\Gamma'$ of $H$ are $72\delta+6\epsilon$-slim.
+
+\end{corollary}
+
+\begin{proof}
+It is known (for example, by \cite{6author}) that if all triangles in a space are $\Delta$-slim then all triangles are $6\Delta$-thin, so by Proposition \ref{prop:thin_triangles} we are done.
+\end{proof}
+
+The important observation here is that the hyperbolicity of the coset Cayley graph is linear in $\epsilon$. In fact, one can easily show that the cases involving the addition of $\epsilon$ in the above proof can only occur if $2|w| \le |d| + |f|$, and it's also true that $|d| \le |f| + 3\delta + 2\epsilon$ and $|f| \le |a| + |b| + |c|$. In particular, if $Hw$ is the corner of a triangle with perimeter less than or equal to $|w| - 2\delta - \epsilon$ then that triangle is $7\delta$-slim.
+
+This is the first hint that there is some ball about $H$ where much of the ``bad'' behaviour occurs.
+
+\section{A Linear Bound on the GIB($k$) Constant for Torsion Free Subgroups}
+
+For torsion free subgroups, Foord demonstrates the GIB($k$) property for any $k$ for a specific class of subgroups, however he gives no bound on the value of the constant associated to it. It is the aim of this section to demonstrate that such a bound exists and is in $O(k\epsilon)$. The argument specific to torsion free subgroups is again largely based on the argument given in Foord's thesis, with some observations on the specific class of groups giving us the eventual bound.
+
+We first note the following result from Foord's thesis:
+
+\begin{proposition}
+\label{prop:loop_in_ball}
+Suppose $x$ and $y$ are vertices in some Cayley-like graph $\Gamma$. If for some non-negative integer $k$ the balls $B_k(x)$ and $B_k(y)$ are not isomorphic, then there is some word $w$ of length at most $2k+1$ which labels a loop based at the centre of one ball but a path which is not a loop based at the centre of the other.
+\end{proposition}
+
+For full details of the proof, refer to Foord's thesis.
+
+\begin{proof}
+If the balls are not isomorphic, then the construction in Definition \ref{def:isomorphic} must not be possible. One can break down the possibilities into cases and construct a word as required in each case. For example, suppose some words $w$ and $u$ have $xw = xu$ but not $yw = yu$ (must check why these can be assumed geodesic). Then $wu^{-1}$ labels a loop at $x$ but not at $y$.
+\end{proof}
+
+The next result simply summarises some facts used in both of the following propositions.
+
+\begin{lemma}
+\label{lemma:conj_quadrilateral}
+Suppose that $G = <\!X|R\!>$ is a presentation with all geodesic triangles in its Cayley graph $\Gamma$ being $\delta$-thin and that $H$ is an $\epsilon$-quasiconvex subgroup with coset Cayley graph $\Gamma'$. Suppose that $u$ is a word labelling a geodesic in $\Gamma$, that $w$ is a word labelling a geodesic based at $H$ in $\Gamma'$ and that $w$ labels a loop at $Hw$. Then there exists a word $v$ labelling a geodesic for an element of $H$ such that $wvw^{-1} = u$ and either
+
+\begin{itemize}
+\item $|v| \le |u| + 2\epsilon + 3\delta$ and $2|w| \le |u| + 2\epsilon + 3\delta$ or
+\item $|v| \le 2\epsilon + 3\delta$ and $|u| \le 2\delta$ or
+\item $|v| \le 2\epsilon + 3\delta$ and letting $i = \floor{\frac{|u|}{2}} - \delta$, there is a word $u'$ with $|u'| \le 5\delta$ such that $u = w(-i)u'w^{-1}(i)$
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+Now we find that $u$ conjugates into $H$, so there is some $h \in H$ such that $hw =_G wv$. Let $v$ be some shortest word representing $h$, and form a geodesic quadrilateral in $\Gamma$ with sides $v$, $w_1$ (labelled $w$ and connecting the points $h$ and $hw$), $u$ and $w_2$ (labelled $w$ and connecting the points $1$ and $w$). Pick some word $t$ labelling a geodesic path connecting $1$ to $hw$, and we have 2 geodesic triangles.
+
+We will abuse the phrase ``$x$ corresponds to $y$'' to include ``$x$ corresponds to a point on $t$ which in turn corresponds to a point on $y$''.
+
+Note that the meeting point on $w_1$ has distance at most $\delta + \epsilon$ from point $H$, so since $w$ is a geodesic in $\Gamma'$ the meeting point must be further than $\delta + \epsilon$ from $h$. Similarly find that the meeting point on $w_2$ can occur no further than $2\delta + \epsilon$ from $1$.
+
+For the first case, suppose at least two points on $u$ correspond to points on $v$. At most $|u|$ vertices can have this property so given the previous paragraph we have $|v| \le |u| + 2\epsilon + 3\delta$. Also, the existence of more than one such point means that no point on $w_1$ can correspond to a point on $w_2$, hence those that do not correspond to points on $u$ must correspond to points on $v$, and we find that $2|w| - 2\epsilon - 3\delta \le |u|$, as required.
+
+For the second two cases, suppose that at most one point on $u$ corresponds to a point on $v$. Then clearly all points on $u$ correspond to points on $w_1$ or $w_2$ so $|u| \le 2\epsilon + 3\delta$ as required. If $|u| > 2\delta$ then it remains to show we are in the final case.
+
+Note that if a point $p$ on $w_1$ corresponds to a point $p'$ on $t$ which corresponds to a point $q$ on $w_2$ then $d(h, p) - 2\delta \le d(1, q) \le d(h, p) + 2\delta$, otherwise we can find a path from $1$ to $p$ or from $h$ to $q$ which is shorter than $w$, contradicting the fact that $w$ is a geodesic in $\Gamma'$. It is easy to see that
+
+\begin{eqnarray*}
+d(1, q) - d(h, p) & = & d(1, q) - |w| + d(hw, p) \\
+                  & = & d(1, q) - |w| + d(hw, p') \\
+				  & = & d(1, q) - |w| + |t| - d(1, q) \\
+				  & = & |t| - |w|
+\end{eqnarray*}
+
+so $|w| - 2\delta \le |t| \le |w| + 2\delta$, and we find the meeting point $m$ on $u$ must have $d(w, u) \le \frac{|u|}{2} + \delta$ and $d(hw, u) \le \frac{|u|}{2} + \delta$. Now it is clear that the points $a$ and $b$ at distance $i$ from $hw$ and $w$ along the sides $w_1$ and $w_2$ respectively correspond to points on $u$ at most $2\delta$ apart. So we have $d(a, b) \le 5\delta$ and letting $u'$ be a word labelling a path between them, we have $u = w(-i)u'w^{-1}(i)$ as required.
+\end{proof}
+
+
+\begin{proposition}
+
+Suppose that $G = <\!X|R\!>$ is a presentation with all geodesic triangles in its Cayley graph being $\delta$-thin and that $H$ is an $\epsilon$-quasiconvex subgroup. If $H$ has IB($\frac{5}{2}\delta$) with constant $K$ then it has IB($k$) for any $k \ge 2\delta$ with constant $\max\{K, K + k - \delta + 1, \epsilon + \frac{3\delta + 2k + 1}{2}\}$. Similarly, if $H$ has GIB($\frac{5}{2}\delta$) with constant $K'$ then it has GIB($k$) for any $k \ge 2\delta$ with constant $\max\{K', K' + k - \delta + 1, \epsilon + \frac{3\delta + 2k + 1}{2}\}$.
+
+\end{proposition}
+
+\begin{proof}
+Let $\Gamma$ and $\Gamma'$ be the associated group and coset Cayley graphs, respectively. Suppose $H$ has IB($\frac{5}{2}\delta$). Suppose that $w$ and $w'$ are the labels of geodesic paths from $H$ to some $Hg$ and $Hg'$ respectively with both words being longer than $\epsilon + \frac{3\delta + 2k + 1}{2}$, and that the $k$-balls around these two points are not isomorphic.
+
+By a Proposition \ref{prop:loop_in_ball}, there is a loop of length at most $2k+1$ based at the centre of one of the balls whose label does not label a loop about the centre of the other. Suppose that this loop is present at $Hg$, and has label $u$. We can suppose that $u$ labels a geodesic in $\Gamma$ since if it doesn't, we can replace it with a word which labels a geodesic between $1$ and $u$, and find that the new word has the same properties.
+
+Now using Lemma \ref{lemma:conj_quadrilateral} we must have either $|u| \le 2\delta$ or for $i = \floor{\frac{|u|}{2}} - \delta$, $u = w(-i)u'w^{-1}(i)$ for $|u'| \le 5\delta$. In the former case, $u$ must lie inside $B_\delta(Hg)$ which is clearly not isomorphic to $B_\delta(Hg')$, so we must in particular have $|w| \le K$ or $|w'| \le K$.
+
+In the second case, note that since all group relators label loops in $\Gamma'$, $u'$ labels a loop based at $Hw(|w| - i)$ inside $B_{\frac{5}{2}\delta}Hw(|w| - i)$ but does not label a loop based at $Hw'w(-i)$. Thus either $|w| = d(H, Hw(|w| - i)) + i \le K + i$ or $|w'| \le d(H, Hw'w(-i)) + i \le K + i$. Since $i \le k + 1 - \delta$, we have shown that $\Gamma'$ has IB($k$) with the requird constant.
+
+For the GIB case, the same method applies, but we can use $1$ in $\Gamma$ in place of $Hw'$.
+\end{proof}
+
+In order to find a bound on GIB($k$), we now only need to exhibit a constant for GIB($\frac{5}{2}\delta$). We do this below.
+
+\begin{proposition}
+Suppose that $G = <\!X|R\!>$ is a presentation with all geodesic triangles in its Cayley graph being $\delta$-thin. Then there exists a constant $K$ such that if $H$ is any $\epsilon$-quasiconvex torsion-free subgroup and $k$ is a positive integer, then $H$ has GIB($\frac{5}{2}\delta$) with constant $Q = ((2|X|+1)^{2\delta+1})! + (5\delta+1)^{8\delta(2|X|)^{8\delta}} + 3(3\delta + 2\epsilon)MN + 10\delta$.
+\end{proposition}
+
+\begin{proof}
+Once again, let $\Gamma$ and $\Gamma'$ be the associated group and coset Cayley graphs, respectively. Suppose that $w$ is the labels of a geodesic path from $H$ to some $Hg$ which longer than $\epsilon + \frac{3\delta + 2k + 1}{2}$, and that the $\frac{5}{2}\delta$-balls around these two points are not isomorphic.
+
+As in the above proof, using Proposition \ref{prop:loop_in_ball}, we find a word $u$ of length at most $5\delta + 1$ which labels a geodesic in $\Gamma$ but labels a loop at $Hg$ in $\Gamma'$. Application of Lemma \ref{lemma:conj_quadrilateral} gives us a word $v$ labelling a geodesic in $\Gamma$ which represents an element of $H$, so that $wuw^{-1} = v$ and $|u| \le 2\epsilon + 3\delta$.
+
+It's known by \cite{bridson_howie} (Conjugacy of Lists in quadratic) that there is a word $w'$ such that $w'uw'^{-1} = v$ and $|w'| \le Q(|u| + |v|)$, where $Q = ((2|X|+1)^{2\delta+1})! + (2\frac{5}{2}\delta+1)^{8\delta(2|X|)^{8\delta}}$. Then $wuw^{-1} = w'uw'^{-1}$, so $w^{-1}w' \in C_G(u)$.
+
+(This paragraph is heavily reliant on the conjugacy of lists paper.) By \cite{6author}, a word representing an infinite order element, and of length at most $k$ is a ($kV$, $2k^2V^2 + 2kV$)-quasigeodesic, where $V$ is the number of vertices inside $B^\Gamma_2\delta(1)$. In particular, if $M = 26000\delta^5L^3V^4$ then if $u'$ is labels a geodesic between the endpoints of $u^M$ then $|u'_C| > 2L$, so $u'_C$ is an $L$-local ($1$, $2\delta$) geodesic. By \cite{holt} (Conjugacy of single elements in linear time), there is some $N \le V$ and some word $x$ with $|x| \le 4\delta$ such that $z = g^{-1} (u'_C)^N g$ is short-lex straight. For any $c \in C_G(u)$ there there exists $c' \in C_G(u')$ such that $c = (u'_R)^{-1}gc'g^{-1}u'_R$. Then again by \cite{holt} there is an integer $n$ and word $y$ and $z_1$ with $|y| \le 2\delta$ and $z_1$ a prefix of $z$ such that $c' = z^nz_1y$, so $c = u^{MN}(u'_R)^{-1}gz_1yg^{-1}u'_R$. In particular, $d(H, Hc) \le 3|u|MN + 10\delta$. Let $P = 3|u|MN + 10\delta$.
+
+Since $w^{-1}w' \in C_G(u)$, we have $w^{-1} = cw'^{-1}$ for some $c \in C_G(u)$, so $|w| \le |w'| + P \le Q + P$, which is the required constant.
+\end{proof}
+
+\section{A Stronger Sense of Local Homogeneity}
+
+In this section, we will show that there exists a $K$ such that a geodesic path lying distance greater than $K$ from $H$ in the coset Cayley graph remains geodesic regardless of what point is based at, provided its distance from $H$ remains greater than $K$. We suppose for this section that $G = <\!X|R\!>$ is a presentation with all geodesic triangles in its Cayley graph $\Gamma$ being $\delta$-thin, that $H$ is an $\epsilon$-quasiconvex subgroup and that the coset Cayley graph $\Gamma'$ associated to $H$ has $\Delta$-thin triangles.
+
+\begin{proposition}
+Suppose $\Gamma$ is a Cayley-like graph with base point $b$ such that all geodesic triangles in $\Gamma$ are $\Delta$-thin. Suppose $\Gamma$ has IB($\Delta+1$) with constant $K$ and , that $w$ is a word labelling some geodesic that lies entirely outside of $B_K(b)$, and that $\gamma$ is any path labelled by $w$ and lying entirely outside of $B_K(b)$. Then $\gamma$ is a geodesic.
+\end{proposition}
+
+\begin{proof}
+Suppose the conclusion is false, and suppose the geodesic that $w$ labels starts from $p$ and $\gamma$ starts from $q$. Let $w = w_1aw_2$, where $w_1$ is the longest subword which does label a geodesic starting at $q$, and $a$ is a word of length 1. Let $w_1'$ be a the label of a geodesic such that $qw_1' = qw_1a$, so that we must have $|w_1'| \le |w_1|$.
+
+Then we have a geodesic triangle with corners $q$, $qw_1$ and $qw_1'$ and the obvious sides connecting them. Let $n := |w_1|$, and for $0 \le i < n$, let $p_i := qw(i)$ and $q_i := qw_1'(i)$. Let $p_n := qw_1$ and $q_n := qw_1'$. This is illustrated in Figure \ref{figure_geodesic_outside_GIB}.
+
+\begin{figure}
+\begin{center}
+\input geodesic_outside_GIB.pstex_t
+\caption{Geodesic triangle constructed outside of $B_{K-1}(b)$}
+\label{figure:geodesic_outside_GIB}
+\end{center}
+\end{figure}
+
+Now, since the triangle above is $\Delta$-thin, we can pick, for each $i$, a word $h_i$ joining $p_i$ and $q_i$ so that $|h_i| \le \Delta$. Now we find that for $0 \le i < n$, each quadrilateral with corners $p_i$, $p_{i+1}$, $q_i$, $q_{i+1}$ lies within $\Delta+1$ of $p_i$, hence it is contained inside the $\Delta+1$-ball around $qw(i)$, which is isomorphic to the $\Delta+1$-ball around $pw(i)$ (since this point is at a distance of at least $K$ from $H$).
+
+Using a simple induction, $d(p, pw_1'(i)) = d(q, qw_1'(i)) = i$ for $0 \le i \le n$ and $pw_1a = pw_1'$. But this is a clear contradiction, since $|w_1a| > |w_1'|$, and $w_1a$ labels a geodesic path starting at $p$. Hence no such $w_1'$ existed, and $w$ labels a geodesic starting at $q$.
+\end{proof}
+
+By substituting the point $1$ in the group Cayley graph for $q$ in the above argument, we derive the following similar result:
+
+\begin{proposition}
+Suppose $H$ has GIB($\Delta+1$) with constant $K$ and that $w$ is a shortest word representing some group element. Then any path in $\Gamma'$ labelled by $w$ which lies outside of $B_{K-1}(H)$ is a geodesic.
+\end{proposition}
+
+We see the emergence of one ``bad'' ball, centred at $H$ in the coset Cayley graph. By the previous two sections, note that $K \le K'\epsilon$, where $K'$ depends only on the group.
+
+It should be clear that if shortest words in the group label geodesics in the coset Cayley graph outside a certain radius, the same is true of quasigeodesics. We show this explicitly for $(1, k)$-quasigeodesics.
+
+\begin{lemma}
+
+If $w$ is a word which labels a $(1, k)$-quasigeodesic path in $\Gamma$ and labels a path $\gamma$ in $\Gamma'$ which lies outside of $B_{K+\frac{k}{2}+\delta-1}(H)$, then $\gamma$ is a $(1, k)$-quasigeodesic.
+
+\end{lemma}
+
+\begin{proof}
+
+Let $\alpha$ be a $(1, k)$-quasigeodesic in $\Gamma$ labelled by $w$. By \cite{me} (constant hyperbolicity), $\alpha$ lies within $\frac{k}{2} + \delta$ of a geodesic $\alpha'$ with label $w'$ say. Since any loop in $\Gamma$ is present at all points in $\Gamma'$, we find that this fellow traveller property translates exactly, and a path labelled by $w$ based at any point lies within $\frac{k}{2} + \delta$ of a path labelled by $w'$ based at the same point. If $\gamma$ lies outside of $B_{K+\frac{k}{2}+\delta-1}(H)$ then the path $\gamma'$ labelled by $w'$ based at the same point $Hg$ must lie outside of $B_{K-1}(H)$, so is a geodesic. But then $d_\gamma(Hg, Hgw) = |w| \le |w| + k = d(Hg, Hgw) + k$, so $\gamma$ is a $(1, k)$-quasigeodesic as required.
+
+\end{proof}
+
+We can now prove the following statement:
+
+\begin{corollary}
+
+If $H$ has GIB($\Delta+1$) with constant $K$ and GIB($34\delta + 1$) with constant $K'$, there is an algorithm which, given $g \in G$, can decide if there exists an $a \in G$ such that $a^{-1}ga \in H$ in time linear in $|g|_G$ (assuming a fixed subgroup and presentation).
+
+\end{corollary}
+
+\begin{proof}
+
+Then pick a geodesic word $w$ for $g$. Suppose $K$ is the constant associated to the GIB($\Delta+1$) property. It is known that if $w = w_Lw_R$ with $|w_L| \ge |w_R| \ge |w_L| - 1$, then taking a geodesic $w_C =_G w_Rw_L$ has either $|w_C| \le 78\delta+2$ or $w_C^2$ is a $(1, 2\delta)$-quasigeodesic.
+
+Suppose that $|w_C| > 78\delta+2$ and that $w_C$ labels a loop at $Hb$. Note that since $w$ does not label a loop in the Cayley graph of $G$, neither does $w_C$, so the path $\gamma$ based at $Hb$ and labelled by $w_C^2$ cannot be a $(1, 2\delta)$-quasigeodesic (since it is of length greater than $78\delta+2$) and therefore cannot lie entirely oustide of $B_{K+\frac{k}{2}+\delta-1}(H)$. Since those parts of $\gamma$ which lie outside of $B_{K+\frac{k}{2}+\delta-1}(H)$ are $(1, 2\delta)$-quasigeodesic, it is clear that the distance along $\gamma$ between it entering and exiting $B_{K+\frac{k}{2}+\delta-1}(H)$ must be at most $2K+k+4\delta-2$. Thus $\gamma$ must lie inside $B_{2K+k+3\delta-2}(H)$.
+
+Thus if $w_C$ conjugates into $H$, it labels a path inside $B_{2K+k+3\delta-2}(H)$. We can check for this by, for each point in this ball, simply following the path $w_C$. If $w_C$ labels a loop at $Hb$ then $Hb = Hbw_Rw_L = Hbw_L^{-1}ww_L$ and $h = bw_L^{-1}gw_Lb^{-1}$ for some $h \in H$, so we can return $w_Lb^{-1}$ as a conjugating element. If $w_C$ does not label a loop at any point, it does not conjugate into $H$, so neither does $g$. Each check can be done in time linear in $|g|_G$ and the number of checks is dependent only on the subgroup and presentation, so we have proved the statement for this case.
+
+If $|w_C| \le 78\delta + 2$ then if $w_C$ labels a loop based at $Hb$ in the coset Cayley graph, we must have $d(H, Hb) < K'$, so need simply check, for every word $b$ such that $|b| < K'$ if $w_C$ labels a loop at $Hb$ and deal with the results as before. Clearly we are checking a number of points dependent only on the subgroup and presentation, and each check takes time dependent only on the subgroup and presentation, so we can complete this check in constant time, so we are done.
+
+\end{proof}
+
+We can also easily use this to see (another outline proof to be fleshed out):
+
+\begin{corollary}
+
+There exists an $M \in \mathbb{N}$ such that under the above hypothesis if $g, a \in G$ and $g^n \in a^{-1}Ha$, then $g^m \in a^{-1}Ha$ for some $m \le M|B^{\Gamma'}_{2K+5\delta}(H)| + |B^{\Gamma}_{2\delta}(1)|$.
+
+\end{corollary}
+
+Sketch:
+
+\begin{proof}
+
+Suppose $g = g_L g_R$ with $|g_L| \le |g_R| \le |g_L| + 1$. Let $g_C = g_R g_L$. If $|g_C| > 2L$ (as in Epstein+Holt) then $g_C^i$ labels a $(1, 2\delta)$-quasigeodesic in $\Gamma$ for any $i$. Then since $g^n$ forms a loop about $Ha$, we find $g_C^n$ must form a loop around $Hag_L$. This loop must pass into the $K + 2\delta$-ball by the above lemma (or it could not be a $(1, 2\delta)$-quasigeodesic). Since it is a $(1, 2\delta)$-quasigeodesic, if it leaves this ball it must return within a distance of $2K + 6\delta$, hence the whole loop remains inside a $2K + 5\delta$-ball (the radius of the inner ball plus half of the outer distance). If $Hag_L(g_C)^i = Hag_L(g_C)^j$ for some integers such that $j > i$, we find $Hag^i = Hag^j$ and so $Ha = Hag^{j - i}$. But there can be at most $|B^{\Gamma'}_{2K+5\delta}(H)|$ distinct values for $Hag_l(g_C)^j$, hence we are done.
+
+Suppose then that $|g_C| \le 2L$. Then wither $g$ was of finite order (in which case there is a bound of $|B^{\Gamma}_{2\delta}(1)$ on its order, or it is of infinite order, in which case there is an integer $M$ depending only on $\delta$ such that $|(g^M)_C| > 2L$ and we can use the above on $g^M$.
+
+\end{proof}
+
+% APPENDIX
+
+\begin{proposition}
+
+Suppose $G = <\!\!X|R\!\!>$ is a finitely presented group and that all triangles in its Cayley graph $\Gamma$ are $\delta$-thin. Suppose that $H$ is a $\epsilon$-quasiconvex subgroup. Then all triangles in the coset Cayley graph $\Gamma'$ of $H$ are $30\delta+4\epsilon$-thin.
+
+\end{proposition}
+
+\begin{figure}
+\begin{center}
+\input coset_thin_general.pstex_t
+\caption{Dividing up the hexagon}
+\label{figure:coset_thin_general}
+\end{center}
+\end{figure}
+
+\begin{proof}
+
+Suppose we are given a geodesic triangle in $\Gamma'$ with corners $A'$, $B'$ and $C'$, and side labels $a$ from $A'$ to $B'$, $b$ from $B'$ to $C'$ and $c$ from $C'$ to $A'$. Suppose that we are given some point $x'$ on the side labelled by $a$, and corresponds to the point $y'$ on the side labelled by $b$ (for points elsewhere on the triangle, we can just relabel appropriately). Our aim is to find a bound on the distance between $x'$ and $y'$.
+
+Pick a geodesic path from $H$ to $A'$, and let $w$ be its label. Clear that $Hwabcw^{-1} = H$, hence we can pick some $h \in H$ so that $wabcw^{-1} =_G h$. Let $d$ be a geodesic path from $1$ to $h$ in $\Gamma$. Then, since any geodesic word based at a point in $\Gamma'$ is a geodesic in $\Gamma$ based at any point, we have a geodesic hexagon in $\Gamma$.
+
+Label the corners of this hexagon by $A := hw$, $B := hwa$, $C := hwab$, $D := hwabc =_G w$, $E := 1$, and $F := h$. We will refer to the sides by their labels, with $w_1$ referring to the side connecting $1$ and $p$ and $w_2$ referring to the remaining side labelled $w$. Divide the hexagon into 4 triangles by picking geodesic paths with labels $e$ from $E$ to $A$, $f$ from $A$ to $D$ and $g$ from $D$ to $B$.
+
+Let $m_a$, $m_b$, $m_c$, $m_d$, $m_{w_1}$ and $m_{w_2}$ be the meeting points on sides $a$, $b$, $c$, $d$, $w_1$, $w_2$ respectively. Let $m_{bcf}$and $m_1'$ be the meeting point of the same triangle on the path connecting $r$ and $p$. Let $m_2$ be the meeting point on $a$, and $m_2'$ the meeting point on the same side as $m_1'$.
+
+We will slightly abuse the term ``corresponding points'' in this proof to mean any two points which can be connected by using a chain of corresponding points, so if $y$ 2-corresponds to $z$ then $y$ corresponds to some $y'$ using one triangle, which in turn corresponds to $z$ using another triangle and we find $d(y, z) \le 2\delta$.
+
+Having constructed this triangle, we let $x$ and $y$ by the points on the sides labelled $a$ and $b$ such that $Hx = Hx'$ and $Hy = Hy'$ (that is, they lie at the same distance along their respective sides in $\Gamma$ as $x'$ and $y'$ did in $\Gamma'$).
+
+We now branch into a number of cases, based on which side of the hexagon $x$ corresponds to. We can first eliminate the sides $w_2$ and $c$ as follows:
+
+Let $m_{fD}$ be the meeting point on $f$ resulting from the triangle connecting $A$, $D$ and $E$, and let $m_{fB}$ be the other meeting point. Note that $|e| = |hw|_\Gamma \ge |hw|_{\Gamma'} = |w|_{\Gamma'} = |w|$, and similarly $|g| \ge |a|$. Then
+
+\begin{eqnarray*}
+d(A, m_{fD}) &  =  & \frac{d(A, D) + d(A, E) - d(D, E)}{2} \\
+             & \ge & \frac{d(A, D)}{2}
+\end{eqnarray*} and
+
+\begin{eqnarray*}
+d(A, m_{fB}) &  =  & \frac{d(A, D) + d(A, B) - d(B, D)}{2} \\
+             & \le & \frac{d(A, D)}{2}
+\end{eqnarray*} so if $x$ $2$-corresponds to a point on $w_1$ it also $3$-corresponds to a point on either $d$ or $w_2$.
+
+Now, let $m_b'$ be the meeting point on the side labelled by $b$ in the triangle in $\Gamma'$, and let $m_b$ be the meeting point on $b$ resulting from the triangle connecting $B$, $C$ and $D$. We find
+
+\begin{eqnarray*}
+d(B, m_b) &  =  & \frac{d(B, C) + d(B, D) - d(C, D)}{2} \\
+          & \ge & \frac{d(B, C) + d(A, B) - d(C, D)}{2} \\
+		  &  =  & \frac{|b| + |a| - |c|}{2} \\
+		  &  =  & d(B, m_b')
+\end{eqnarray*} so if $x$ $2$-corresponds to a point on $c$, it also $2$-corresponds to a point on $b$.
+
+So we need only consider the cases where $x$ corresponds to a point on the remaining two sides.
+
+Case 1: Suppose $x$ $2$-corresponds to a point on $b$. Then clearly this point is $y$, and $d(x, y) \le 2\delta$.
+
+Case 2: Suppose $x$ $3$-corresponds to some point $x'$ on $d$. Then $d(x, H) \le 3\delta + \epsilon$, since $d$ labels a geodesic element of $H$, which is $\epsilon$-quasiconvex.
+
+It remains to cover those $x$ which $3$-correspond to some point $x'$ on $w_2$. We find that since $Hhw = Hw$ there is some point $z'$ on $w_1$ such that, when $x'$ and $z'$ are viewed as group elements, we have $Hx' = Hz'$. Since $w$ labels a geodesic in $\Gamma'$, we have $d(F, x') = d(E, z')$. We branch into further cases depending on which side $z'$ corresponds to (note that it cannot correspond to a point on $a$ by previous arguments).
+
+Case 3: Suppose $z'$ $2$-corresponds to a point on $d$. Then similarly to Case 2, $d(x, H) \le 5\delta + \epsilon$.
+%Also note that the distance between two points $x$ with this property is at most $2\delta + \epsilon$, since if $d(E, z') > 2\delta + \epsilon$, we can find a strictly shorter path in $\Gamma'$ from $H$ to this point along $w$, contradicting $w$ being a geodesic.
+
+Case 4: Suppose $z'$ $2$-corresponds to a point $z$ on $w_2$. Then clearly $d(Hz, Hx') \le 2\delta$, and noting the paths taken by the correspondances, we see that if $m_{w_2}$ is the meeting point on $w_2$ we have $d(F, z) \le d(F, m_{w_2}) \le d(F, x')$, hence the distance between any two points $x$ with this property is at most $2\delta$.
+
+Case 5: Suppose $z'$ $3$-corresponds to a point $z$ on $b$. Then viewing $x$ and $z$ as group elements, we see $d(Hwa, Hx) \le d(Hwa, Hz) + 6\delta$. Thus, $d(y, z) \le 6\delta$ and $d(Hx, Hy) \le 12\delta$.
+
+The maximum distance between two $x$ lying in Cases 2, 3 or 4 is $10\delta + 2\epsilon + 2\delta = 12\delta + 2\epsilon$. Then $x$ lies within $\frac{7\delta + 2\epsilon}{2}$ of a point within $12\delta$ of its corresponding point or within $\frac{17\delta + 2\epsilon}{2}$ of a point within $2\delta$ of its corresponding point. Either way if $x$ lies in any of these 5 cases, $d(Hx, Hy) \le 19\delta + 2\epsilon$.
+
+It remains to measure the distance between two points $x$ which lie in case 6, where $x''$ $3$-corresponds to a point $z$ on $c$.
+
+Note that if some point between $a$ and $m_a'$ lies in case 5 and some point in the same range lies in case 6, then there exists some $x'$ on $a$ such that $d(Hm_b', Hx') \le 6\delta$ and $d(B, m_b') \le d(B, x') + 6\delta$, as before. In particular, we find that under these conditions, if $x$ lies in case 6, we have $d(Hx, Hy) \le 12\delta$. We can therefore assume that there are no points $x$ $3$-corresponding to points on $a$, whose $x''$ as above $3$-corresponds to a point on $b$.
+
+Since $d(m_c, m_c') = d(m_b, m_b')$, and $z$ must lie between $m_c$ and $m_c'$, it is sufficient to bound this distance. Let us suppose, then, that $r$ lies between $m_b$ and $m_b'$. We once again split into cases, noting that $r$ cannot $2$-correspond to a point on $a$, nor can it $1$-correspond to a point on $c$.
+
+Case A: Suppose $r$ $3$-corresponds to a point on $d$. Then $d(H, r) \le 3\delta + \epsilon$. We will treat this case later along with Cases B.3 and C.3.
+
+Case B: Suppose $r$ $3$-corresponds to a point $r'$ on $w_1$. Then there is a point $s'$ on $w_2$ such that viewing the points as group elements we have $Hr' = Hs'$. We note that $s'$ $4$-corresponding to any point on $c$ contradicts $r$ $3$-corresponding to a point on $w_1$ (the paths taken by the correspondances would cross), and $s'$ cannot correspond to a point on $a$ because we have assumed no points lie in case 5. We branch into subcases for the remaining sides.
+
+Case B.1: Suppose $s'$ $4$-corresponds to a point $s$ on $b$. Then clearly $d(Hs, Hr) \le 7\delta$, so $d(s, r) \le 7\delta$. In fact, one can see that cases A, B.2, B.3, C.2 and C.3 must lie strictly between these points, so this distance bounds all of these cases together if the case exists at all.
+
+Case B.2: Suppose $s'$ $2$-corresponds to a point $s$ on $w_1$. By the earlier argument, the distance between two points in this case is at most $2\delta$.
+
+Case B.3: Suppose $s'$ $1$-corresponds to a point $s$ on $d$. Then, by a similar argument to that of case 3, the points in this case lie within $4\delta + \epsilon$ of $H$.
+
+Case C: Suppose $r$ $4$-corresponds to a point $r'$ on $w_2$. Then there is a point $s'$ on $w_1$ such that $Hs' = Hr'$ and we branch into subcases depending on which side this point corresponds to (noting that it cannot correspond to a point on $a$).
+
+Case C.1: If $s'$ $3$-corresponds to a point $s$ on $b$, this is the same as Case B.1.
+
+Case C.2: If $s'$ $2$-corresponds to a point $s$ on $w_1$, we use the argument from Case B.2. Note that the presence of any point $r$ in this case contradicts the existence of any point in Case B.2.
+
+Case C.3: If $s'$ $2$-corresponds to a point $s$ on $d$, then as in Case B.3, points in this case are at most $6\delta + \epsilon$ from $H$.
+
+Case C.4: Finally, suppose $s'$ $3$-corresponds to a point $s$ on $c$. Note that if any point lies in this case, then \textsf{all} points between $m_a$ and $m_a'$ must be in Case 6 (since points $r$ in Case C.4 must lie closer to $B$ than points in any of the other cases listed here, we also contradict any other case for the points on $a$). The maximum distance between two points in any of Case A, Case B and the remainder of Case C is $12\delta + 2\epsilon + 2\delta = 14\delta + 2\epsilon$, so we have
+
+\begin{eqnarray*}
+d(m_c, m_c') + 14\delta + \epsilon & \ge & d(m_a, m_a') + (d(m_a, m_a') + d(m_b, m_b')) \\
+                                   & \ge & 2d(m_a, m_a') + d(m_c, m_c')
+\end{eqnarray*} which implies $d(m_a, m_a') \le 7\delta + \epsilon$ and we see that if $x$ lies in Case 6, $x$ lies within $7\delta + \epsilon$ of some $x'$ which $2$-corresponds to some $y'$ within $7\delta + \epsilon$ of $y$.
+
+Therefore, if any $r$ lies in Case C.4, for all $x$ in Case 6 we have $d(Hx, Hy) \le 16\delta + 2\epsilon$.
+
+If no $r$ lies in Case C.4, a similar argument yields $d(Hx, Hy) \le 30\delta + 4\epsilon$ for any $x$ in Case 6, and we have completed the proof.
+\end{proof}
+
+\end{document}

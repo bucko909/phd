@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{alonso1990notes}
+J.M.\ Alonso, T.\ Brady, D.\ Cooper, V.\ Ferlini, M.\ Lustig, M.\ Mihalik, M.\
+  Shapiro, and H.~Short.
+\newblock {Notes on word hyperbolic groups}.
+\newblock {\em Group theory from a geometrical viewpoint (Trieste, 1990)},
+  pages 3--63.
+
+\bibitem{BriHae99}
+M.R.\ Bridson and A.~Haefliger.
+\newblock {\em Metric Spaces of Non-Positive Curvature}.
+\newblock Springer-Verlag, Berlin, 1999.
+
+\bibitem{bridson2005conjugacy}
+M.R.\ Bridson and J.~Howie.
+\newblock {Conjugacy of finite subsets in hyperbolic groups}.
+\newblock {\em International Journal of Algebra and Computation},
+  15(4):725--756, 2005.
+
+\bibitem{dahmani2008isomorphism}
+F.\ Dahmani and D.~Groves.
+\newblock {The isomorphism problem for toral relatively hyperbolic groups}.
+\newblock {\em Publications Math{\'e}matiques de L'IH{\'E}S}, 107(1):211--290,
+  2008.
+
+\bibitem{dehn1911unendliche}
+M.~Dehn.
+\newblock {\"{U}ber unendliche diskontinuierliche Gruppen}.
+\newblock {\em Mathematische Annalen}, 71(1):116--144, 1911.
+
+\bibitem{epstein1992word}
+D.B.A.\ Epstein and J.W. Cannon.
+\newblock {\em {Word processing in groups}}.
+\newblock AK Peters, Ltd., 1992.
+
+\bibitem{epstein2001computation}
+D.B.A. Epstein and D.F. Holt.
+\newblock {Computation in word-hyperbolic groups}.
+\newblock {\em International Journal of Algebra and Computation},
+  11(4):467--488, 2001.
+
+\bibitem{epstein2006linearity}
+D.B.A.\ Epstein and D.F. Holt.
+\newblock {The linearity of the conjugacy problem in word-hyperbolic groups}.
+\newblock {\em International Journal of Algebra and Computation},
+  16(2):287--305, 2006.
+
+\bibitem{foord2000thesis}
+R.~Foord.
+\newblock {\em {Automaticicity and growth in certain classes of groups and
+  monoids}}.
+\newblock PhD thesis, University of Warwick, 2000.
+
+\bibitem{gersten1991rational}
+S.M.\ Gersten and H.B. Short.
+\newblock {Rational subgroups of biautomatic groups}.
+\newblock {\em The Annals of Mathematics}, 134(1):125--158, 1991.
+
+\bibitem{gromov1987hyperbolic}
+M.~Gromov.
+\newblock {Hyperbolic groups}.
+\newblock {\em Essays in group theory}, 8:75--263, 1987.
+
+\bibitem{holt2000word}
+D.F. Holt.
+\newblock {Word-hyperbolic groups have real-time word problem}.
+\newblock {\em International Journal of Algebra and Computation},
+  10(2):221--228, 2000.
+
+\bibitem{holt2005handbook}
+D.F.\ Holt, B.\ Eick, and E.A. O'Brien.
+\newblock {\em {Handbook of computational group theory}}.
+\newblock CRC Press, 2005.
+
+\bibitem{hopcraft--ullman}
+J.E.\ Hopcroft and J.D. Ullman.
+\newblock {\em Introduction to Automata Theory, Languages, and Computation}.
+\newblock Addison-Wesley, 1979.
+
+\bibitem{kapovich1994detecting}
+I.~Kapovich.
+\newblock {Detecting quasiconvexity: algorithmic aspects}.
+\newblock {\em Geometric and computational perspectives on infinite groups
+  (Minneapolis, MN and New Brunswick, NJ), 1994}, 25:91--99.
+
+\bibitem{kapovich1995non}
+I.~Kapovich.
+\newblock {A Non-quasiconvex Subgroup of a Hyperbolic Group with an Exotic
+  Limit Set}.
+\newblock {\em New York J. Math}, 1:184--195, 1995.
+
+\bibitem{papasoglu1995strongly}
+P.~Papasoglu.
+\newblock {Strongly geodesically automatic groups are hyperbolic}.
+\newblock {\em Inventiones Mathematicae}, 121(1):323--334, 1995.
+
+\bibitem{rips1982subgroups}
+E.~Rips.
+\newblock {Subgroups of small cancellation groups}.
+\newblock {\em Bull. London Math. Soc}, 14(1):45--47, 1982.
+
+\bibitem{sela1995isomorphism}
+Z.~Sela.
+\newblock {The isomorphism problem for hyperbolic groups I}.
+\newblock {\em The Annals of Mathematics}, 141(2):217--283, 1995.
+
+\bibitem{Z.Sela02232009}
+Z.~Sela.
+\newblock {Diophantine geometry over groups VII: the elementary theory of a
+  hyperbolic group}.
+\newblock {\em Proc. London Math. Soc.}, page pdn052, 2009.
+
+\end{thebibliography}

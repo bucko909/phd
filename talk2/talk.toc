@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.07pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Cayley Graphs}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Hyperbolic Groups}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Quasiconvexity}{19}{0}{1}
+\beamer@subsectionintoc {1}{4}{Ends}{22}{0}{1}
+\beamer@sectionintoc {2}{Ends of the Coset Cayley Graph}{32}{0}{2}
