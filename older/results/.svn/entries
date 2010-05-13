@@ -1,0 +1,90 @@
+9
+
+dir
+1
+file:///home/bucko/svn/phd/older/results
+file:///home/bucko/svn/phd
+
+
+
+2009-01-05T16:23:15.803552Z
+1
+bucko
+
+
+svn:special svn:externals svn:needs-lock
+
+results.log
+file
+
+
+
+
+2007-09-24T12:02:25.000000Z
+fdbedda04125b0b77e43072dd3d5fba6
+2009-01-05T16:23:15.803552Z
+1
+bucko
+
+results.ps
+file
+
+
+
+
+2007-09-24T12:02:26.000000Z
+cbad3bcc92404ead173e243f9edb916f
+2009-01-05T16:23:15.803552Z
+1
+bucko
+
+results.dvi
+file
+
+
+
+
+2007-09-24T12:02:25.000000Z
+795263ed6070c478c9bce374c595a29e
+2009-01-05T16:23:15.803552Z
+1
+bucko
+has-props
+
+results.pdf
+file
+
+
+
+
+2007-09-24T12:05:59.000000Z
+8cb3074b29dba8ddbdd81e7009f7d49c
+2009-01-05T16:23:15.803552Z
+1
+bucko
+has-props
+
+results.latex
+file
+
+
+
+
+2007-09-24T12:02:22.000000Z
+dcfb0d5525667c03a3429bdd2f62bc16
+2009-01-05T16:23:15.803552Z
+1
+bucko
+
+results.aux
+file
+
+
+
+
+2007-09-24T12:02:25.000000Z
+a94a2480d3289e625eea47cd1b285758
+2009-01-05T16:23:15.803552Z
+1
+bucko
+

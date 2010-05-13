@@ -1,0 +1,356 @@
+\documentclass{article} 
+\usepackage{beamerarticle}
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+  %\setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{epsfig}
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+%\title[Conjugacy in Hyperbolic Groups] % (optional, use only with long paper titles)
+%{Title As It Is In the Proceedings}
+
+\title{Conjugacy in Hyperbolic Groups}
+
+%\author[Author, Another] % (optional, use only with lots of authors)
+%{F.~Author\inst{1} \and S.~Another\inst{2}}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+\author{David Buckley}
+
+%\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+%{
+%  \inst{1}%
+%  Department of Computer Science\\
+%  University of Somewhere
+%  \and
+%  \inst{2}%
+%  Department of Theoretical Philosophy\\
+%  University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+%TODO
+%\pgfdeclareimage[height=1cm]{university-logo}{the_warwick_uni_blue}
+%\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+\section{Ingredients}
+
+\subsection{A Hyperbolic Group}
+
+\begin{frame}{Hyperbolic Space}{Subtitles are optional.}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{itemize}
+  	\item Hyperbolic spaces curve "inwards."
+	\item This makes geodesic triangles thin.
+
+  \only<1-2>{\uncover<2>{\begin{figure}
+  \input thin_triangle.pstex_t
+  \end{figure}}}
+
+  \only<3-4>{\begin{figure}
+  \input thin_triangle2.pstex_t
+  \end{figure}}
+
+  \uncover<4>{\item Hyperbolic if all geodesic triangles are $\delta$-thin.
+  }
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Hyperbolic Groups}
+
+  \begin{itemize}
+  \item The Cayley graph of a finitely generated group is a geodesic metric space.
+  \item A group is hyperbolic if its Cayley graph is hyperbolic.
+  \item Examples:
+  \begin{itemize}
+    \pause
+    \item Finite groups.
+    \pause
+    \item Free groups of finite rank.
+    \pause
+    \item Groups acting properly and cocompactly on hyperbolic spaces.
+  \end{itemize}
+  \pause
+  \item Non-example: $\mathbb{Z}\times\mathbb{Z}$
+  \pause
+  \item Fix $G = <\!\!X | R\!\!>$ a finitely generated group with $\delta$-hyperbolic Cayley graph $\Gamma$.
+  \item Let $A = X \cup X^{-1}$.
+  \end{itemize}
+
+\end{frame}
+
+
+\subsection{A Quasiconvex Subgroup}
+
+\begin{frame}{Quasiconvex Subgroups}
+  \begin{itemize}
+    \item Let $w$ be a word in $A^*$.
+	\item Suppose $w$ labels a geodesic $\alpha$ in $\Gamma$ starting at $1$.
+	\item Let $H < G$ any subgroup.
+	\pause
+	\item $d(w, H)$ is the max distance from a point on $\alpha$ to closest point in $H$.
+  	\begin{figure}
+	\input quasiconvex.pstex_t
+	\end{figure}
+	\pause
+	\item $H$ $\epsilon$-quasiconvex if $d(w, H) \le \epsilon$ for any such $w \in H$.
+	\pause
+	\item For instance, $<\!\!a^2\!\!>$ is a $2$-quasiconvex subgroup of $F(a, b)$.
+  \end{itemize}
+\end{frame}
+
+\subsection{Some Elements}
+
+\begin{frame}{The Problem}
+  \begin{itemize}
+    \item We're given a word $u \in A^*$.
+	\item In time $O(|u|)$, we must:
+	\pause
+	\begin{itemize}
+	  \item Check if there exists $w \in A^*$ such that $wuw^{-1} \in H$.
+	  \pause
+	  \item Return such a $w$, if one exists.
+	\end{itemize}
+	\pause
+	\item We assume $G$ and $H$ are fixed.
+	\item Exponential running time with respect to $\delta + \epsilon$.
+  \end{itemize}
+\end{frame}
+
+\section{Equipment Required}
+
+\subsection{Shortest Words}
+
+\begin{frame}
+  \begin{itemize}
+    \item Given any word $w \in A^*$, find some $w' \in A^*$ such that:
+	\begin{itemize}
+	  \item $w' =_G w$, and
+	  \item $|w'|$ is minimal
+	\end{itemize}
+	\pause
+	\item Shapiro's algorithm in ``The linearity of the conjugacy problem in word hyperbolic groups'' (Epstein+Holt, 2006).
+	\item Runs in time linear in $O(|w|)$.
+	\pause
+	\item Assume that \textbf{all} words are shortest.
+	\item If not, just run Shapiro's algorithm.
+  \end{itemize}
+\end{frame}
+
+\subsection{Minimal Conjugates}
+
+\begin{frame}{Minimal Conjugates}
+  \begin{itemize}
+    \item Given any word $u \in A^*$, find some $u', w \in A^*$ such that:
+	\begin{itemize}
+	  \item $u' =_G w^{-1}uw$, and
+	  \item $|u'|$ is minimal
+	\end{itemize}
+	\pause
+  	\item Strictly speaking, do not have this.
+	\pause
+	\item Do have an algorithm computing this for $u^M$ where $M$ is some constant.
+	\item Sufficient; compute with $u^M$, then use centraliser of $u^M$ to check everything for $u$.
+	\pause
+	\item We therefore assume $u$ in the problem is its own minimal conjugate.
+  \end{itemize}
+\end{frame}
+
+\subsection{Solution to Conjugacy Problem}
+
+\begin{frame}{The Conjugacy Problem}
+  \begin{itemize}
+    \item Given any words $u, v \in A^*$:
+	\begin{itemize}
+	  \item Check if there is a $g \in A^*$ with $u =_G g^{-1}vg$.
+	  \item Return some such $g$ if one exists. 
+    \end{itemize}
+	\pause
+	\item Solved by Epstein and Holt (2006).
+	\item Runs in time $O(|u| + |v|)$.
+  \end{itemize}
+\end{frame}
+
+\section{Recipe}
+
+\subsection{Idea}
+
+\begin{frame}{Idea}
+  \begin{itemize}
+    \item Suppose $g \in G$ has $gug^{-1} \in H$ as required.
+	\pause
+	\item Pick $h \in H$ and $w \in A^*$ such that $w =_G hg$ and $|w|$ is minimal.
+	\item Then $wuw^{-1} = v \in H$.
+	\item Aim is to either:
+	\pause
+	\begin{itemize}
+	  \item find an $O(1)$ bound on the length of $w$, or
+	  \pause
+	  \item find an $O(1)$ bound on the length of $v$
+	\end{itemize}
+	\pause
+	\item Bounded number of checks taking time $O(|u|)$ means $O(|u|)$ time.
+	\item Upper bounds will all depend on constants $\delta$ and $\epsilon$.
+  \end{itemize}
+\end{frame}
+
+\subsection{Bounding $|w|$}
+
+\begin{frame}{Bounding the Number of $w$}
+  \begin{itemize}
+    \item Suppose a point on $u$ corresponds to a point on $v$.
+	\pause
+	\item $m$ and $n$ distances to the meeting points on $w$ from ends of $u$.
+	\begin{figure}
+	\input conj1_mn.pstex_t
+	\end{figure}
+	\pause
+	\item If $\min\{m,n\} > \delta$ there is a suffix $w'$ of $w$ such that $|wuw^{-1}| < |u|$ (contradiction!).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Bounding the Number of $w$}
+  \begin{itemize}
+	\item $p$ and $q$ distances to meeting points on $w$ from ends of $v$.
+	\only<1-2,4->{
+	\begin{figure}
+	\input conj1_pq.pstex_t
+	\end{figure}
+	}
+	\only<3>{
+	\begin{figure}
+	\input conj1_pq2.pstex_t
+	\end{figure}
+	}
+	\pause
+	\item If $\max\{p,q\} > 2\delta + \epsilon$ there is a word $w' \in A^*$ such that $|w'| < |w|$ and $hw' =_G w$ for some $h \in H$ (contradiction!).
+	\pause
+	\pause
+	\item $|w| = m + p = n + q$, so $|w| \le 3\delta + \epsilon$.
+	\pause
+	\item $|w| \in O(1)$ and there $O(1)$ possibilities for $w$.
+	\pause
+	\item Check if $wuw^{-1} \in H$ for all $|w| \le 3\delta + \epsilon$.
+  \end{itemize}
+\end{frame}
+
+\subsection{Bounding $|v|$}
+
+\begin{frame}
+  \begin{itemize}
+    \item Suppose no point on $u$ corresponds to a point on $v$.
+	\pause
+	\begin{figure}
+	\input conj2.pstex_t
+	\end{figure}
+	\pause
+	\item By the same argument as before, $\max\{p,q\} \le 2\delta + \epsilon$.
+	\pause
+	\item $|v| = p + q \le 4\delta + 2\epsilon$.
+	\pause
+	\item So $|v| \in O(1)$ and there are $O(1)$ possibilities for $v$.
+	\pause
+	\item For each $|v| \le 4\delta + 2\epsilon$, check if there is $w$ such that $wuw^{-1} = v$.
+  \end{itemize}
+\end{frame}
+
+\section{Finished Product}
+
+\begin{frame}{Finished Product}
+  \begin{itemize}
+    \item Can with some more work extend this to checking if, given a list $a_1, \ldots, a_n$, there is one $w$ such that $wa_iw^{-1} \in H$ for all $i$.
+	\pause
+    \item Useful because if there is, $<\!\!a_1, \ldots, a_n\!\!>$ conjugates into $H$.
+  \end{itemize}
+  \pause
+\end{frame}
+  
+\end{document}
+
+

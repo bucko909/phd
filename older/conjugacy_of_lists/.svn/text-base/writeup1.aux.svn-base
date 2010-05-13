@@ -1,0 +1,54 @@
+\relax 
+\citation{quadratic}
+\citation{linear}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Abstract}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Introduction}{1}}
+\citation{notes}
+\citation{linear}
+\citation{quadratic}
+\citation{HE}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Preliminaries}{3}}
+\newlabel{lemma:short_lex}{{3.1}{3}}
+\newlabel{lemma:triangle}{{3.4}{4}}
+\citation{HE}
+\citation{holt}
+\newlabel{lemma:replace}{{3.5}{5}}
+\newlabel{prop:short_conj}{{3.6}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conjugacy of finite lists containing at least one infinite order element}{5}}
+\citation{hyp}
+\newlabel{prop:find_centraliser}{{4.1}{6}}
+\newlabel{prop:make_long}{{4.2}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Cutting across a long quasigeodesic}}{7}}
+\newlabel{figure:make_long}{{1}{7}}
+\newlabel{prop:find_straight_centraliser}{{4.3}{7}}
+\citation{holt}
+\newlabel{lemma:thin_section}{{4.5}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The thin section of C geodesic quadrilateral}}{9}}
+\newlabel{figure:thin_section}{{2}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces C part of figure 2\hbox {}}}{9}}
+\newlabel{figure:quad_zoom}{{3}{9}}
+\newlabel{prop:shape}{{4.6}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The geodesics $\alpha $ and $\beta $ lie close.}}{10}}
+\newlabel{figure:bdd_inf}{{4}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The end of the unbounded case}}{11}}
+\newlabel{figure:unbd_end}{{5}{11}}
+\citation{holt}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The midsection of the unbounded case, case 2}}{12}}
+\newlabel{figure:unbd_behaved}{{6}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces After the first section}}{12}}
+\newlabel{figure:unbd_grow}{{7}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conjugacy of Lists}{14}}
+\newlabel{algorithm:shorten_list}{{5.1}{14}}
+\newlabel{step:is_other_long}{{2}{14}}
+\newlabel{step:extend_c}{{3}{14}}
+\newlabel{step:short_end}{{4}{14}}
+\newlabel{step:short_loop}{{5}{14}}
+\newlabel{prop:shorten_list}{{5.2}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Extending $c$.}}{15}}
+\newlabel{figure:extend_c}{{8}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The conjugates of the $a_i'$ are all short.}}{15}}
+\newlabel{figure:fin_order}{{9}{15}}
+\citation{bh}
+\citation{holt}
+\newlabel{step:precomputed}{{7}{17}}
+\newlabel{step:inf}{{8}{17}}

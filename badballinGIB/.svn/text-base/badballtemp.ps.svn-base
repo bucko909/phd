@@ -1,0 +1,1193 @@
+%!PS-Adobe-2.0
+%%Creator: dvips(k) 5.95a Copyright 2005 Radical Eye Software
+%%Title: badballtemp.dvi
+%%Pages: 4
+%%PageOrder: Ascend
+%%BoundingBox: 0 0 596 842
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic Symbol CMR10 CMSY10
+%%+ CMMI10 MSBM10
+%%DocumentPaperSizes: a4
+%%EndComments
+%DVIPSWebPage: (www.radicaleye.com)
+%DVIPSCommandLine: dvips badballtemp.dvi
+%DVIPSParameters: dpi=600
+%DVIPSSource:  TeX output 2008.11.21:1459
+%%BeginProcSet: tex.pro 0 0
+%!
+/TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
+N}B/A{dup}B/TR{translate}N/isls false N/vsize 11 72 mul N/hsize 8.5 72
+mul N/landplus90{false}def/@rigin{isls{[0 landplus90{1 -1}{-1 1}ifelse 0
+0 0]concat}if 72 Resolution div 72 VResolution div neg scale isls{
+landplus90{VResolution 72 div vsize mul 0 exch}{Resolution -72 div hsize
+mul 0}ifelse TR}if Resolution VResolution vsize -72 div 1 add mul TR[
+matrix currentmatrix{A A round sub abs 0.00001 lt{round}if}forall round
+exch round exch]setmatrix}N/@landscape{/isls true N}B/@manualfeed{
+statusdict/manualfeed true put}B/@copies{/#copies X}B/FMat[1 0 0 -1 0 0]
+N/FBB[0 0 0 0]N/nn 0 N/IEn 0 N/ctr 0 N/df-tail{/nn 8 dict N nn begin
+/FontType 3 N/FontMatrix fntrx N/FontBBox FBB N string/base X array
+/BitMaps X/BuildChar{CharBuilder}N/Encoding IEn N end A{/foo setfont}2
+array copy cvx N load 0 nn put/ctr 0 N[}B/sf 0 N/df{/sf 1 N/fntrx FMat N
+df-tail}B/dfs{div/sf X/fntrx[sf 0 0 sf neg 0 0]N df-tail}B/E{pop nn A
+definefont setfont}B/Cw{Cd A length 5 sub get}B/Ch{Cd A length 4 sub get
+}B/Cx{128 Cd A length 3 sub get sub}B/Cy{Cd A length 2 sub get 127 sub}
+B/Cdx{Cd A length 1 sub get}B/Ci{Cd A type/stringtype ne{ctr get/ctr ctr
+1 add N}if}B/CharBuilder{save 3 1 roll S A/base get 2 index get S
+/BitMaps get S get/Cd X pop/ctr 0 N Cdx 0 Cx Cy Ch sub Cx Cw add Cy
+setcachedevice Cw Ch true[1 0 0 -1 -.1 Cx sub Cy .1 sub]{Ci}imagemask
+restore}B/D{/cc X A type/stringtype ne{]}if nn/base get cc ctr put nn
+/BitMaps get S ctr S sf 1 ne{A A length 1 sub A 2 index S get sf div put
+}if put/ctr ctr 1 add N}B/I{cc 1 add D}B/bop{userdict/bop-hook known{
+bop-hook}if/SI save N @rigin 0 0 moveto/V matrix currentmatrix A 1 get A
+mul exch 0 get A mul add .99 lt{/QV}{/RV}ifelse load def pop pop}N/eop{
+SI restore userdict/eop-hook known{eop-hook}if showpage}N/@start{
+userdict/start-hook known{start-hook}if pop/VResolution X/Resolution X
+1000 div/DVImag X/IEn 256 array N 2 string 0 1 255{IEn S A 360 add 36 4
+index cvrs cvn put}for pop 65781.76 div/vsize X 65781.76 div/hsize X}N
+/p{show}N/RMat[1 0 0 -1 0 0]N/BDot 260 string N/Rx 0 N/Ry 0 N/V{}B/RV/v{
+/Ry X/Rx X V}B statusdict begin/product where{pop false[(Display)(NeXT)
+(LaserWriter 16/600)]{A length product length le{A length product exch 0
+exch getinterval eq{pop true exit}if}{pop}ifelse}forall}{false}ifelse
+end{{gsave TR -.1 .1 TR 1 1 scale Rx Ry false RMat{BDot}imagemask
+grestore}}{{gsave TR -.1 .1 TR Rx Ry scale 1 1 false RMat{BDot}
+imagemask grestore}}ifelse B/QV{gsave newpath transform round exch round
+exch itransform moveto Rx 0 rlineto 0 Ry neg rlineto Rx neg 0 rlineto
+fill grestore}B/a{moveto}B/delta 0 N/tail{A/delta X 0 rmoveto}B/M{S p
+delta add tail}B/b{S p tail}B/c{-4 M}B/d{-3 M}B/e{-2 M}B/f{-1 M}B/g{0 M}
+B/h{1 M}B/i{2 M}B/j{3 M}B/k{4 M}B/w{0 rmoveto}B/l{p -4 w}B/m{p -3 w}B/n{
+p -2 w}B/o{p -1 w}B/q{p 1 w}B/r{p 2 w}B/s{p 3 w}B/t{p 4 w}B/x{0 S
+rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
+
+%%EndProcSet
+%%BeginProcSet: 8r.enc 0 0
+% File 8r.enc  TeX Base 1 Encoding  Revision 2.0  2002-10-30
+%
+% @@psencodingfile@{
+%   author    = "S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry,
+%                W. Schmidt, P. Lehman",
+%   version   = "2.0",
+%   date      = "30 October 2002",
+%   filename  = "8r.enc",
+%   email     = "tex-fonts@@tug.org",
+%   docstring = "This is the encoding vector for Type1 and TrueType
+%                fonts to be used with TeX.  This file is part of the
+%                PSNFSS bundle, version 9"
+% @}
+% 
+% The idea is to have all the characters normally included in Type 1 fonts
+% available for typesetting. This is effectively the characters in Adobe
+% Standard encoding, ISO Latin 1, Windows ANSI including the euro symbol,
+% MacRoman, and some extra characters from Lucida.
+% 
+% Character code assignments were made as follows:
+% 
+% (1) the Windows ANSI characters are almost all in their Windows ANSI
+% positions, because some Windows users cannot easily reencode the
+% fonts, and it makes no difference on other systems. The only Windows
+% ANSI characters not available are those that make no sense for
+% typesetting -- rubout (127 decimal), nobreakspace (160), softhyphen
+% (173). quotesingle and grave are moved just because it's such an
+% irritation not having them in TeX positions.
+% 
+% (2) Remaining characters are assigned arbitrarily to the lower part
+% of the range, avoiding 0, 10 and 13 in case we meet dumb software.
+% 
+% (3) Y&Y Lucida Bright includes some extra text characters; in the
+% hopes that other PostScript fonts, perhaps created for public
+% consumption, will include them, they are included starting at 0x12.
+% These are /dotlessj /ff /ffi /ffl.
+% 
+% (4) hyphen appears twice for compatibility with both ASCII and Windows.
+%
+% (5) /Euro was assigned to 128, as in Windows ANSI
+%
+% (6) Missing characters from MacRoman encoding incorporated as follows:
+%
+%     PostScript      MacRoman        TeXBase1
+%     --------------  --------------  --------------
+%     /notequal       173             0x16
+%     /infinity       176             0x17
+%     /lessequal      178             0x18
+%     /greaterequal   179             0x19
+%     /partialdiff    182             0x1A
+%     /summation      183             0x1B
+%     /product        184             0x1C
+%     /pi             185             0x1D
+%     /integral       186             0x81
+%     /Omega          189             0x8D
+%     /radical        195             0x8E
+%     /approxequal    197             0x8F
+%     /Delta          198             0x9D
+%     /lozenge        215             0x9E
+%
+/TeXBase1Encoding [
+% 0x00
+ /.notdef /dotaccent /fi /fl
+ /fraction /hungarumlaut /Lslash /lslash
+ /ogonek /ring /.notdef /breve
+ /minus /.notdef /Zcaron /zcaron
+% 0x10
+ /caron /dotlessi /dotlessj /ff
+ /ffi /ffl /notequal /infinity
+ /lessequal /greaterequal /partialdiff /summation
+ /product /pi /grave /quotesingle
+% 0x20
+ /space /exclam /quotedbl /numbersign
+ /dollar /percent /ampersand /quoteright
+ /parenleft /parenright /asterisk /plus
+ /comma /hyphen /period /slash
+% 0x30
+ /zero /one /two /three
+ /four /five /six /seven
+ /eight /nine /colon /semicolon
+ /less /equal /greater /question
+% 0x40
+ /at /A /B /C
+ /D /E /F /G
+ /H /I /J /K
+ /L /M /N /O
+% 0x50
+ /P /Q /R /S
+ /T /U /V /W
+ /X /Y /Z /bracketleft
+ /backslash /bracketright /asciicircum /underscore
+% 0x60
+ /quoteleft /a /b /c
+ /d /e /f /g
+ /h /i /j /k
+ /l /m /n /o
+% 0x70
+ /p /q /r /s
+ /t /u /v /w
+ /x /y /z /braceleft
+ /bar /braceright /asciitilde /.notdef
+% 0x80
+ /Euro /integral /quotesinglbase /florin
+ /quotedblbase /ellipsis /dagger /daggerdbl
+ /circumflex /perthousand /Scaron /guilsinglleft
+ /OE /Omega /radical /approxequal
+% 0x90
+ /.notdef /.notdef /.notdef /quotedblleft
+ /quotedblright /bullet /endash /emdash
+ /tilde /trademark /scaron /guilsinglright
+ /oe /Delta /lozenge /Ydieresis
+% 0xA0
+ /.notdef /exclamdown /cent /sterling
+ /currency /yen /brokenbar /section
+ /dieresis /copyright /ordfeminine /guillemotleft
+ /logicalnot /hyphen /registered /macron
+% 0xD0
+ /degree /plusminus /twosuperior /threesuperior
+ /acute /mu /paragraph /periodcentered
+ /cedilla /onesuperior /ordmasculine /guillemotright
+ /onequarter /onehalf /threequarters /questiondown
+% 0xC0
+ /Agrave /Aacute /Acircumflex /Atilde
+ /Adieresis /Aring /AE /Ccedilla
+ /Egrave /Eacute /Ecircumflex /Edieresis
+ /Igrave /Iacute /Icircumflex /Idieresis
+% 0xD0
+ /Eth /Ntilde /Ograve /Oacute
+ /Ocircumflex /Otilde /Odieresis /multiply
+ /Oslash /Ugrave /Uacute /Ucircumflex
+ /Udieresis /Yacute /Thorn /germandbls
+% 0xE0
+ /agrave /aacute /acircumflex /atilde
+ /adieresis /aring /ae /ccedilla
+ /egrave /eacute /ecircumflex /edieresis
+ /igrave /iacute /icircumflex /idieresis
+% 0xF0
+ /eth /ntilde /ograve /oacute
+ /ocircumflex /otilde /odieresis /divide
+ /oslash /ugrave /uacute /ucircumflex
+ /udieresis /yacute /thorn /ydieresis
+] def
+
+
+%%EndProcSet
+%%BeginProcSet: texps.pro 0 0
+%!
+TeXDict begin/rf{findfont dup length 1 add dict begin{1 index/FID ne 2
+index/UniqueID ne and{def}{pop pop}ifelse}forall[1 index 0 6 -1 roll
+exec 0 exch 5 -1 roll VResolution Resolution div mul neg 0 0]FontType 0
+ne{/Metrics exch def dict begin Encoding{exch dup type/integertype ne{
+pop pop 1 sub dup 0 le{pop}{[}ifelse}{FontMatrix 0 get div Metrics 0 get
+div def}ifelse}forall Metrics/Metrics currentdict end def}{{1 index type
+/nametype eq{exit}if exch pop}loop}ifelse[2 index currentdict end
+definefont 3 -1 roll makefont/setfont cvx]cvx def}def/ObliqueSlant{dup
+sin S cos div neg}B/SlantFont{4 index mul add}def/ExtendFont{3 -1 roll
+mul exch}def/ReEncodeFont{CharStrings rcheck{/Encoding false def dup[
+exch{dup CharStrings exch known not{pop/.notdef/Encoding true def}if}
+forall Encoding{]exch pop}{cleartomark}ifelse}if/Encoding exch def}def
+end
+
+%%EndProcSet
+%%BeginProcSet: special.pro 0 0
+%!
+TeXDict begin/SDict 200 dict N SDict begin/@SpecialDefaults{/hs 612 N
+/vs 792 N/ho 0 N/vo 0 N/hsc 1 N/vsc 1 N/ang 0 N/CLIP 0 N/rwiSeen false N
+/rhiSeen false N/letter{}N/note{}N/a4{}N/legal{}N}B/@scaleunit 100 N
+/@hscale{@scaleunit div/hsc X}B/@vscale{@scaleunit div/vsc X}B/@hsize{
+/hs X/CLIP 1 N}B/@vsize{/vs X/CLIP 1 N}B/@clip{/CLIP 2 N}B/@hoffset{/ho
+X}B/@voffset{/vo X}B/@angle{/ang X}B/@rwi{10 div/rwi X/rwiSeen true N}B
+/@rhi{10 div/rhi X/rhiSeen true N}B/@llx{/llx X}B/@lly{/lly X}B/@urx{
+/urx X}B/@ury{/ury X}B/magscale true def end/@MacSetUp{userdict/md known
+{userdict/md get type/dicttype eq{userdict begin md length 10 add md
+maxlength ge{/md md dup length 20 add dict copy def}if end md begin
+/letter{}N/note{}N/legal{}N/od{txpose 1 0 mtx defaultmatrix dtransform S
+atan/pa X newpath clippath mark{transform{itransform moveto}}{transform{
+itransform lineto}}{6 -2 roll transform 6 -2 roll transform 6 -2 roll
+transform{itransform 6 2 roll itransform 6 2 roll itransform 6 2 roll
+curveto}}{{closepath}}pathforall newpath counttomark array astore/gc xdf
+pop ct 39 0 put 10 fz 0 fs 2 F/|______Courier fnt invertflag{PaintBlack}
+if}N/txpose{pxs pys scale ppr aload pop por{noflips{pop S neg S TR pop 1
+-1 scale}if xflip yflip and{pop S neg S TR 180 rotate 1 -1 scale ppr 3
+get ppr 1 get neg sub neg ppr 2 get ppr 0 get neg sub neg TR}if xflip
+yflip not and{pop S neg S TR pop 180 rotate ppr 3 get ppr 1 get neg sub
+neg 0 TR}if yflip xflip not and{ppr 1 get neg ppr 0 get neg TR}if}{
+noflips{TR pop pop 270 rotate 1 -1 scale}if xflip yflip and{TR pop pop
+90 rotate 1 -1 scale ppr 3 get ppr 1 get neg sub neg ppr 2 get ppr 0 get
+neg sub neg TR}if xflip yflip not and{TR pop pop 90 rotate ppr 3 get ppr
+1 get neg sub neg 0 TR}if yflip xflip not and{TR pop pop 270 rotate ppr
+2 get ppr 0 get neg sub neg 0 S TR}if}ifelse scaleby96{ppr aload pop 4
+-1 roll add 2 div 3 1 roll add 2 div 2 copy TR .96 dup scale neg S neg S
+TR}if}N/cp{pop pop showpage pm restore}N end}if}if}N/normalscale{
+Resolution 72 div VResolution 72 div neg scale magscale{DVImag dup scale
+}if 0 setgray}N/psfts{S 65781.76 div N}N/startTexFig{/psf$SavedState
+save N userdict maxlength dict begin/magscale true def normalscale
+currentpoint TR/psf$ury psfts/psf$urx psfts/psf$lly psfts/psf$llx psfts
+/psf$y psfts/psf$x psfts currentpoint/psf$cy X/psf$cx X/psf$sx psf$x
+psf$urx psf$llx sub div N/psf$sy psf$y psf$ury psf$lly sub div N psf$sx
+psf$sy scale psf$cx psf$sx div psf$llx sub psf$cy psf$sy div psf$ury sub
+TR/showpage{}N/erasepage{}N/setpagedevice{pop}N/copypage{}N/p 3 def
+@MacSetUp}N/doclip{psf$llx psf$lly psf$urx psf$ury currentpoint 6 2 roll
+newpath 4 copy 4 2 roll moveto 6 -1 roll S lineto S lineto S lineto
+closepath clip newpath moveto}N/endTexFig{end psf$SavedState restore}N
+/@beginspecial{SDict begin/SpecialSave save N gsave normalscale
+currentpoint TR @SpecialDefaults count/ocount X/dcount countdictstack N}
+N/@setspecial{CLIP 1 eq{newpath 0 0 moveto hs 0 rlineto 0 vs rlineto hs
+neg 0 rlineto closepath clip}if ho vo TR hsc vsc scale ang rotate
+rwiSeen{rwi urx llx sub div rhiSeen{rhi ury lly sub div}{dup}ifelse
+scale llx neg lly neg TR}{rhiSeen{rhi ury lly sub div dup scale llx neg
+lly neg TR}if}ifelse CLIP 2 eq{newpath llx lly moveto urx lly lineto urx
+ury lineto llx ury lineto closepath clip}if/showpage{}N/erasepage{}N
+/setpagedevice{pop}N/copypage{}N newpath}N/@endspecial{count ocount sub{
+pop}repeat countdictstack dcount sub{end}repeat grestore SpecialSave
+restore end}N/@defspecial{SDict begin}N/@fedspecial{end}B/li{lineto}B
+/rl{rlineto}B/rc{rcurveto}B/np{/SaveX currentpoint/SaveY X N 1
+setlinecap newpath}N/st{stroke SaveX SaveY moveto}N/fil{fill SaveX SaveY
+moveto}N/ellipse{/endangle X/startangle X/yrad X/xrad X/savematrix
+matrix currentmatrix N TR xrad yrad scale 0 0 1 startangle endangle arc
+savematrix setmatrix}N end
+
+%%EndProcSet
+%%BeginProcSet: color.pro 0 0
+%!
+TeXDict begin/setcmykcolor where{pop}{/setcmykcolor{dup 10 eq{pop
+setrgbcolor}{1 sub 4 1 roll 3{3 index add neg dup 0 lt{pop 0}if 3 1 roll
+}repeat setrgbcolor pop}ifelse}B}ifelse/TeXcolorcmyk{setcmykcolor}def
+/TeXcolorrgb{setrgbcolor}def/TeXcolorgrey{setgray}def/TeXcolorgray{
+setgray}def/TeXcolorhsb{sethsbcolor}def/currentcmykcolor where{pop}{
+/currentcmykcolor{currentrgbcolor 10}B}ifelse/DC{exch dup userdict exch
+known{pop pop}{X}ifelse}B/GreenYellow{0.15 0 0.69 0 setcmykcolor}DC
+/Yellow{0 0 1 0 setcmykcolor}DC/Goldenrod{0 0.10 0.84 0 setcmykcolor}DC
+/Dandelion{0 0.29 0.84 0 setcmykcolor}DC/Apricot{0 0.32 0.52 0
+setcmykcolor}DC/Peach{0 0.50 0.70 0 setcmykcolor}DC/Melon{0 0.46 0.50 0
+setcmykcolor}DC/YellowOrange{0 0.42 1 0 setcmykcolor}DC/Orange{0 0.61
+0.87 0 setcmykcolor}DC/BurntOrange{0 0.51 1 0 setcmykcolor}DC
+/Bittersweet{0 0.75 1 0.24 setcmykcolor}DC/RedOrange{0 0.77 0.87 0
+setcmykcolor}DC/Mahogany{0 0.85 0.87 0.35 setcmykcolor}DC/Maroon{0 0.87
+0.68 0.32 setcmykcolor}DC/BrickRed{0 0.89 0.94 0.28 setcmykcolor}DC/Red{
+0 1 1 0 setcmykcolor}DC/OrangeRed{0 1 0.50 0 setcmykcolor}DC/RubineRed{
+0 1 0.13 0 setcmykcolor}DC/WildStrawberry{0 0.96 0.39 0 setcmykcolor}DC
+/Salmon{0 0.53 0.38 0 setcmykcolor}DC/CarnationPink{0 0.63 0 0
+setcmykcolor}DC/Magenta{0 1 0 0 setcmykcolor}DC/VioletRed{0 0.81 0 0
+setcmykcolor}DC/Rhodamine{0 0.82 0 0 setcmykcolor}DC/Mulberry{0.34 0.90
+0 0.02 setcmykcolor}DC/RedViolet{0.07 0.90 0 0.34 setcmykcolor}DC
+/Fuchsia{0.47 0.91 0 0.08 setcmykcolor}DC/Lavender{0 0.48 0 0
+setcmykcolor}DC/Thistle{0.12 0.59 0 0 setcmykcolor}DC/Orchid{0.32 0.64 0
+0 setcmykcolor}DC/DarkOrchid{0.40 0.80 0.20 0 setcmykcolor}DC/Purple{
+0.45 0.86 0 0 setcmykcolor}DC/Plum{0.50 1 0 0 setcmykcolor}DC/Violet{
+0.79 0.88 0 0 setcmykcolor}DC/RoyalPurple{0.75 0.90 0 0 setcmykcolor}DC
+/BlueViolet{0.86 0.91 0 0.04 setcmykcolor}DC/Periwinkle{0.57 0.55 0 0
+setcmykcolor}DC/CadetBlue{0.62 0.57 0.23 0 setcmykcolor}DC
+/CornflowerBlue{0.65 0.13 0 0 setcmykcolor}DC/MidnightBlue{0.98 0.13 0
+0.43 setcmykcolor}DC/NavyBlue{0.94 0.54 0 0 setcmykcolor}DC/RoyalBlue{1
+0.50 0 0 setcmykcolor}DC/Blue{1 1 0 0 setcmykcolor}DC/Cerulean{0.94 0.11
+0 0 setcmykcolor}DC/Cyan{1 0 0 0 setcmykcolor}DC/ProcessBlue{0.96 0 0 0
+setcmykcolor}DC/SkyBlue{0.62 0 0.12 0 setcmykcolor}DC/Turquoise{0.85 0
+0.20 0 setcmykcolor}DC/TealBlue{0.86 0 0.34 0.02 setcmykcolor}DC
+/Aquamarine{0.82 0 0.30 0 setcmykcolor}DC/BlueGreen{0.85 0 0.33 0
+setcmykcolor}DC/Emerald{1 0 0.50 0 setcmykcolor}DC/JungleGreen{0.99 0
+0.52 0 setcmykcolor}DC/SeaGreen{0.69 0 0.50 0 setcmykcolor}DC/Green{1 0
+1 0 setcmykcolor}DC/ForestGreen{0.91 0 0.88 0.12 setcmykcolor}DC
+/PineGreen{0.92 0 0.59 0.25 setcmykcolor}DC/LimeGreen{0.50 0 1 0
+setcmykcolor}DC/YellowGreen{0.44 0 0.74 0 setcmykcolor}DC/SpringGreen{
+0.26 0 0.76 0 setcmykcolor}DC/OliveGreen{0.64 0 0.95 0.40 setcmykcolor}
+DC/RawSienna{0 0.72 1 0.45 setcmykcolor}DC/Sepia{0 0.83 1 0.70
+setcmykcolor}DC/Brown{0 0.81 1 0.60 setcmykcolor}DC/Tan{0.14 0.42 0.56 0
+setcmykcolor}DC/Gray{0 0 0 0.50 setcmykcolor}DC/Black{0 0 0 1
+setcmykcolor}DC/White{0 0 0 0 setcmykcolor}DC end
+
+%%EndProcSet
+%%BeginFont: CMSY10
+%!PS-AdobeFont-1.1: CMSY10 1.0
+%%CreationDate: 1991 Aug 15 07:20:57
+% Copyright (C) 1997 American Mathematical Society. All Rights Reserved.
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (1.0) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (CMSY10) readonly def
+/FamilyName (Computer Modern) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle -14.035 def
+/isFixedPitch false def
+end readonly def
+/FontName /CMSY10 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 0 /minus put
+dup 20 /lessequal put
+dup 21 /greaterequal put
+dup 48 /prime put
+dup 50 /element put
+dup 54 /negationslash put
+dup 102 /braceleft put
+dup 103 /braceright put
+dup 106 /bar put
+readonly def
+/FontBBox{-29 -960 1116 775}readonly def
+currentdict end
+currentfile eexec
+D9D66F633B846A97B686A97E45A3D0AA052F09F9C8ADE9D907C058B87E9B6964
+7D53359E51216774A4EAA1E2B58EC3176BD1184A633B951372B4198D4E8C5EF4
+A213ACB58AA0A658908035BF2ED8531779838A960DFE2B27EA49C37156989C85
+E21B3ABF72E39A89232CD9F4237FC80C9E64E8425AA3BEF7DED60B122A52922A
+221A37D9A807DD01161779DDE7D31FF2B87F97C73D63EECDDA4C49501773468A
+27D1663E0B62F461F6E40A5D6676D1D12B51E641C1D4E8E2771864FC104F8CBF
+5B78EC1D88228725F1C453A678F58A7E1B7BD7CA700717D288EB8DA1F57C4F09
+0ABF1D42C5DDD0C384C7E22F8F8047BE1D4C1CC8E33368FB1AC82B4E96146730
+DE3302B2E6B819CB6AE455B1AF3187FFE8071AA57EF8A6616B9CB7941D44EC7A
+71A7BB3DF755178D7D2E4BB69859EFA4BBC30BD6BB1531133FD4D9438FF99F09
+4ECC068A324D75B5F696B8688EEB2F17E5ED34CCD6D047A4E3806D000C199D7C
+515DB70A8D4F6146FE068DC1E5DE8BC57034F6B6A67AB666E15104577F342F68
+CDE6AB4EF53E08A8E0552B76072FF46E80AC884959B54D147A9D5105D1FC6B3B
+BEB747B75D6E6A3BE833BFC95FBCB2A23A8697CF76D1B9F09F567345137B24FB
+84474441D5CC4C121EFF5CCC630144A4A0C067F7E347B0E9F02419CEA506BB83
+4A11EDFC37EDFBBD77F426D3DBAB12ADD8BA68851937B9A392BECA578A30903E
+775E2427937B875FA7A18DB27AA61B7D9016F29DC2E9787517A3560FEDA75765
+295D03B52E285FDA9954ECF6F85AB99A70BF3922E991113052DD67CA752F6187
+0DA59613E53F61AE701D6490EB8C6D80B278E90BE6E037389131C1FB3A969484
+2013EF87ED11C7CDEAEE23395F364AAFE6B93035D445992BAA756105E7FF76CE
+C82BAF5D3CE70898A0B75718E63BF2B26F5781F60C387F84C8C6A2149E9DDB84
+596C2595E0EC1279FA15D4F9606B77B51A064330C3DC9935C8AE6F5ED4349858
+5A07467EA4407D4E7FFDBE903A10A90E91AC7DDCECD8A36C3EDBDA794A7C50E6
+3E51A8B01E3B4DB7716B6C4F1CEE14E7154A841482984D329828BA4F6682CB82
+E61CD54621679E0829E12CD2AD56386BFA83CA5CE85A0CE1DE5380E40D25A55C
+3704AE56C572FBEF233A66184E2FBCA6363A3F769225196D640BEF4C6613266B
+0A0B996837FCA51FD38504E3719519C3DD64ED53277C710EA2F7C8CD6D9F209B
+977B94105AFCF8F4C6E3391446A2810623CED4D5EFD817E0ACE7DD29071E2264
+92D7A694B067005B9420FA678DFD7A8DDA77856B27FEC947832915942A108156
+B9208F2DE9176E14722AE0FE51769C1FF471959070CFD5F3FE19A8F519ADB311
+DD358F48A0FB198695745F5329BCFCAAA639133FDE98275DA7FFABC36B360040
+B7D44DFD2742B63C5E5AE9B7733E39C875F86A0F3955718679809A41199680FC
+36E3A87C7712EC65B19F3AB2EB3C611E5FF21AC57EB79298BDCA7C917167054D
+C1566DEF32429E87EC1FCB708B6D120A4A1ACB054E1F738595677B61C1829776
+5CDD13F902695FC666889E56C1E1ED810E705FF787A1BF000ADF262692349819
+723444F18368E6892E6127E28435BB7CDD19BB83DF966F5D2DFC98EC0A8328C1
+DEF7A0A6D60488C506C046F9090637D4D23FF46561EC987905EB6023323DB23B
+7E960017CE3917E293D651C1F86641039A3704869046FBCBB7BC857431B9DCDC
+16FB61D9EAA64EC37843ACE42CE55C0346E4844FFEF19DAFDE3424B9729568A0
+0D0450ADCB3F2F58C205984DD715DB771732E8ABB8FCCACAFC6D2971A00F6EE9
+10696417A080C51EAD55346BF4C4CA2D61AEC4D5B4FAD4D68F7BBCC916E08E8E
+26CA3FC7D67E7142133D8C5C1A96AC21C089104F672A046FA9AC231F0F0CE507
+19568436C20529A5BF4529877EF073588A7A7E1709AFCCBDCE95583C3CC63CCE
+0F5AC5249B2141CAB4009E46261C43AC71D9012268FA9AC6742E920FAF5B5E0A
+D48E23F0DFDF0BA714A3BED38587CB044665AA0E5BD19E976075E3F496CF5456
+8B18A4EF568E106EB44B934CBDB0E4AE1A0A448A1879524ADA36815DD0AA5812
+5F55E9E9D5502A030FEEB13F67F6AE7DBD81FC9996DA4F84C603509D4A78C54D
+52A8E3166394BCAF4A744978E712CE79C825B187891A7C0C6063AA1C22957C50
+816A95DBF61D0E5E7E70ACB95E7BD5F4F317D3DAF7C7276B8DDD63A025D3324B
+A7BB7F03DD963224B32AFE5C76C42B5B9E9A951D0CC282B18F031307EEB9D504
+F3E7A4A4E81A6D2A7FDDCDE61D421AAED9BDA26F3303CB9C86E09F846D539FA6
+CEC49C6101708D6DF8493F962C355FE536352E6687CFA9A97BDFA023
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndFont 
+%%BeginFont: MSBM10
+%!PS-AdobeFont-1.1: MSBM10 2.1
+%%CreationDate: 1993 Sep 17 11:10:37
+% Math Symbol fonts were designed by the American Mathematical Society.
+% Copyright (C) 1997 American Mathematical Society. All Rights Reserved.
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (2.1) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (MSBM10) readonly def
+/FamilyName (Euler) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle 0 def
+/isFixedPitch false def
+end readonly def
+/FontName /MSBM10 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 78 /N put
+readonly def
+/FontBBox{-55 -420 2343 920}readonly def
+currentdict end
+currentfile eexec
+D9D66F633B846A97B686A97E45A3D0AA052A014267B7904EB3C0D3BD0B83D891
+016CA6CA4B712ADEB258FAAB9A130EE605E61F77FC1B738ABC7C51CD46EF8171
+9098D5FEE67660E69A7AB91B58F29A4D79E57022F783EB0FBBB6D4F4EC35014F
+D2DECBA99459A4C59DF0C6EBA150284454E707DC2100C15B76B4C19B84363758
+469A6C558785B226332152109871A9883487DD7710949204DDCF837E6A8708B8
+2BDBF16FBC7512FAA308A093FE5CF5B8CABB9FFC6A66A4000A13D5F68BFF326D
+1D432B0D064B56C598F4338C319309181D78E1629A31ECA5DD8536379B03C383
+D10F04E2C2822D3E73F25B81C424627D3D9A158EAB554233A25D3C6849ABA86F
+1F25C1667CB57D2E79B7803083CB7CC0616467F68450D9A3FEAB534EB9721003
+DBFEEFD050F3AC3492F5C74162A9A531ECEC0F47610B4940E946D21CAA771D30
+A6C27ECBA11708CC46C62396BF9D1990D579D0C394899D24FE7A4382EA18E7E1
+160E7283AF5BE17254790628E79FCC206F28B5566075B3A5697D5209062544FF
+D85FD89D6F43D6588B242AB2666B5D2861CD38A8CE676503EDFAE84D12A71E77
+8405E468FE391F4F3F50D2C57ED55512036B0DB8E76A7EF413ED08673E56DE2C
+16A3B65CD478433C0D2F9FEC4E662D54DAA43CFA6957D2A9AF8979BE06F70B68
+ED4C8C493D6DAC4971A3F1D010A7726D084EC1074FECD7D12D72AE16C26194AF
+21AF5774D9B860EEE8608D34F150092F09C19959BAA670022B9A9F263CD391E3
+74DD1D1B4CD4D75273CAA4E37F68C631723E08FA35AD34C0AFB4621AE6689861
+854D16CE1C375FD159A337E221A6FF1CFFB5693A0623E7EBB58C2969F590D081
+AD92DD9E5322E26D6A15023664AC73A355998BCC48ADD0E7A4BC79790519606F
+A1FEF6075033BCD1A542ED2F7EE4943A13D927138CB26A52F33F52249DD24930
+BBA9773D5DEB5B8115804C2E65EDBCCB17469C47F2591BB232690DAC5F1780A5
+6FE9861DC450426725D35E3E8006C022026C0A383B0A6E8AA30A52055E7E139B
+DF6ABC491AF90C7A3884582B7407C0DDF37CC49F3CBA0126D07A3639A615400A
+01FC5412668335BC7FB0C5C62F533276BC13716EA27CCD3924408650605BEEDE
+2A68B5B6105D8766B9DD6A877DE6AEA9C3179677B7C0726022D0F929E7E63574
+4692A959C7B4919DEC77FA5012A3CB81439F809D15DA7739FAB5D8E03BD8F283
+FB6832C9864D18C4CD499B20534D33C822226FC199D26116A73ABA2B5CAB0B63
+42F1B4A3003688088F1F6DA3C61363B4C0C44269FD21F981DA0BDC5D180FFD2C
+8BAB61F4330FE5806A35F1235364554FAA1CA61EC79EB01793D586FB1B62F4E9
+3FA5AF30CE168CB03F041F939358D62A995FC4958E8FCD8CAC9FEA5FB6D8209C
+BAEBDFAD9E2C4CCE9A2D1B96D99A703A642CBAED5F06AEA53FA71398D4C25060
+E248122521E7BAB474E143724230BE4AB1CF171FE5FAB9649726C9EA80BB3847
+1B90CFA895CB2E24E4EB9E13A5D9D8A2CC17449E2143D0269CA9DA77AC2EBBF4
+C21D4FB62D2F1FC77B48127D74D318481EC372D5F9E0FF82CDC8587D4CFEE71F
+242CE9C1692E8EFB1DF6D865D3B845CFCB0183DC368C5A202C6B2DC5E736F855
+355553B7C37D7871F22E0E0DF7F8C0F354C3475280C07BF1DC568CE6FA9CF07F
+7369074A0333E2CE9D5B4089C42D0B3E7A23AA0EC6AF3A26FC775550CF4F05C4
+08B3F75657BF5F3C24C71FC4603DA72A23F8E67EDFE1FB210F6A804F3A8364F8
+46BFF1FB2384DB32CF32222806A7DCD5590AE596C20C233E454D1098BD07370D
+C0B721431148C6BD99DBBD626B7C79261961A7E5C40F2B99E06778C84C541300
+C891138B60B516D4A3FFCC690B
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndFont 
+%%BeginFont: CMR10
+%!PS-AdobeFont-1.1: CMR10 1.00B
+%%CreationDate: 1992 Feb 19 19:54:52
+% Copyright (C) 1997 American Mathematical Society. All Rights Reserved.
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (1.00B) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (CMR10) readonly def
+/FamilyName (Computer Modern) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle 0 def
+/isFixedPitch false def
+end readonly def
+/FontName /CMR10 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 40 /parenleft put
+dup 41 /parenright put
+dup 43 /plus put
+dup 61 /equal put
+dup 91 /bracketleft put
+dup 93 /bracketright put
+readonly def
+/FontBBox{-251 -250 1009 969}readonly def
+currentdict end
+currentfile eexec
+D9D66F633B846A97B686A97E45A3D0AA052A014267B7904EB3C0D3BD0B83D891
+016CA6CA4B712ADEB258FAAB9A130EE605E61F77FC1B738ABC7C51CD46EF8171
+9098D5FEE67660E69A7AB91B58F29A4D79E57022F783EB0FBBB6D4F4EC35014F
+D2DECBA99459A4C59DF0C6EBA150284454E707DC2100C15B76B4C19B84363758
+469A6C558785B226332152109871A9883487DD7710949204DDCF837E6A8708B8
+2BDBF16FBC7512FAA308A093FE5CF7158F1163BC1F3352E22A1452E73FECA8A4
+87100FB1FFC4C8AF409B2067537220E605DA0852CA49839E1386AF9D7A1A455F
+D1F017CE45884D76EF2CB9BC5821FD25365DDEA6E45F332B5F68A44AD8A530F0
+92A36FAC8D27F9087AFEEA2096F839A2BC4B937F24E080EF7C0F9374A18D565C
+295A05210DB96A23175AC59A9BD0147A310EF49C551A417E0A22703F94FF7B75
+409A5D417DA6730A69E310FA6A4229FC7E4F620B0FC4C63C50E99E179EB51E4C
+4BC45217722F1E8E40F1E1428E792EAFE05C5A50D38C52114DFCD24D54027CBF
+2512DD116F0463DE4052A7AD53B641A27E81E481947884CE35661B49153FA19E
+0A2A860C7B61558671303DE6AE06A80E4E450E17067676E6BBB42A9A24ACBC3E
+B0CA7B7A3BFEA84FED39CCFB6D545BB2BCC49E5E16976407AB9D94556CD4F008
+24EF579B6800B6DC3AAF840B3FC6822872368E3B4274DD06CA36AF8F6346C11B
+43C772CC242F3B212C4BD7018D71A1A74C9A94ED0093A5FB6557F4E0751047AF
+D72098ECA301B8AE68110F983796E581F106144951DF5B750432A230FDA3B575
+5A38B5E7972AABC12306A01A99FCF8189D71B8DBF49550BAEA9CF1B97CBFC7CC
+96498ECC938B1A1710B670657DE923A659DB8757147B140A48067328E7E3F9C3
+7D1888B284904301450CE0BC15EEEA00E48CCD6388F3FC3C8578EF9A20A0E06E
+4F7ADDAF0E7D1E182D115BF1AD931977325AD391E72E2B13CC108E3726C11099
+E2000623188AAAC9F3E233EB253BDD8B0A4759A66A113E066238B0086AC1B634
+5ABFF90E4B5ED3FA69C22541981B2BFC9710AEF6B50A8BB53431C7B4D380D721
+639E005D6B4688EE16BFF48443E7C9E5FB5BC5883E271CB03428966C96B6988B
+2C9127404E8C64B122D405610B1207E61D6CB678BF414E64299C22D6B8DA233B
+8E0E897EEAF81E43E962BD1DE1D8F24C8350761B0E688E433D01BCC9ADD5857E
+BE9564F01D501D5F99C4272CA490100395D23DEC1BE59A6DE8D20B90C61434C9
+062B6856C5C61184BD58F20E01B447F6140CB149BD370D59069F121FCA8AC937
+4A86AF9E00E141BE1F2B0DEF30A4AC17817E4B58B1A8921B990F237E64A938AD
+284A1DAB4F3BF58231B22F57219F9BF0E38585D631CF24EB1DDCBB1EA6E3DB31
+88D7C3F8D9EAF27F7239557A2D2EA7AC5AED0DC02CDB0A2C9E4D64C24C3616F3
+AA98D473C46596DC975C149FD66CE806C4529D92B0173BBCDA0D18B2956E0F51
+179D7861557A915D2AA59CE21800265DAF737E83C7B4E9C41F80195E51A95158
+F9CEAFA5ABDEBCDF332BC7107FEA70FDE84269ACCD15BB35D961846217D54B02
+88995D6A3304BF88EEA7ACB9C548195606C4E601789F3562E89A69C40BEA9167
+D3F49BF39DB2D57630674554F297DA605A079220182EA752B31072D46E091410
+D021BFC8B8A1E4D6E2AC110AE143BE32F407F6AAD2FEE259839BF6AEE1B7FAC4
+7597F8E3347EFB48F3DDE6E9198354D1D408AD5657D41F5D11FE6B805FBFA2E2
+F92F6332DDAD4AE77D30758E37B67866D6CEA29B6027812977B8D68A570904DF
+47550EA6773ED0DFE830F8B80BBECAA80EC33DC5ACDD4E683E5B688F5D1F14FA
+A5778EE610C3FCF3429021E2A014F8B0B97BEAFFA7F3868E61B35678D54173BC
+93A7BF29949C2814BB364594DA9ABAA2F2AEC654B0FB8C022B5775582D8CBA0D
+D1AD19333BD74415F40C24E839E48B674B003359EAB05AC8A0ABD358DA7E999D
+1AFE8359E410DE798A76FBF289C701E5DC730913F6FC2FD9693C34013B47C8CF
+84670F3925D2FB69CA3C2C61029C9FD1066AD2C1D640A556E226D7056118CBBB
+CB4C859D64B04B08751F3EFBDEF6F1F352DCBD682F73C89910D7A937D07ED50E
+5DCA560DBAD3A96F708B639F62730A566E7D4D3C6C89BF3868707B721ED3ECD8
+F185314C9D5B4E8456BC0B096F99F1A9AD67E40E0EBF19B06BFE1DE82BA32980
+AA
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndFont 
+%%BeginFont: CMMI10
+%!PS-AdobeFont-1.1: CMMI10 1.100
+%%CreationDate: 1996 Jul 23 07:53:57
+% Copyright (C) 1997 American Mathematical Society. All Rights Reserved.
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (1.100) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (CMMI10) readonly def
+/FamilyName (Computer Modern) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle -14.04 def
+/isFixedPitch false def
+end readonly def
+/FontName /CMMI10 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 58 /period put
+dup 59 /comma put
+dup 60 /less put
+dup 62 /greater put
+readonly def
+/FontBBox{-32 -250 1048 750}readonly def
+currentdict end
+currentfile eexec
+D9D66F633B846A97B686A97E45A3D0AA0529731C99A784CCBE85B4993B2EEBDE
+3B12D472B7CF54651EF21185116A69AB1096ED4BAD2F646635E019B6417CC77B
+532F85D811C70D1429A19A5307EF63EB5C5E02C89FC6C20F6D9D89E7D91FE470
+B72BEFDA23F5DF76BE05AF4CE93137A219ED8A04A9D7D6FDF37E6B7FCDE0D90B
+986423E5960A5D9FBB4C956556E8DF90CBFAEC476FA36FD9A5C8175C9AF513FE
+D919C2DDD26BDC0D99398B9F4D03D5993DFC0930297866E1CD0A319B6B1FD958
+9E394A533A081C36D456A09920001A3D2199583EB9B84B4DEE08E3D12939E321
+990CD249827D9648574955F61BAAA11263A91B6C3D47A5190165B0C25ABF6D3E
+6EC187E4B05182126BB0D0323D943170B795255260F9FD25F2248D04F45DFBFB
+DEF7FF8B19BFEF637B210018AE02572B389B3F76282BEB29CC301905D388C721
+59616893E774413F48DE0B408BC66DCE3FE17CB9F84D205839D58014D6A88823
+D9320AE93AF96D97A02C4D5A2BB2B8C7925C4578003959C46E3CE1A2F0EAC4BF
+8B9B325E46435BDE60BC54D72BC8ACB5C0A34413AC87045DC7B84646A324B808
+6FD8E34217213E131C3B1510415CE45420688ED9C1D27890EC68BD7C1235FAF9
+1DAB3A369DD2FC3BE5CF9655C7B7EDA7361D7E05E5831B6B8E2EEC542A7B38EE
+03BE4BAC6079D038ACB3C7C916279764547C2D51976BABA94BA9866D79F13909
+95AA39B0F03103A07CBDF441B8C5669F729020AF284B7FF52A29C6255FCAACF1
+74109050FBA2602E72593FBCBFC26E726EE4AEF97B7632BC4F5F353B5C67FED2
+3EA752A4A57B8F7FEFF1D7341D895F0A3A0BE1D8E3391970457A967EFF84F6D8
+47750B1145B8CC5BD96EE7AA99DDC9E06939E383BDA41175233D58AD263EBF19
+AFC0E2F840512D321166547B306C592B8A01E1FA2564B9A26DAC14256414E4C8
+42616728D918C74D13C349F4186EC7B9708B86467425A6FDB3A396562F7EE4D8
+40B43621744CF8A23A6E532649B66C2A0002DD04F8F39618E4F572819DD34837
+B5A08E643FDCA1505AF6A1FA3DDFD1FA758013CAED8ACDDBBB334D664DFF5B53
+9560176671A33FC55340CD04C2DE46FD812FC2711A85E61442AB93E8157A603D
+91023151267FB376665DDADCADD27FB02C8ED543E20516DA8FF6AF77848523C5
+86A500942F5D59B75422A42CF5876232320E2F1C54F253DE61FB2466D96F1F25
+31499278FF020F783D34144843E8EDA8454892F14751857C5D90C3320AD4362E
+9D080C4C8EA27FF7A1EE12EF9303B68A8D71912344F9A2C976D6202438BAF801
+38B95E9AFC28215E35703FA3992E84F4734B7E8252C52296D37961DD6E82A83C
+DD150831CFA3240C096EC00382CB49C9EB60B409268A50F68CA37D703D8A8B34
+F827C83648E3595D96AFB914CEC2B8245229D4CE55C9F460B008A5A675F6EA13
+3795B3D3A567063F73E1619EC9F9FCB03F23D4F4D25E515F4028FDC3751C1BE0
+E7DFE4C2D82026E9728FA913DF665799699AE4E20DEA279E23854672E64AA972
+29F81F4FE7FC4C3CF1BFBD630812B6A097D242782269F004347DF610BBE78287
+16FA5AC2F9DF565C4DA38F2FC3E975910C3D379EE30F8C43513FD5986C8A501A
+9AB0B536ACE3B752217BCF0B804286FD06A92FA8897DC09C7799C3988F50A804
+E154E2588E5EF3ACAA66618DFD9F886C38B6AB6DA75C37A78E0AB169A1622A48
+1273971868D7DEF19F3D93F3DF0A9568FAE6E459D291944512F1D741493C0A3D
+95F0DE2A875FE49B4478300989D65BA75BAA15A1CED70CB44258D1919371590E
+1D9560A9F059A1C8F2B9E4EF46F126730F04F0B1A9989FDB6907EBB92FC9CC2C
+15AA63194C9A8CB3
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndFont 
+TeXDict begin 39158280 55380996 1000 600 600 (badballtemp.dvi)
+@start /Fa 207[14 48[{}1 49.8132 /CMSY10 rf /Fb 177[66
+78[{}1 90.9091 /MSBM10 rf /Fc 205[25 25 49[{
+TeXBase1Encoding ReEncodeFont}2 49.8132 /Times-Roman
+rf /Fe 207[18 47[52{}2 66.4176 /CMSY10 rf /Ff 212[52
+43[{}1 66.4176 /CMR10 rf /Fg 200[33 1[33 33 33 33 33
+49[{TeXBase1Encoding ReEncodeFont}6 66.4176 /Times-Roman
+rf /Fh 149[25 2[45 45 47[0 3[61 28[71 71 19[71{}8 90.9091
+/CMSY10 rf /Fi 136[44 8[33 48 18 29 18 18 33 6[33 14[41
+4[55 37 4[48 3[44 67[{TeXBase1Encoding ReEncodeFont}14
+66.4176 /Times-Italic rf /Fj 154[29 33 100[{}2 66.4176
+/Symbol rf /Fk 162[25 1[25 29[71 17[71 1[35 35 40[{}6
+90.9091 /CMR10 rf /Fl 193[71 1[71 25 25 58[{}4 90.9091
+/CMMI10 rf /Fm 133[45 20[40 45 2[57 25[55 71[{}5 90.9091
+/Symbol rf /Fn 134[40 40 61 40 45 25 35 35 45 45 45 45
+66 25 40 25 25 45 45 25 40 45 40 45 45 10[56 1[51 45
+56 66 56 66 1[76 51 61 1[30 66 66 2[66 61 56 15[45 45
+45 1[23 30 23 41[45 2[{TeXBase1Encoding ReEncodeFont}48
+90.9091 /Times-Italic rf /Fo 134[45 4[30 35 40 1[51 45
+51 76 25 2[25 51 2[40 3[45 12[61 3[56 3[61 8[66 3[45
+6[45 45 45 45 45 45 45 45 45 1[23 46[{TeXBase1Encoding ReEncodeFont}28
+90.9091 /Times-Bold rf /Fp 134[45 45 66 45 45 25 35 30
+45 45 45 45 71 25 45 25 25 45 45 30 40 45 40 45 40 9[86
+2[56 51 2[51 66 66 1[56 2[30 2[51 56 66 61 61 66 5[25
+25 3[45 45 45 45 45 45 45 1[23 30 23 2[30 30 37[51 2[{
+TeXBase1Encoding ReEncodeFont}54 90.9091 /Times-Roman
+rf end
+%%EndProlog
+%%BeginSetup
+%%Feature: *Resolution 600dpi
+TeXDict begin
+%%BeginPaperSize: a4
+/setpagedevice where
+{ pop << /PageSize [595 842] >> setpagedevice }
+{ /a4 where { pop a4 } if }
+ifelse
+%%EndPaperSize
+ end
+%%EndSetup
+%%Page: 1 1
+TeXDict begin 1 0 bop Black Black 523 548 a Fp(Prerequisites:)p
+Black 382 736 a Fo(Pr)n(oposition)25 b(0.1.)p Black 42
+w Fn(De\002ne)g(L)20 b Fp(:)p Fk(=)g Fp(34)p Fm(d)13
+b Fk(+)g Fp(1)p Fn(.)30 b(Let)23 b(w)g(be)h(some)g(short-le)n(x)j
+(least)e(wor)m(d,)e(and)i(let)382 848 y(w)18 b Fk(=)g
+Fn(w)611 862 y Fi(L)652 848 y Fn(w)713 862 y Fi(R)778
+848 y Fn(with)k Fh(j)p Fn(w)1042 862 y Fi(L)1083 848
+y Fh(j)c(\024)g(j)p Fn(w)1301 862 y Fi(R)1346 848 y Fh(j)h(\024)f(j)p
+Fn(w)1565 862 y Fi(L)1606 848 y Fh(j)11 b Fk(+)g Fp(1)p
+Fn(.)27 b(Let)21 b(w)2014 862 y Fi(C)2084 848 y Fn(be)h(the)g(short-le)
+n(x)i(least)e(r)m(epr)m(esentative)382 961 y(of)k(w)539
+975 y Fi(R)584 961 y Fn(w)645 975 y Fi(L)686 961 y Fn(.)37
+b(If)26 b(w)885 975 y Fi(C)960 961 y Fn(has)h(length)h(strictly)h(gr)m
+(eater)f(than)f Fp(2)p Fn(L,)g(then)g(all)g(positive)h(power)o(s)g(of)e
+(w)3321 975 y Fi(C)382 1074 y Fn(label)d(L-local)h Fk(\()p
+Fp(1)p Fl(;)10 b Fp(2)p Fm(d)p Fk(\))p Fn(-quasig)o(eodesi)q(cs,)28
+b(and)23 b(ther)m(e)g(e)n(xists)h(some)e(inte)l(g)o(er)j
+Fp(0)20 b Fl(<)f Fn(k)i Fh(\024)e Fn(Q)3176 1041 y Fg(2)3234
+1074 y Fn(and)382 1187 y(some)k(wor)m(d)h(a)f(whose)h(length)h(is)e
+(less)h(than)h Fp(4)p Fm(d)e Fn(suc)o(h)h(that)g Fk(\(\()p
+Fn(w)2386 1201 y Fi(C)2436 1187 y Fk(\))2471 1154 y Fi(k)2506
+1187 y Fk(\))2541 1154 y Fi(a)2601 1187 y Fn(is)g(short-le)n(x)i(str)o
+(aight.)523 1300 y(Mor)m(eo)o(ver)-10 b(,)25 b(k)f(and)g(a)f(can)h(be)g
+(computed)h(in)f(time)f(linear)i(in)e Fh(j)p Fn(w)p Fh(j)p
+Fn(.)523 1413 y(In)g(particular)-10 b(,)27 b(if)c(w)f(is)i(of)f
+(\002nite)i(or)m(der)-10 b(,)24 b(then)g Fh(j)p Fn(w)2060
+1427 y Fi(C)2109 1413 y Fh(j)2134 1427 y Fi(G)2207 1413
+y Fh(\024)c Fp(2)p Fn(L.)p Black 382 1601 a Fo(Pr)n(oposition)27
+b(0.2.)p Black 43 w Fn(Let)e(M)g Fp(:)p Fk(=)d Fp(26000)p
+Fm(d)1664 1568 y Fg(5)1703 1601 y Fn(L)1754 1568 y Fg(3)1786
+1601 y Fn(V)1854 1568 y Fg(4)1891 1601 y Fn(,)k(wher)m(e)21
+b(V)36 b(is)26 b(the)g(volume)h(of)f(the)g Fp(2)p Fm(d)p
+Fn(-ball)h(in)382 1714 y Fm(G)k Fn(and)h(let)g(w)f(be)h(any)g
+(in\002nite)i(or)m(der)f Fm(G)p Fn(-g)o(eodesic)h(wor)m(d)e(with)g
+Fh(j)p Fn(w)p Fh(j)24 b(\024)h Fp(2)p Fn(L.)53 b(Let)32
+b(w)3090 1681 y Fe(0)3143 1714 y Fn(be)g(the)382 1826
+y(short-le)n(x)26 b(least)e(r)m(epr)m(esentative)k(of)23
+b(w)1611 1793 y Fi(M)1673 1826 y Fn(.)28 b(Then)23 b
+Fh(j)p Fk(\()p Fn(w)2049 1793 y Fe(0)2072 1826 y Fk(\))2104
+1840 y Fi(C)2154 1826 y Fh(j)d Fl(>)g Fp(2)p Fn(L.)523
+2014 y Fp(Ne)n(w)i(stuf)n(f:)p Black 382 2202 a Fo(Lemma)i(0.3.)p
+Black 44 w Fn(Suppose)j(that)f(w)21 b Fk(=)1530 2216
+y Fi(G)1603 2202 y Fn(w)1664 2216 y Fg(1)1701 2202 y
+Fn(w)1762 2216 y Fg(2)1824 2202 y Fn(is)k(some)h(shortest)h(wor)m(d)e
+(r)m(epr)m(esenting)k(an)c(ele-)382 2315 y(ment)i(of)h(G.)40
+b(Let)27 b(k)d Fp(:)p Fk(=)e(\()p Fn(w)1233 2277 y Fe(\000)p
+Fg(1)1233 2342 y(1)1322 2315 y Fl(;)10 b Fn(w)1418 2329
+y Fg(2)1456 2315 y Fk(\))1491 2329 y Fg(1)1528 2315 y
+Fn(,)28 b(and)g(K)f Fp(:)p Fk(=)22 b Fn(d)5 b Fk(\()p
+Fn(H)i Fl(;)j Fn(H)d(w)2275 2329 y Fg(1)2311 2315 y Fk(\))14
+b Fh(\000)g Fn(k)i Fh(\000)e Fp(3)p Fm(d)g Fh(\000)g
+Fm(e)p Fn(.)40 b(If)28 b(K)f Fl(>)22 b Fp(0)27 b Fn(then)382
+2428 y(d)5 b Fk(\()p Fn(H)i Fl(;)j Fn(H)d(w)p Fk(\))19
+b Fh(\025)h Fn(K)d Fk(+)c Fh(j)p Fn(w)1102 2442 y Fg(2)1138
+2428 y Fh(j)g(\000)g Fn(k)r(.)p Black 382 2615 a(Pr)l(oof.)p
+Black 46 w Fp(Let)32 b Fn(w)867 2629 y Fg(1)929 2615
+y Fk(=)1000 2629 y Fi(G)1077 2615 y Fn(h)1122 2629 y
+Fg(1)1160 2615 y Fn(w)1221 2582 y Fe(0)1221 2641 y Fg(1)1289
+2615 y Fp(and)h Fn(w)25 b Fk(=)1609 2629 y Fi(G)1686
+2615 y Fn(h)1731 2629 y Fg(2)1769 2615 y Fn(w)1830 2582
+y Fe(0)1830 2641 y Fg(2)1898 2615 y Fp(where)33 b Fn(h)2197
+2629 y Fg(1)2235 2615 y Fl(;)10 b Fn(h)2315 2629 y Fg(2)2378
+2615 y Fh(2)25 b Fn(H)37 b Fp(and)c Fn(w)2791 2582 y
+Fe(0)2791 2641 y Fg(1)2860 2615 y Fp(and)g Fn(w)3084
+2582 y Fe(0)3084 2641 y Fg(2)3152 2615 y Fp(are)g(of)382
+2728 y(minimal)e(length)h(w)o(ords)f(for)g(e)o(xpressions)j(of)c(this)h
+(form.)51 b(Then)30 b Fh(j)p Fn(w)2630 2695 y Fe(0)2630
+2754 y Fg(1)2667 2728 y Fh(j)25 b Fk(=)f Fn(d)5 b Fk(\()p
+Fn(H)i Fl(;)j Fn(H)d(w)3139 2742 y Fg(1)3174 2728 y Fk(\))30
+b Fp(and)382 2841 y Fh(j)p Fn(w)468 2808 y Fe(0)468 2867
+y Fg(2)505 2841 y Fh(j)20 b Fk(=)g Fn(d)5 b Fk(\()p Fn(H)i
+Fl(;)j Fn(H)d(w)p Fk(\))p Fp(.)523 2954 y(Let)29 b Fn(d)718
+2968 y Fg(1)780 2954 y Fk(=)23 b(\()p Fp(1)p Fl(;)10
+b Fn(w)1050 2968 y Fg(1)1088 2954 y Fk(\))1123 2968 y
+Fi(h)1156 2978 y Fc(1)1190 2954 y Fp(,)31 b Fn(d)1289
+2968 y Fg(2)1350 2954 y Fk(=)24 b(\()p Fp(1)p Fl(;)10
+b Fn(w)p Fk(\))1656 2968 y Fi(h)1689 2978 y Fc(2)1723
+2954 y Fp(,)30 b Fn(s)1811 2968 y Fg(1)1873 2954 y Fk(=)23
+b(\()p Fn(h)2047 2968 y Fg(1)2085 2954 y Fl(;)10 b Fn(w)2181
+2968 y Fg(1)2219 2954 y Fk(\))2254 2968 y Fg(1)2320 2954
+y Fp(and)31 b Fn(s)2516 2968 y Fg(2)2577 2954 y Fk(=)24
+b(\()p Fn(h)2752 2968 y Fg(2)2790 2954 y Fl(;)10 b Fn(w)p
+Fk(\))2921 2968 y Fg(1)2958 2954 y Fp(.)47 b(Note)30
+b(that)382 3067 y Fn(d)427 3081 y Fi(i)469 3067 y Fh(\024)19
+b Fm(d)12 b Fk(+)g Fm(e)p Fp(,)21 b(or)h Fn(w)941 3034
+y Fe(0)941 3091 y Fi(i)985 3067 y Fp(w)o(ould)h(not)g(be)g(minimal)f
+(as)h(de\002ned)g(abo)o(v)o(e.)29 b(W)-7 b(e)22 b(aim)g(to)g(sho)n(w)h
+(that)g Fn(s)3251 3081 y Fg(2)3310 3067 y Fp(is)382 3180
+y(not)h(much)g(lar)n(ger)h(than)f Fn(s)1193 3194 y Fg(1)1231
+3180 y Fp(.)523 3293 y(Suppose)e Fn(K)917 3260 y Fe(0)956
+3293 y Fp(:)p Fk(=)17 b Fn(s)1104 3307 y Fg(2)1152 3293
+y Fh(\000)10 b Fn(s)1268 3307 y Fg(1)1315 3293 y Fk(+)g
+Fn(d)1441 3307 y Fg(1)1488 3293 y Fh(\000)g Fp(3)p Fm(d)g
+Fh(\000)g Fm(e)16 b Fl(>)h Fp(0.)27 b(Let)20 b Fn(K)2196
+3260 y Fe(00)2253 3293 y Fk(=)d Fn(min)p Fh(f)p Fp(3)p
+Fm(d)10 b Fk(+)g Fm(e)g Fk(+)g Fn(K)2900 3260 y Fe(0)2922
+3293 y Fl(;)g Fh(j)p Fn(w)3043 3260 y Fe(0)3043 3319
+y Fg(1)3080 3293 y Fh(j)g(\000)g Fn(k)r Fh(g)17 b Fl(>)382
+3406 y Fp(3)p Fm(d)9 b Fk(+)g Fm(e)p Fp(,)20 b(and)h(let)27
+b Fn(p)20 b Fp(be)g(the)g(point)h(on)g Fk([)p Fn(h)1599
+3420 y Fg(1)1637 3406 y Fl(;)10 b Fn(w)1733 3420 y Fg(1)1770
+3406 y Fk(])19 b Fp(with)h Fn(d)5 b Fk(\()i Fn(p)p Fl(;)j
+Fn(h)2212 3420 y Fg(1)2251 3406 y Fk(\))17 b(=)g Fn(K)2457
+3373 y Fe(00)2497 3406 y Fp(.)27 b(As)19 b Fn(d)5 b Fk(\()i
+Fn(p)p Fl(;)j Fn(h)2884 3420 y Fg(1)2923 3406 y Fk(\))18
+b Fl(>)e Fp(3)p Fm(d)9 b Fk(+)g Fm(e)18 b Fl(>)382 3518
+y Fn(d)427 3532 y Fg(1)465 3518 y Fp(,)31 b Fn(p)24 b
+Fp(corresponds)k(to)c(a)g(point)i Fn(q)e Fp(on)h Fk([)p
+Fp(1)p Fl(;)10 b Fn(w)1770 3532 y Fg(1)1808 3518 y Fk(])p
+Fp(.)31 b(As)24 b Fn(d)5 b Fk(\()p Fn(q)p Fl(;)10 b Fn(w)2238
+3532 y Fg(1)2276 3518 y Fk(\))21 b(=)g Fn(d)5 b Fk(\()i
+Fn(p)p Fl(;)j Fn(w)2657 3532 y Fg(1)2695 3518 y Fk(\))21
+b(=)f Fh(j)p Fn(w)2928 3485 y Fe(0)2928 3544 y Fg(1)2966
+3518 y Fh(j)13 b(\000)g Fn(K)3154 3485 y Fe(00)3215 3518
+y Fh(\025)20 b Fn(k)r Fp(,)382 3631 y Fn(q)j Fp(must)h(correspond)i(to)
+e(a)f(point)h Fn(q)1487 3598 y Fe(0)1533 3631 y Fp(on)g
+Fk([)p Fp(1)p Fl(;)10 b Fn(w)p Fk(])p Fp(.)523 3744 y(Note)23
+b(that)1245 3949 y Fn(d)5 b Fk(\()p Fp(1)p Fl(;)10 b
+Fn(q)1455 3911 y Fe(0)1479 3949 y Fk(\))83 b(=)g Fn(d)5
+b Fk(\()p Fp(1)p Fl(;)10 b Fn(q)p Fk(\))1597 4086 y(=)83
+b Fn(d)5 b Fk(\()p Fn(h)1881 4100 y Fg(1)1919 4086 y
+Fl(;)17 b Fn(p)p Fk(\))c Fh(\000)g Fn(d)2183 4100 y Fg(1)2233
+4086 y Fk(+)g Fn(s)2352 4100 y Fg(1)1597 4224 y Fh(\024)83
+b Fn(K)1817 4187 y Fe(0)1851 4224 y Fh(\000)13 b Fp(3)p
+Fm(d)g Fh(\000)g Fm(e)g Fh(\000)g Fn(d)2304 4238 y Fg(1)2352
+4224 y Fk(+)g Fn(s)2471 4238 y Fg(1)1597 4362 y Fk(=)83
+b Fn(s)1786 4376 y Fg(2)382 4566 y Fp(so)29 b Fn(q)536
+4533 y Fe(0)587 4566 y Fp(corresponds)j(to)d(a)g(point)h(on)f
+Fk([)p Fp(1)p Fl(;)10 b Fn(h)1706 4580 y Fg(2)1745 4566
+y Fk(])28 b Fp(and)h(we)f(ha)n(v)o(e)i Fn(d)5 b Fk(\()i
+Fn(p)p Fl(;)j Fn(H)d Fk(\))24 b Fh(\024)e Fp(3)p Fm(d)15
+b Fk(+)g Fp(3)p Fm(e)28 b Fp(since)i Fn(h)3249 4580 y
+Fg(2)3310 4566 y Fh(2)382 4679 y Fn(H)7 b Fp(.)65 b(But)36
+b Fn(w)771 4646 y Fe(0)771 4705 y Fg(1)844 4679 y Fp(w)o(as)g(pick)o
+(ed)i(to)e(be)h(minimal)f(so)h Fn(d)5 b Fk(\()i Fn(p)p
+Fl(;)j Fn(H)d Fk(\))27 b(=)g Fn(d)5 b Fk(\()i Fn(p)p
+Fl(;)j Fn(h)2602 4693 y Fg(1)2641 4679 y Fk(\))28 b(=)f
+Fn(K)2868 4646 y Fe(00)2935 4679 y Fl(>)g Fp(3)p Fm(d)18
+b Fk(+)f Fm(e)p Fp(,)38 b(a)382 4792 y(contradiction.)33
+b(Thus)23 b(we)g(must)g(ha)n(v)o(e)i Fn(K)1703 4759 y
+Fe(0)1745 4792 y Fh(\024)20 b Fp(0,)j(ie.)28 b Fn(s)2078
+4806 y Fg(2)2136 4792 y Fh(\024)20 b Fn(s)2262 4806 y
+Fg(1)2312 4792 y Fh(\000)13 b Fn(d)2441 4806 y Fg(1)2491
+4792 y Fk(+)g Fp(3)p Fm(d)g Fk(+)g Fm(e)p Fp(.)523 4905
+y(Note)28 b(by)h(observing)i(corresponding)h(lengths)f(that)d
+Fn(s)2268 4919 y Fg(1)2329 4905 y Fk(=)22 b Fh(j)p Fn(h)2492
+4919 y Fg(1)2530 4905 y Fh(j)14 b(\000)g Fn(d)2699 4919
+y Fg(1)2761 4905 y Fk(=)22 b(\()p Fh(j)p Fn(w)2975 4919
+y Fg(1)3013 4905 y Fh(j)14 b(\000)g(j)p Fn(w)3223 4872
+y Fe(0)3223 4931 y Fg(1)3260 4905 y Fh(j)g Fk(+)p Black
+1854 5652 a Fp(1)p Black eop end
+%%Page: 2 2
+TeXDict begin 2 1 bop Black Black 382 548 a Fp(2)p Fn(d)472
+562 y Fg(1)510 548 y Fk(\))13 b Fh(\000)g Fn(d)687 562
+y Fg(1)724 548 y Fp(.)28 b(Similarly)-6 b(,)24 b(we)f(\002nd)g
+Fh(j)p Fn(w)1532 515 y Fe(0)1532 574 y Fg(2)1569 548
+y Fh(j)e Fk(=)e Fh(j)p Fn(w)p Fh(j)13 b(\000)g Fn(s)1948
+562 y Fg(2)1998 548 y Fk(+)g Fn(d)2127 562 y Fg(2)2164
+548 y Fh(j)23 b Fp(and)h Fh(j)p Fn(w)p Fh(j)c Fk(=)g
+Fh(j)p Fn(w)2674 562 y Fg(1)2711 548 y Fh(j)13 b Fk(+)g
+Fh(j)p Fn(w)2919 562 y Fg(2)2955 548 y Fh(j)g(\000)g
+Fp(2)p Fn(k)r Fp(,)22 b(so)546 752 y Fn(d)5 b Fk(\()p
+Fn(H)i Fl(;)j Fn(H)d(w)p Fk(\))82 b(=)g Fh(j)p Fn(w)1229
+715 y Fe(0)1229 775 y Fg(2)1266 752 y Fh(j)990 890 y
+Fk(=)g Fh(j)p Fn(w)p Fh(j)13 b(\000)g Fn(s)1386 904 y
+Fg(2)1435 890 y Fk(+)g Fn(d)1564 904 y Fg(2)990 1028
+y Fh(\025)82 b(j)p Fn(w)p Fh(j)13 b(\000)g Fn(s)1386
+1042 y Fg(1)1435 1028 y Fk(+)g Fn(d)1564 1042 y Fg(1)1614
+1028 y Fh(\000)g Fp(3)p Fm(d)g Fh(\000)g Fm(e)g Fk(+)g
+Fn(d)2067 1042 y Fg(2)990 1166 y Fk(=)82 b(\()p Fh(j)p
+Fn(w)1264 1180 y Fg(1)1302 1166 y Fh(j)13 b Fk(+)g Fh(j)p
+Fn(w)1510 1180 y Fg(2)1546 1166 y Fh(j)g(\000)g Fp(2)p
+Fn(k)r Fk(\))g Fh(\000)g Fk(\()p Fh(j)p Fn(w)2008 1180
+y Fg(1)2044 1166 y Fh(j)g(\000)g(j)p Fn(w)2252 1128 y
+Fe(0)2252 1188 y Fg(1)2288 1166 y Fh(j)g Fk(+)g Fn(d)2455
+1180 y Fg(1)2492 1166 y Fk(\))g(+)g Fn(d)2669 1180 y
+Fg(1)2719 1166 y Fh(\000)g Fp(3)p Fm(d)g Fh(\000)g Fm(e)g
+Fk(+)g Fn(d)3172 1180 y Fg(2)990 1303 y Fk(=)82 b Fh(j)p
+Fn(w)1229 1317 y Fg(2)1266 1303 y Fh(j)13 b(\000)g Fp(2)p
+Fn(k)h Fk(+)f Fh(j)p Fn(w)1657 1266 y Fe(0)1657 1326
+y Fg(1)1694 1303 y Fh(j)g(\000)g Fp(3)p Fm(d)g Fh(\000)g
+Fm(e)g Fk(+)g Fn(d)2185 1317 y Fg(2)990 1441 y Fk(=)82
+b Fh(j)p Fn(w)1229 1455 y Fg(2)1266 1441 y Fh(j)13 b(\000)g
+Fn(k)h Fk(+)f Fn(K)j Fk(+)d Fn(d)1732 1455 y Fg(2)990
+1579 y Fh(\025)82 b(j)p Fn(w)1229 1593 y Fg(2)1266 1579
+y Fh(j)13 b(\000)g Fn(k)h Fk(+)f Fn(K)382 1783 y Fp(as)23
+b(required.)p 3305 1783 4 62 v 3309 1725 55 4 v 3309
+1783 V 3363 1783 4 62 v Black 382 1971 a Fo(Theor)n(em)j(0.4.)p
+Black 43 w Fn(Suppose)j(that)d(g)c Fh(2)g Fn(G)i(with)i(g)1900
+1938 y Fi(n)1960 1971 y Fh(2)21 b Fn(H)31 b(for)26 b(some)h(n)22
+b Fh(2)f Fb(N)p Fn(.)35 b(Then)26 b(g)3008 1938 y Fi(n)3041
+1914 y Fa(0)3085 1971 y Fh(2)21 b Fn(H)32 b(for)382 2084
+y(some)25 b(n)638 2051 y Fe(0)681 2084 y Fh(\024)c Fn(M)t(Q)919
+2051 y Fg(2)955 2084 y Fn(R)j(wher)m(e)g(Q)g(is)g(as)h(in)g(Pr)l
+(oposition)i(0.1,)d(M)k(is)c(as)h(in)g(Pr)l(oposition)i(0.2)d(and)382
+2197 y(R)e(is)i(the)f(number)i(of)e(vertices)j(in)d(the)h(B)1660
+2214 y Fg(5)p Fj(d)p Ff(+)p Fj(e)1810 2197 y Fk(\()p
+Fn(H)7 b Fk(\))23 b Fn(in)g(the)h(coset)h(Cayle)m(y)f(gr)o(aph)h(of)e
+(H)7 b(.)p Black 382 2384 a(Pr)l(oof.)p Black 46 w Fp(Note)25
+b(that)h(for)f(some)g(0)d Fl(<)e Fn(m)h Fh(\024)g Fn(M)t(Q)1844
+2351 y Fg(2)1880 2384 y Fp(,)k Fn(g)1973 2351 y Fi(m)2049
+2384 y Fp(has)h(a)e(short-le)o(x)k(straight)f(conjugate)g(by)382
+2497 y(Propositions)33 b(0.2)c(and)h(0.1.)48 b(Let)29
+b Fn(x)24 b Fk(=)g Fn(a)o(g)1750 2464 y Fi(m)1803 2497
+y Fn(a)1848 2464 y Fe(\000)p Fg(1)1966 2497 y Fp(be)30
+b(a)f(short-le)o(x)j(straight)g(conjugate)g(w)o(ord)382
+2610 y(with)j Fn(a)g Fp(of)g(minimal)h(length.)65 b(W)-7
+b(e)34 b(\002rst)h(aim)g(to)g(sho)n(w)g(that)h(there)g(is)f(little)h
+(cancellation)382 2723 y(between)25 b Fn(a)e Fp(and)h
+Fn(x)p Fp(.)523 2836 y(Suppose)39 b Fn(j)23 b Fp(:)p
+Fk(=)d(\()p Fn(x)1107 2803 y Fe(\000)p Fg(1)1197 2836
+y Fn(a)p Fl(;)10 b Fn(a)p Fk(\))1357 2850 y Fg(1)1416
+2836 y Fl(>)20 b Fp(2)p Fm(d)p Fp(.)29 b(Let)h Fn(p)23
+b Fp(be)h(the)g(point)h(on)f Fk([)p Fp(1)p Fl(;)10 b
+Fn(x)p Fk(])24 b Fp(at)g(distance)40 b Fn(j)25 b Fp(from)f(1,)382
+2949 y(and)k(let)g Fn(q)f Fp(be)h(the)g(point)h(on)f
+Fk([)p Fp(1)p Fl(;)17 b Fn(p)p Fk(])28 b Fp(which)h(2-corresponds)j(to)
+i Fn(p)28 b Fp(\(this)g(e)o(xists)h(by)f(choice)h(of)396
+3062 y Fn(j)r Fp(\).)36 b(Let)26 b Fn(w)21 b Fk(=)28
+b Fn(p)885 3029 y Fe(\000)p Fg(1)975 3062 y Fn(q)p Fp(,)e(and)h
+Fn(b)22 b Fk(=)28 b Fn(p)1437 3029 y Fe(\000)p Fg(1)1526
+3062 y Fn(a)p Fp(,)f(so)f(that)g Fh(j)p Fn(b)p Fh(j)d
+Fk(=)e Fh(j)p Fn(a)p Fh(j)14 b(\000)g(j)p Fn(q)p Fh(j)g
+Fk(+)g Fh(j)p Fn(w)p Fh(j)21 b Fl(<)h Fh(j)p Fn(a)p Fh(j)p
+Fp(.)36 b(But)26 b(the)h(short-)382 3175 y(le)o(x)g(reduction)j(of)e
+Fn(bg)1081 3142 y Fi(m)1134 3175 y Fn(b)1179 3142 y Fe(\000)p
+Fg(1)1295 3175 y Fp(is)f(just)i(a)e(c)o(yclic)h(conjugate)i(of)d
+Fn(x)p Fp(,)h(hence)h(is)e(short-le)o(x)j(straight)382
+3288 y(which)24 b(contradicts)i(minimality)f(of)f Fn(a)p
+Fp(.)523 3401 y(Similarly)i(if)f Fk(\()p Fn(x)p Fl(;)17
+b Fn(p)p Fk(\))1163 3415 y Fg(1)1223 3401 y Fl(>)k Fm(d)j
+Fp(we)g(will)h(get)g(a)g(contradiction.)37 b(Therefore,)27
+b Fk(\()p Fn(x)p Fl(;)17 b Fn(p)p Fk(\))3018 3415 y Fg(1)3078
+3401 y Fh(\024)k Fm(d)j Fp(and)382 3513 y Fk(\()p Fn(x)457
+3480 y Fe(\000)p Fg(1)554 3513 y Fn(p)p Fl(;)17 b Fn(p)p
+Fk(\))721 3527 y Fg(1)779 3513 y Fh(\024)j Fp(2)p Fm(d)p
+Fp(.)29 b(W)-7 b(e)22 b(actually)k(w)o(ant)d(to)h(sho)n(w)f(that)h
+Fk(\()p Fn(x)2202 3480 y Fe(\000)p Fi(n)2299 3513 y Fn(p)p
+Fl(;)10 b Fn(x)2419 3480 y Fi(l)2453 3513 y Fn(p)p Fk(\))2533
+3527 y Fg(1)2591 3513 y Fh(\024)20 b Fp(2)p Fm(d)p Fp(.)523
+3626 y(No)n(w)i(suppose)j(for)e(some)g Fn(n)f Fp(that)i
+Fn(d)5 b Fk(\()p Fn(H)i Fl(;)j Fn(H)k(p)1921 3593 y Fe(\000)p
+Fg(1)2009 3626 y Fn(x)2049 3593 y Fi(n)2087 3626 y Fk(\))19
+b Fl(>)h Fp(5)p Fm(d)12 b Fk(+)g Fm(e)p Fp(.)27 b(Then)c(by)g(Lemma)f
+(0.3)h(we)382 3739 y(ha)n(v)o(e)g Fn(d)5 b Fk(\()p Fn(H)i
+Fl(;)j Fn(H)k(p)890 3706 y Fe(\000)p Fg(1)978 3739 y
+Fn(x)1018 3706 y Fi(n)p Ff(+)p Fi(l)1136 3739 y Fn(p)p
+Fk(\))19 b Fl(>)g Fp(0)j(for)g(all)g Fn(l)i Fl(>)18 b
+Fp(0,)k(and)h(so)f(no)g(po)n(wer)g(of)g Fn(g)2614 3706
+y Fi(m)2685 3739 y Fk(=)k Fn(p)2827 3706 y Fe(\000)p
+Fg(1)2916 3739 y Fn(x)7 b(p)22 b Fp(can)h(be)f(an)382
+3852 y(element)i(of)g Fn(H)7 b Fp(.)27 b(Thus)c Fn(d)5
+b Fk(\()p Fn(H)i Fl(;)j Fn(H)k(p)1436 3819 y Fe(\000)p
+Fg(1)1524 3852 y Fn(x)1564 3819 y Fi(n)1609 3852 y Fn(p)p
+Fk(\))21 b Fh(\024)f Fp(5)p Fm(d)13 b Fk(+)g Fm(e)22
+b Fp(for)i(all)f Fn(n)p Fp(.)523 3965 y(If)h Fn(H)14
+b(p)732 3932 y Fe(\000)p Fg(1)820 3965 y Fn(x)860 3932
+y Fi(i)891 3965 y Fn(p)20 b Fk(=)h Fn(H)14 b(p)1173 3932
+y Fe(\000)p Fg(1)1261 3965 y Fn(x)1311 3932 y Fi(j)1343
+3965 y Fn(p)23 b Fp(for)i(some)f Fn(i)g Fp(and)39 b Fn(j)r
+Fp(,)23 b(then)32 b Fn(p)2279 3932 y Fe(\000)p Fg(1)2368
+3965 y Fn(x)2408 3932 y Fi(i)p Fe(\000)10 b Fi(j)2520
+3965 y Fn(p)24 b Fp(is)g(in)g Fn(H)7 b Fp(,)23 b(so)h(if)g
+Fn(g)3114 3932 y Fi(mk)3218 3965 y Fh(2)c Fn(H)382 4078
+y Fp(with)25 b Fn(k)g Fp(minimal,)h(we)e(must)g(ha)n(v)o(e)i
+Fn(H)14 b(p)1632 4045 y Fe(\000)p Fg(1)1720 4078 y Fn(x)1760
+4045 y Fi(i)1790 4078 y Fn(p)21 b Fh(6)p Fk(=)g Fn(H)14
+b(p)2073 4045 y Fe(\000)p Fg(1)2161 4078 y Fn(x)2211
+4045 y Fi(j)2243 4078 y Fn(p)24 b Fp(for)h(all)g(0)d
+Fh(\024)e Fn(i)h Fl(<)35 b Fn(j)23 b Fl(<)d Fn(mk)r Fp(.)32
+b(Since)382 4191 y Fn(d)5 b Fk(\()p Fn(H)i Fl(;)j Fn(H)k(p)700
+4158 y Fe(\000)p Fg(1)788 4191 y Fn(x)828 4158 y Fi(i)858
+4191 y Fn(p)p Fk(\))22 b Fh(\024)f Fp(5)p Fm(d)13 b Fk(+)g
+Fm(e)25 b Fp(for)h(all)f Fn(i)d Fh(2)f Fb(N)p Fp(,)j(we)h(must)h(ha)n
+(v)o(e)g Fn(k)d Fh(\024)e Fn(R)p Fp(.)33 b(Let)25 b Fn(n)2776
+4158 y Fe(0)2820 4191 y Fk(=)c Fn(mk)i Fh(\024)e Fn(M)t(Q)3279
+4158 y Fg(2)3315 4191 y Fn(R)382 4304 y Fp(and)j(we)f(are)g(done.)p
+3305 4304 V 3309 4246 55 4 v 3309 4304 V 3363 4304 4
+62 v Black 382 4491 a Fo(Lemma)d(0.5.)p Black 38 w Fn(Suppose)j(s)d(is)
+h(a)g(wor)m(d)f(of)h(in)g(the)g(g)o(ener)o(ator)o(s)j(of)d(G)e(of)i
+(minimal)g(length)i(under)382 4604 y(conjugation,)k(and)d(g)c
+Fh(2)g Fn(G.)28 b(Then)23 b Fp(min)q Fh(f)p Fk(\()p Fn(s)1745
+4571 y Fe(\000)p Fg(1)1835 4604 y Fl(;)10 b Fn(g)p Fk(\))1950
+4618 y Fg(1)1988 4604 y Fl(;)g Fk(\()p Fn(sg)o Fl(;)g
+Fn(g)p Fk(\))2252 4618 y Fg(1)2292 4604 y Fl(;)g Fk(\()p
+Fn(s)p Fl(;)g Fn(sg)p Fk(\))2547 4618 y Fg(1)2587 4604
+y Fh(g)20 b(\024)2753 4569 y Fg(3)p 2753 4584 34 4 v
+2753 4636 a(2)2796 4604 y Fm(d)p Fn(.)p Black 382 4792
+a(Pr)l(oof.)p Black 46 w Fp(Suppose)33 b(not,)h(so)d(all)h(three)g
+(inner)h(products)g(are)f(strictly)h(greater)h(than)3076
+4756 y Fg(3)p 3076 4771 V 3076 4823 a(2)3119 4792 y Fm(d)p
+Fp(;)h(let)c Fn(i)382 4905 y Fp(be)26 b(the)h(minimum.)37
+b(Construct)29 b(a)d(quadrilateral)k(with)c(corners)i(1,)f
+Fn(s)p Fp(,)f Fn(sg)p Fp(,)h(and)g Fn(g)f Fp(and)h(pick)g(a)382
+5018 y(geodesic)e Fm(a)d Fp(connecting)k(1)c(to)h Fn(sg)p
+Fp(.)28 b(No)n(w)22 b(let)29 b Fn(p)22 b Fp(be)h(the)g(point)h(on)f
+Fk([)p Fn(s)p Fl(;)10 b Fn(sg)p Fk(])23 b Fp(at)g(distance)i
+Fn(i)d Fp(from)g Fn(s)382 5131 y Fp(and)i Fn(q)f Fp(be)h(the)f(point)i
+(on)f Fk([)p Fp(1)p Fl(;)10 b Fn(g)p Fk(])24 b Fp(at)f(distance)j
+Fn(i)d Fp(from)g(1.)p Black 1854 5652 a(2)p Black eop
+end
+%%Page: 3 3
+TeXDict begin 3 2 bop Black Black 523 548 a Fp(Note)23
+b(that)31 b Fn(p)22 b Fp(corresponds)27 b(to)22 b(a)h(point)31
+b Fn(p)1833 515 y Fe(0)1878 548 y Fp(on)23 b Fk([)p Fp(1)p
+Fl(;)10 b Fn(s)p Fk(])24 b Fp(and)f Fn(q)g Fp(2-corresponds)k(to)c(a)g
+(point)h Fn(q)3348 515 y Fe(0)382 661 y Fp(on)g Fk([)p
+Fp(1)p Fl(;)10 b Fn(s)p Fk(])p Fp(.)29 b(No)n(w)22 b(we)h(ha)n(v)o(e)
+1194 865 y Fh(j)p Fn(s)p Fh(j)84 b(\024)e(j)p Fn(g)p
+Fk(\()p Fn(i)p Fk(\))1681 828 y Fe(\000)p Fg(1)1772 865
+y Fn(sg)p Fk(\()p Fn(i)p Fk(\))p Fh(j)1972 879 y Fi(G)1363
+1003 y Fk(=)g Fn(d)5 b Fk(\()i Fn(p)p Fl(;)j Fn(q)p Fk(\))1363
+1141 y Fh(\024)82 b Fn(d)5 b Fk(\()i Fn(p)p Fl(;)17 b
+Fn(p)1740 1103 y Fe(0)1764 1141 y Fk(\))c(+)g Fn(d)5
+b Fk(\()i Fn(p)2033 1103 y Fe(0)2055 1141 y Fl(;)j Fn(q)2135
+1103 y Fe(0)2158 1141 y Fk(\))j(+)g Fn(d)5 b Fk(\()p
+Fn(q)2420 1103 y Fe(0)2443 1141 y Fl(;)10 b Fn(q)p Fk(\))1363
+1279 y Fh(\024)82 b Fm(d)13 b Fk(+)g Fh(j)p Fn(s)p Fh(j)g(\000)g
+Fp(2)p Fn(i)g Fk(+)g Fp(2)p Fm(d)1363 1416 y Fk(=)82
+b Fh(j)p Fn(s)p Fh(j)13 b(\000)g Fp(2)p Fn(i)g Fk(+)g
+Fp(3)p Fm(d)382 1621 y Fp(where)18 b(the)h(\002rst)f(inequality)j(is)d
+(due)g(to)g Fn(s)g Fp(being)h(short-le)o(x)i(straight)f(\(hence)f(a)f
+(minimal)g(length)382 1733 y(conjugate\),)26 b(and)e(the)g(third)h
+(uses)f(corresponding)29 b(sides,)24 b(as)g(in)g(Figure)g
+Fo(??)q Fp(.)k(No)n(w)23 b(it)g(is)h(clear)382 1846 y(that)g
+Fn(i)c Fh(\024)687 1811 y Fg(3)p 687 1826 34 4 v 687
+1878 a(2)730 1846 y Fm(d)p Fp(,)j(as)g(required.)p 3305
+1846 4 62 v 3309 1788 55 4 v 3309 1846 V 3363 1846 4
+62 v Black 382 2034 a Fo(Pr)n(oposition)29 b(0.6.)p Black
+44 w Fn(Suppose)h(that)f(w)d(is)i(short-le)n(x)i(str)o(aight)g(wor)m(d)
+d(in)h(G)f(with)g(awa)3103 2001 y Fe(\000)p Fg(1)3216
+2034 y Fh(2)22 b Fn(H)382 2147 y(for)h(a)f(some)h(wor)m(d)f(of)h
+(minimal)f(length.)30 b(Then)23 b(either)h(both)f Fh(j)p
+Fn(h)p Fh(j)d(\024)f Fp(3)p Fm(d)12 b Fk(+)g Fp(2)p Fm(e)22
+b Fn(and)h Fh(j)p Fn(w)p Fh(j)d(\024)f Fp(5)p Fm(d)j
+Fn(or)382 2260 y Fh(j)p Fn(a)p Fh(j)f(\024)599 2224 y
+Fg(7)p 599 2239 34 4 v 599 2291 a(2)642 2260 y Fm(d)13
+b Fk(+)g Fm(e)p Fn(.)p Black 382 2447 a(Pr)l(oof.)p Black
+46 w Fp(Let)28 b Fn(h)23 b Fk(=)f Fn(awa)1114 2414 y
+Fe(\000)p Fg(1)1231 2447 y Fp(be)28 b(a)g(geodesic,)j(so)d(that)h(e)n
+(v)o(ery)f(point)h(on)g Fk([)p Fp(1)p Fl(;)10 b Fn(h)p
+Fk(])29 b Fp(lies)f(within)h Fm(e)e Fp(of)382 2560 y(a)j(point)h(in)f
+Fn(H)7 b Fp(.)47 b(Construct)32 b(a)d(quadrilateral)34
+b(in)c(the)h(Cayle)o(y)f(graph)i(of)e Fn(G)f Fp(with)h(corners)i(1,)382
+2673 y Fn(h)p Fp(,)e Fn(a)p Fp(,)g Fn(a)o(g)p Fp(.)46
+b(Di)n(vide)30 b(this)g(quadrilateral)j(into)c(tw)o(o)g(triangles)j(by)
+d(taking)i(a)e(geodesic)i Fm(a)e Fp(con-)382 2786 y(necting)i
+Fn(h)e Fp(to)g Fn(a)p Fp(.)46 b(Note)29 b(that)h(by)f(minimality)i(of)e
+Fn(a)p Fp(,)h Fk(\()p Fn(h)p Fl(;)10 b Fn(a)p Fk(\))2279
+2800 y Fg(1)2342 2786 y Fh(\024)23 b Fm(d)15 b Fk(+)g
+Fm(e)27 b Fp(and)j(by)f(Lemma)f(0.5,)382 2899 y(min)p
+Fh(f)p Fk(\()p Fn(a)p Fl(;)10 b Fn(h)p Fk(\))763 2913
+y Fi(aw)847 2899 y Fl(;)g Fk(\()p Fn(h)p Fl(;)g Fp(1)p
+Fk(\))1077 2913 y Fi(a)1117 2899 y Fl(;)g Fk(\()p Fn(aw)-7
+b Fl(;)10 b Fn(h)p Fk(\))1401 2913 y Fi(a)1440 2899 y
+Fh(g)15 b Fk(=)g Fp(min)q Fh(f)p Fk(\()p Fn(w)1869 2866
+y Fe(\000)p Fg(1)1958 2899 y Fl(;)10 b Fn(a)2038 2866
+y Fe(\000)p Fg(1)2128 2899 y Fk(\))2163 2913 y Fg(1)2200
+2899 y Fl(;)g Fk(\()p Fn(wa)2376 2866 y Fe(\000)p Fg(1)2466
+2899 y Fl(;)g Fn(a)2546 2866 y Fe(\000)p Fg(1)2636 2899
+y Fk(\))2671 2913 y Fg(1)2708 2899 y Fl(;)g Fk(\()p Fn(w)-7
+b Fl(;)10 b Fn(wa)2973 2866 y Fe(\000)p Fg(1)3063 2899
+y Fk(\))3098 2913 y Fg(1)3136 2899 y Fh(g)15 b(\024)3292
+2863 y Fg(3)p 3292 2878 V 3292 2930 a(2)3335 2899 y Fm(d)p
+Fp(.)523 3012 y(No)n(w)28 b(suppose)j(that)f Fk(\()p
+Fn(aw)-7 b Fl(;)10 b Fn(h)p Fk(\))1461 3026 y Fi(a)1523
+3012 y Fh(\025)23 b Fk(\()p Fn(h)p Fl(;)10 b Fp(1)p Fk(\))1812
+3026 y Fi(a)1851 3012 y Fp(,)30 b(that)f(is,)i(the)e(meeting)h(point)h
+(on)e Fm(a)g Fp(opposite)382 3125 y Fn(aw)i Fp(is)g(further)i(from)f
+Fn(a)f Fp(than)h(the)g(meeting)g(point)h(opposite)h(1.)52
+b(Points)32 b(on)g Fk([)p Fn(h)p Fl(;)10 b Fn(aw)p Fk(])32
+b Fp(which)382 3238 y(correspond)22 b(to)c(points)j(on)d
+Fm(a)h Fp(must)f(2-correspond)23 b(to)18 b(points)j(on)d
+Fk([)p Fp(1)p Fl(;)10 b Fn(h)p Fk(])p Fp(,)21 b(so)d
+Fk(\()p Fn(aw)-7 b Fl(;)10 b Fn(a)p Fk(\))3012 3252 y
+Fi(h)3067 3238 y Fh(\024)15 b Fp(2)p Fm(d)8 b Fk(+)g
+Fm(e)382 3351 y Fp(by)24 b(minimality)g(of)g Fn(a)p Fp(.)523
+3464 y(Since)h Fk(\()p Fn(h)p Fl(;)10 b Fp(1)p Fk(\))944
+3478 y Fi(a)1004 3464 y Fh(\024)21 b Fk(\()p Fn(aw)-7
+b Fl(;)10 b Fn(h)p Fk(\))p Fp(,)26 b(we)e(must)h(ha)n(v)o(e)h(either)g
+Fk(\()p Fn(a)p Fl(;)10 b Fn(h)p Fk(\))2344 3478 y Fi(aw)2448
+3464 y Fh(\024)2550 3428 y Fg(3)p 2550 3443 V 2550 3495
+a(2)2593 3464 y Fm(d)p Fp(,)24 b(so)h Fh(j)p Fn(a)p Fh(j)d
+Fk(=)f(\()p Fn(aw)-7 b Fl(;)10 b Fn(a)p Fk(\))3248 3478
+y Fi(h)3300 3464 y Fk(+)382 3577 y(\()p Fn(a)p Fl(;)g
+Fn(h)p Fk(\))577 3591 y Fi(aw)682 3577 y Fh(\024)785
+3541 y Fg(7)p 785 3556 V 785 3608 a(2)828 3577 y Fm(d)k
+Fk(+)g Fm(e)p Fp(,)26 b(or)g Fk(\()p Fn(h)p Fl(;)10 b
+Fp(1)p Fk(\))1357 3591 y Fi(a)1418 3577 y Fh(\024)1521
+3541 y Fg(3)p 1521 3556 V 1521 3608 a(2)1564 3577 y Fm(d)p
+Fp(,)27 b(gi)n(ving)h Fh(j)p Fn(a)p Fh(j)23 b(\024)2135
+3541 y Fg(5)p 2135 3556 V 2135 3608 a(2)2178 3577 y Fm(d)14
+b Fk(+)g Fm(e)p Fp(.)37 b(Either)27 b(w)o(ay)-6 b(,)27
+b(we)f(satisfy)j(the)382 3689 y(second)c(case)f(in)g(the)g(statement)h
+(of)e(the)h(proposition,)j(so)c(we)g(are)h(done.)523
+3802 y(On)34 b(the)i(other)g(hand,)i(if)d Fk(\()p Fn(aw)-7
+b Fl(;)10 b Fn(h)p Fk(\))1610 3816 y Fi(a)1676 3802 y
+Fh(\024)26 b Fk(\()p Fn(h)p Fl(;)10 b Fp(1)p Fk(\))1968
+3816 y Fi(a)2007 3802 y Fp(,)37 b(then)f(we)e(\002nd)h(an)o(y)g(point)h
+(of)f Fn(h)g Fp(which)382 3915 y(corresponds)30 b(to)d(a)g(point)h(on)f
+Fm(a)g Fp(2-corresponds)k(to)c(a)g(point)h(on)f Fk([)p
+Fn(h)p Fl(;)10 b Fn(aw)p Fk(])p Fp(,)28 b(so)f(by)h(minimality)382
+4028 y(of)23 b Fn(a)h Fp(we)e(ha)n(v)o(e)i Fk(\()p Fp(1)p
+Fl(;)10 b Fn(a)p Fk(\))1063 4042 y Fi(h)1123 4028 y Fh(\024)20
+b Fp(2)p Fm(d)13 b Fk(+)g Fm(e)p Fp(.)27 b(No)n(w)22
+b Fh(j)p Fn(h)p Fh(j)f(\024)f Fk(\()p Fp(1)p Fl(;)10
+b Fn(a)p Fk(\))2090 4042 y Fi(h)2141 4028 y Fk(+)j(\()p
+Fn(h)p Fl(;)d Fn(a)p Fk(\))2420 4042 y Fg(1)2479 4028
+y Fh(\024)20 b Fp(3)p Fm(d)13 b Fk(+)g Fp(2)p Fm(e)p
+Fp(.)523 4141 y(At)28 b(least)h(one)g(point)36 b Fn(p)28
+b Fp(on)h Fk([)p Fn(h)p Fl(;)10 b Fn(aw)p Fk(])29 b Fp(2-corresponds)j
+(to)d(a)f(point)h Fn(q)f Fp(on)h Fk([)p Fp(1)p Fl(;)10
+b Fn(a)p Fk(])p Fp(.)44 b(Note)28 b(that)382 4254 y(since)i
+Fn(a)f Fp(is)h(of)f(minimal)h(length,)i Fh(j)p Fn(d)5
+b Fk(\()i Fn(p)p Fl(;)j Fn(h)p Fk(\))15 b Fh(\000)g Fn(d)5
+b Fk(\()p Fn(q)p Fl(;)10 b Fp(1)p Fk(\))p Fh(j)27 b(\024)c
+Fp(2)p Fm(d)29 b Fp(or)g(there)i(w)o(ould)f(be)f(a)g(shorter)382
+4367 y(path)20 b(from)26 b Fn(p)18 b Fp(or)h Fn(q)g Fp(to)g(an)g
+(element)h(of)f Fn(H)7 b Fp(.)25 b(But)19 b Fh(j)p Fn(d)5
+b Fk(\()i Fn(p)p Fl(;)j Fn(h)p Fk(\))e Fh(\000)g Fn(d)d
+Fk(\()p Fn(q)p Fl(;)10 b Fp(1)p Fk(\))p Fh(j)20 b Fk(=)c
+Fh(j)p Fn(d)5 b Fk(\()i Fn(p)p Fl(;)j Fn(aw)p Fk(\))e
+Fh(\000)g Fn(d)d Fk(\()p Fn(q)p Fl(;)10 b Fn(a)p Fk(\))p
+Fh(j)20 b Fk(=)382 4480 y Fh(j)p Fk(\()p Fn(a)p Fl(;)10
+b Fn(h)p Fk(\))602 4494 y Fi(aw)696 4480 y Fh(\000)h
+Fk(\()p Fn(h)p Fl(;)f Fp(1)p Fk(\))973 4494 y Fi(a)1012
+4480 y Fh(j)p Fp(,)21 b(and)g(so)h Fh(j)p Fn(w)p Fh(j)c
+Fk(=)g(\()p Fn(a)p Fl(;)10 b Fn(h)p Fk(\))1747 4494 y
+Fi(aw)1841 4480 y Fk(+)h(\()p Fn(h)p Fl(;)f Fp(1)p Fk(\))2118
+4494 y Fi(a)2175 4480 y Fh(\024)18 b Fp(2)10 b(min)q
+Fh(f)p Fk(\()p Fn(a)p Fl(;)g Fn(h)p Fk(\))2701 4494 y
+Fi(aw)2785 4480 y Fl(;)g Fk(\()p Fn(h)p Fl(;)g Fp(1)p
+Fk(\))3015 4494 y Fi(a)3054 4480 y Fh(g)h Fk(+)g Fp(2)p
+Fm(d)18 b Fh(\024)382 4593 y Fp(5)p Fm(d)p Fp(.)41 b(Thus)28
+b(both)g(inequalities)j(in)d(the)g(\002rst)f(case)i(in)e(the)h
+(statement)i(of)e(the)g(proposition)j(are)382 4706 y(satis\002ed.)p
+3305 4706 4 62 v 3309 4648 55 4 v 3309 4706 V 3363 4706
+4 62 v Black 382 4893 a Fo(Cor)n(ollary)d(0.7.)p Black
+44 w Fn(Given)e(a)f(wor)m(d)h(w)f(in)h(the)g(g)o(ener)o(ator)o(s)j(of)d
+(G,)f(we)g(can)i(test)f(if)g(ther)m(e)h(e)n(xists,)382
+5006 y(and)d(r)m(eturn,)g(some)g(a)d Fh(2)e Fn(G)k(suc)o(h)h(that)g
+(awa)1758 4973 y Fe(\000)p Fg(1)1868 5006 y Fh(2)19 b
+Fn(H)29 b(in)23 b(time)h(O)p Fk(\()p Fh(j)p Fn(w)p Fh(j)2528
+5020 y Fi(G)2580 5006 y Fk(\))p Fn(.)p Black 382 5194
+a(Pr)l(oof.)p Black 46 w Fp(First,)35 b(the)e(problem)i(can)e(in)g
+(linear)h(time)f(be)g(reduced)i(to)e(solving)i(conjugac)o(y)g(of)382
+5307 y(short-le)o(x)25 b(straight)h(w)o(ords,)e(so)f(suppose)j
+Fn(w)c Fp(is)i(short-le)o(x)h(straight.)p Black 1854
+5652 a(3)p Black eop end
+%%Page: 4 4
+TeXDict begin 4 3 bop Black Black 523 548 a Fp(T)-6 b(est,)41
+b(for)e(all)g Fh(j)p Fn(a)p Fh(j)29 b(\024)1243 512 y
+Fg(7)p 1243 527 34 4 v 1243 579 a(2)1286 548 y Fm(d)18
+b Fk(+)g Fm(e)38 b Fp(if)g Fn(awa)1760 515 y Fe(\000)p
+Fg(1)1878 548 y Fh(2)28 b Fn(H)44 b Fp(\(a)38 b(bounded)j(number)e(of)f
+(linear)i(time)382 661 y(checks\).)60 b(If)33 b Fh(j)p
+Fn(w)p Fh(j)25 b(\024)h Fp(5)p Fm(d)p Fp(,)35 b(test)f(for)f(each)h
+Fh(j)p Fn(h)p Fh(j)27 b(\024)e Fp(3)p Fm(d)16 b Fk(+)g
+Fp(2)p Fm(e)33 b Fp(if)g(there)i(e)o(xists)f Fn(a)26
+b Fh(2)f Fn(G)32 b Fp(such)i(that)382 774 y Fn(awa)533
+741 y Fe(\000)p Fg(1)647 774 y Fk(=)25 b Fn(h)31 b Fp(\(a)h(bounded)i
+(number)e(of)g(bounded)i(time)e(checks,)j(since)d(the)h(lengths)g(of)f
+(all)382 887 y(w)o(ords)24 b(are)g(no)n(w)f(bounded\).)523
+1000 y(If)j(an)o(y)h(of)f(these)i(tests)f(succeed,)i(we)c(ha)n(v)o(e)i
+(found)h(such)f(an)g Fn(a)p Fp(,)f(and)h(if)f(all)h(of)f(them)h(f)o
+(ail,)382 1112 y(by)d(the)f(pre)n(vious)j(proposition)h(there)d(can)g
+(be)g(no)f(such)i Fn(a)p Fp(.)p 3305 1112 4 62 v 3309
+1054 55 4 v 3309 1112 V 3363 1112 4 62 v Black 382 1300
+a Fo(Theor)n(em)18 b(0.8.)p Black 34 w Fn(Suppose)i(K)i(is)c(a)f
+Fm(z)p Fn(-quasicon)l(ve)n(x)23 b(subgr)l(oup)d(and)f(that)g(g)c
+Fh(2)g Fn(G)i(with)h(w)3124 1267 y Fe(\000)p Fg(1)3212
+1300 y Fn(gw)d Fh(2)382 1413 y Fn(H)29 b(for)23 b(some)h(w)c
+Fh(2)g Fn(G.)27 b(Then)d(either)g Fh(j)p Fn(h)p Fh(j)d(\024)f
+Fl(:::)k Fn(or)f Fh(j)p Fn(w)p Fh(j)d(\024)g Fl(:::)p
+Fn(.)p Black 1854 5652 a Fp(4)p Black eop end
+%%Trailer
+
+userdict /end-hook known{end-hook}if
+%%EOF

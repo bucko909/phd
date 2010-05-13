@@ -1,0 +1,6 @@
+
+Lemma \ref{lemma:loop_in_ball} gives us a $\Gamma$-geodesic word $u'$ of length at most $5\delta + 1$ which labels a loop at $x'$ but $u' \ne_G 1$. Use the second hypothesis of Lemma \ref{lemma:coset_cayley_loop}, observe that for the first case we have $d(H, x') \le \epsilon + 4\delta + 1 \le K_{GIB}$.
+
+In the second case we have $|u'| \le 2\delta$ and let $x := x'$ and $u := u'$. In the third case we have some $x'$ such that $d(H, x) > d(H, x') - \frac{5}{2}\delta + \delta - 1$ and some $u$ with $|u| \le 5\delta + 1$ which labels a loop at $x$ but $u \ne_G 1$. In any case we have $|u| \le 5\delta + 1$ and $d(H, x) > d(H, x') - \frac{3}{2}\delta - 1$.
+
+Lemma \ref{lemma:loop_in_ball} gives us a $\Gamma$-geodesic word $u$ of length at most $5\delta + 1$ which labels a loop at $x$ but $u \ne_G 1$, and \ref{lemma:coset_cayley_loop}, using Proposition \ref{prop:loop_in_ball} we find a word $u$ of length at most $5\delta + 1$ which labels a geodesic in $\Gamma$ but labels a loop at $Hg$ in $\Gamma'$. Application of Lemma \ref{lemma:conj_quadrilateral} gives us a $\Gamma$-geodesic word $v$ which represents an element of $H$, so that $wuw^{-1} =_G v$ and $|v| \le 3\delta + 2\epsilon$.
