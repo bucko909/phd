@@ -72,11 +72,15 @@ Conjugacy and Subgroups of Word-Hyperbolic Groups
 thesis submitted in fulfilment of the requirements for the degree of
 Doctor of Philosophy \end{center}\end{minipage}}}
 \put(75,90){\makebox(0,0){\Large Mathematics Institute, University
-of Warwick}} \put(75,78){\makebox(0,0){January 2010}}
+of Warwick}} \put(75,78){\makebox(0,0){June 2010}}
 \put(75,50){\makebox(0,0){\includegraphics[width=6cm]{./img/CoverPageWarwickUni.eps}}}
 \end{picture}
 \end{center}
 \setlength{\unitlength}{1pt}
+\newpage
+
+\thispagestyle{empty}
+\mbox{}
 \newpage
 
 \pagestyle{plain}
@@ -2092,7 +2096,7 @@ We now prove a brief lemma which essentially says that whenever $g$ is close to 
 
 \begin{lemma}
 \label{lemma:coset_corners}
-Suppose that $A$ is a $\sigma$-quasiconvex subgroup of $G$, that $a \in A$ and $g \in G$ with $|g| \le d(A, Ag) + C$ are words labelling geodesics $\alpha$ and $\beta$ respectively which start from the same vertex $\vertex{z}$ in $\Gamma$. If these geodesics are adjacent sides of some geodesic polygon in $\Gamma$ and, after subdivision into triangles, there exist vertices $\vertex{x} \in \alpha$ and $\vertex{y} \in \beta$ such that $\vertex{x}$ $n$-corresponds to $\vertex{y}$ then $d(\vertex{y}, \vertex{z}) \le C + \sigma + n\delta$.
+Suppose that $A$ is a $\sigma$-quasiconvex subgroup of $G$, that $a$ and $g$ are $X$-words which label geodesics $\alpha$ and $\beta$ in $\Gamma$ respectively, such that $a$ is mapped to an element of $A$ and $|g|_G \le d(A, Ag) + C$. If $\alpha$ and $\gamma$ start from the same vertex $\vertex{z}$ in $\Gamma$, are adjacent sides of some geodesic polygon in $\Gamma$ and, after subdivision into triangles, there exist vertices $\vertex{x} \in \alpha$ and $\vertex{y} \in \beta$ such that $\vertex{x}$ $n$-corresponds to $\vertex{y}$ then $d(\vertex{y}, \vertex{z}) \le C + \sigma + n\delta$.
 \end{lemma}
 
 \begin{proof}
@@ -2136,7 +2140,7 @@ There is a vertex $\vertex{r_i} \in \Gamma$ representing an element of $K$ such 
 \end{center}
 \end{figure}
 
-Let $P$ be the number of vertices in $B^\Gamma_{2\delta + \epsilon + \zeta}(\vertex{a})$. Suppose that more than $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ $2$-correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$ so that there exist integers $i < j - \epsilon - \zeta$ with $w_i = w_j$. Let $k_1$, $k_2$ and $k_3$ label geodesics in $\Gamma$ connecting $\vertex{a}$ to $\vertex{r_i}$, $\vertex{r_i}$ to $\vertex{r_j}$ and $\vertex{r_j}$ to $\vertex{c}$ respectively. Define $h_1$, $h_2$ and $h_3$ to label geodesics connecting $\vertex{a}$, $\vertex{s_i}$, $\vertex{s_j}$ and $\vertex{b}$ similarly.
+Let $P$ be the number of vertices in $B^\Gamma_{2\delta + \epsilon + \zeta}(\vertex{a})$. Suppose that more than $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ $2$-correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$ so that there exist integers $i < j - \epsilon - \zeta$ with $w_i =_G w_j$. Let $k_1$, $k_2$ and $k_3$ label geodesics in $\Gamma$ connecting $\vertex{a}$ to $\vertex{r_i}$, $\vertex{r_i}$ to $\vertex{r_j}$ and $\vertex{r_j}$ to $\vertex{c}$ respectively. Define $h_1$, $h_2$ and $h_3$ to label geodesics connecting $\vertex{a}$, $\vertex{s_i}$, $\vertex{s_j}$ and $\vertex{b}$ similarly.
 
 Then $w_i =_G h_2w_jk_2^{-1} = h_2w_ik_2^{-1}$ and $w_i =_G h_3vk_3^{-1}$ so that \begin{eqnarray*}
         u
@@ -2147,7 +2151,7 @@ Then $w_i =_G h_2w_jk_2^{-1} = h_2w_ik_2^{-1}$ and $w_i =_G h_3vk_3^{-1}$ so tha
 & =_G & h_1h_3vk_3^{-1}k_1^{-1},
 \end{eqnarray*} but then $|h_1h_3| + |k_1k_3| \le |h| + 2\epsilon + |k| + 2\zeta - 2(j-i) < |h| + |k|$ and $h_1h_3v =_G uk_1k_3$ which contradicts minimality of $|h| + |k|$. Thus at most $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ can correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$.
 
-Applying Lemma \ref{lemma:coset_corners} with $\sigma = \epsilon + \zeta$ and $C = 8\delta + 2\epsilon + \zeta$, and using setting the triple $(A, g, a)$ to each of $(H, u, h)$, $(H, v, h^{-1})$, $(K, u^{-1}, k)$ and $(K, v^{-1}, k^{-1})$ we see that vertices on the sides of the quadrilateral which chain-correspond to vertices on adjacent sides must be at worst $10\delta + 3\epsilon + 2\zeta$ from the common corner of those two sides. For instance, any vertex on $\path{\vertex{d}}{\vertex{c}}$ which $2$-corresponds to a vertex on $\path{\vertex{a}}{\vertex{d}}$ must be withing $10\delta + 3\epsilon + 2\zeta$ of $\vertex{d}$.
+Applying Lemma \ref{lemma:coset_corners} with $\sigma = \epsilon + \zeta$ and $C = 8\delta + 2\epsilon + \zeta$, and using setting the triple $(A, g, a)$ to each of $(H, u, h)$, $(H, v, h^{-1})$, $(K, u^{-1}, k)$ and $(K, v^{-1}, k^{-1})$ we see that vertices on the sides of the quadrilateral which chain-correspond to vertices on adjacent sides must be at worst $10\delta + 3\epsilon + 2\zeta$ from the common corner of those two sides. For instance, any vertex on $\path{\vertex{d}}{\vertex{c}}$ which $2$-corresponds to a vertex on $\path{\vertex{a}}{\vertex{d}}$ must be within $10\delta + 3\epsilon + 2\zeta$ of $\vertex{d}$ (this upper bound is slightly larger than the one given by the lemma, but works for all four corners giving a slightly simpler proof here).
 
 Now, all vertices on $\path{\vertex{d}}{\vertex{c}}$ are either within $10\delta + 3\epsilon + 2\zeta$ of $\vertex{c}$ or $\vertex{d}$, or $2$-correspond to a vertex on $\path{\vertex{a}}{\vertex{b}}$. By counting vertices, we find that $|k| = d(\vertex{d}, \vertex{c}) \le 10\delta + 3\epsilon + 2\zeta + P(\epsilon + \zeta) + 10\delta + 3\epsilon + 2\zeta + 1 = 20\delta + 6\epsilon + 4\zeta + P(\epsilon + \zeta) + 1$. Similarly, all vertices on $\path{\vertex{a}}{\vertex{b}}$ are either within $10\delta + 3\epsilon + 2\zeta$ of $\vertex{c}$ or $\vertex{d}$, or are $2$-corresponded to by a vertex on $\path{\vertex{d}}{\vertex{c}}$, so $|h| \le 20\delta + 6\epsilon + 4\zeta + P(\epsilon + \zeta) + 1$.
 
