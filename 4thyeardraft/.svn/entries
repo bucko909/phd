@@ -1,14 +1,14 @@
 10
 
 dir
-42
+62
 file:///home/bucko/svn/phd/4thyeardraft
 file:///home/bucko/svn/phd
 
 
 
-2009-12-07T02:35:45.545452Z
-42
+2010-05-06T14:46:20.035995Z
+62
 bucko
 
 
@@ -28,7 +28,7 @@ b59eff6f-6f9a-4868-bb91-c1fe52a1a393
 
 1k_tri2.fig
 file
-58
+
 
 
 
@@ -60,9 +60,17 @@ has-props
 
 2870
 
-coset_thin_no_corr.fig.bak
+thin_quad.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:50.000000Z
+398b45326cb33eb0bbaefe15922220ff
+2009-12-20T04:44:37.324956Z
+54
+bucko
 
 
 
@@ -82,11 +90,21 @@ file
 
 
 
-deleted
+
+
+2316
 
-coset_thin_swap_sides.fig.bak
+coset_thin_swap_sides.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:49.000000Z
+38141d85d63f4d4162c3d6e58ed26483
+2009-12-07T02:35:45.545452Z
+42
+bucko
 
 
 
@@ -106,11 +124,21 @@ file
 
 
 
-deleted
+
+
+2211
 
-conj_quad_1.fig
+coset_thin_no_corr.fig
 file
-0
+
+
+
+
+2010-03-22T13:32:49.000000Z
+4447e4d780375834c423e4be5a2ff893
+2010-03-22T13:35:34.114184Z
+61
+bucko
 
 
 
@@ -130,15 +158,21 @@ file
 
 
 
-deleted
+
+
+2341
 
-coset_thin_tri_in_ccay.pstex_t
+coset_thin_near_corr.fig
 file
-43
 
 
 
 
+2010-03-22T13:32:49.000000Z
+35a65c38ec097f0db64a625c3a9b29ce
+2009-12-07T02:35:45.545452Z
+42
+bucko
 
 
 
@@ -154,127 +188,13 @@ file
 
 
 
-deleted
-
-fig9_fin_order.pstex
-file
-43
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-resolve_straight.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-conj_quad_2.fig
-file
-0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_near_corr.fig.bak
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig9_minitri.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
+2506
 
 1k_tri.fig
 file
@@ -310,33 +230,9 @@ has-props
 
 2678
 
-fig1_bdd_inf.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 extend_c.fig
 file
-55
+
 
 
 
@@ -370,7 +266,7 @@ bucko
 
 1k_close_geo.fig
 file
-59
+
 
 
 
@@ -402,33 +298,9 @@ has-props
 
 1624
 
-coset_thin_tri_in_cay.fig.bak
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 min_conj.fig
 file
-57
+
 
 
 
@@ -462,7 +334,7 @@ bucko
 
 coset_thin_self_corr.fig
 file
-59
+
 
 
 
@@ -494,9 +366,17 @@ bucko
 
 2012
 
-geodesic_outside_GIB.pstex
+coset_thin_tri_in_cay.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:49.000000Z
+198380b171ef07caba5ca3c097fa516d
+2009-11-07T18:22:47.037122Z
+31
+bucko
 
 
 
@@ -516,15 +396,21 @@ file
 
 
 
-deleted
+
+
+3027
 
-coset_thin_tri_in_ccay.pstex
+double_coset_reps.fig
 file
-43
 
 
 
 
+2010-03-22T13:32:49.000000Z
+f137fd7bc5c915abab22d41bce56aed6
+2009-12-24T16:15:10.486674Z
+55
+bucko
 
 
 
@@ -540,83 +426,17 @@ file
 
 
 
-deleted
-
-coset_thin_no_corr.pstex_t
-file
-43
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_swap_sides.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig10_quad.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
+2054
 
 sls_power_canc.fig
 file
-56
+
 
 
 
@@ -648,33 +468,9 @@ bucko
 
 2919
 
-fig7_unbd_behaved.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 triangle_beta_const.fig
 file
-43
+
 
 
 
@@ -706,33 +502,9 @@ bucko
 
 3346
 
-3rdyeardraft.log
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 resolve_nonvertex_1.fig
 file
-58
+
 
 
 
@@ -766,7 +538,7 @@ bucko
 
 resolve_nonvertex_2.fig
 file
-58
+
 
 
 
@@ -798,9 +570,17 @@ bucko
 
 2397
 
-1k_tri2.pstex
+ball.fig
 file
+
+
+
+
+2010-03-22T13:32:49.000000Z
+6cc9a92eb3a1910a0c61dbf1326cf989
+2009-12-07T02:37:51.581874Z
 43
+bucko
 
 
 
@@ -820,59 +600,13 @@ file
 
 
 
-deleted
-
-fig5_unbd_end.pstex_t
-file
-43
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_near_corr.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
+2684
 
 bad_corr.fig
 file
-58
+
 
 
 
@@ -904,9 +638,17 @@ bucko
 
 1948
 
-fig3_unbd_start.pstex
+quad_end.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:50.000000Z
+c5b1d7efc4fc9c9f936abb65b503116c
+2010-01-02T00:51:54.749395Z
+57
+bucko
 
 
 
@@ -926,11 +668,21 @@ file
 
 
 
-deleted
+
+
+1723
 
-fig6_unbd_skew.pstex_t
+thin_quad_zoom.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:50.000000Z
+595eea48ffb32dd7cfb253cd7326dae7
+2009-12-20T04:44:37.324956Z
+54
+bucko
 
 
 
@@ -950,15 +702,21 @@ file
 
 
 
-deleted
+
+
+1544
 
-coset_thin_no_corr.pstex
+not_hyp.fig
 file
-43
 
 
 
 
+2010-03-22T13:32:50.000000Z
+05bc32ee47570735f53355eec738c988
+2010-01-02T19:00:57.372790Z
+58
+bucko
 
 
 
@@ -974,131 +732,17 @@ file
 
 
 
-deleted
-
-coset_thin_swap_sides.pstex
-file
-43
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig10_quad.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_tri_in_cay.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig7_unbd_behaved.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-conj_quad_1.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
+1638
 
 extend_word.fig
 file
-57
+
 
 
 
@@ -1130,85 +774,13 @@ bucko
 
 3151
 
-3rdyeardraft.aux
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig8_unbd_grow.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig11_quad_zoom.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
 bibitems.bib
 file
-62
 
 
 
-2010-04-06T12:50:53.000000Z
+
+2010-05-13T11:13:37.000000Z
 70712814889d0fc6405d022b6e8ecba6
 2010-05-06T14:46:20.035995Z
 62
@@ -1236,177 +808,9 @@ bucko
 
 6305
 
-fig2_bdd_zoom.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig5_unbd_end.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-resolve_nonvertex.fig
-file
-0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-1k_tri.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig9_minitri.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig6_unbd_skew.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_self_corr.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 make_long.fig
 file
-54
+
 
 
 
@@ -1438,9 +842,17 @@ bucko
 
 1676
 
-3rdyeardraft.pdf
+geodesic_outside_GIB.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:49.000000Z
+fca2a6a7ce753777c8127fb8e543d002
+2010-01-03T16:04:30.373060Z
+59
+bucko
 
 
 
@@ -1460,11 +872,21 @@ file
 
 
 
-deleted
+
+
+2360
 
-fig4_unbd_start.pstex_t
+shorten_tri.fig
 file
-43
+
+
+
+
+2010-03-22T13:32:50.000000Z
+2dbff9b01a34ac5e73dae59aa004f983
+2010-01-02T00:51:54.749395Z
+57
+bucko
 
 
 
@@ -1484,11 +906,13 @@ file
 
 
 
-deleted
+
+
+1487
 
 tri_midpoint.fig
 file
-59
+
 
 
 
@@ -1554,33 +978,9 @@ bucko
 
 1722
 
-fig2_bdd_zoom.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 short_coset_rep.fig
 file
-57
+
 
 
 
@@ -1612,9 +1012,43 @@ bucko
 
 3107
 
+ball_not_iso.fig
+file
+
+
+
+
+2010-03-22T13:32:49.000000Z
+7bffc8c24dd5df7730e621b3343e2cf1
+2010-03-22T13:35:34.114184Z
+61
+bucko
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3841
+
 quad_case_1.fig
 file
-58
+
 
 
 
@@ -1648,7 +1082,7 @@ bucko
 
 quad_case_2.fig
 file
-58
+
 
 
 
@@ -1680,1469 +1114,9 @@ bucko
 
 3102
 
-fig9_fin_order.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-3rdyeardraft.ps
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-thin_triangles.fig
-file
-59
-
-
-
-2010-03-22T13:32:50.000000Z
-af8e3dfb7ea93b40a5e45b74cf8db4b9
-2010-01-03T16:04:30.373060Z
-59
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3196
-
-fig1_bdd_inf.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig4_unbd_start.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-thin_quad.fig
-file
-54
-
-
-
-2010-03-22T13:32:50.000000Z
-398b45326cb33eb0bbaefe15922220ff
-2009-12-20T04:44:37.324956Z
-54
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2316
-
-coset_thin_no_corr.fig
-file
-61
-
-
-
-2010-03-22T13:32:49.000000Z
-4447e4d780375834c423e4be5a2ff893
-2010-03-22T13:35:34.114184Z
-61
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2341
-
-coset_thin_swap_sides.fig
-file
-
-
-
-
-2010-03-22T13:32:49.000000Z
-38141d85d63f4d4162c3d6e58ed26483
-2009-12-07T02:35:45.545452Z
-42
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2211
-
-fig10_quad.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-geodesic_outside_GIB.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig7_unbd_behaved.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-olddiagrams
-dir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig11_quad_zoom.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig3_make_long.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-resolve_nonvertex.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig5_unbd_end.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_near_corr.fig
-file
-
-
-
-
-2010-03-22T13:32:49.000000Z
-35a65c38ec097f0db64a625c3a9b29ce
-2009-12-07T02:35:45.545452Z
-42
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2506
-
-coset_thin_self_corr.fig.bak
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-1k_tri2.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig6_unbd_skew.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-fig3_unbd_start.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_tri_in_cay.fig
-file
-
-
-
-
-2010-03-22T13:32:49.000000Z
-198380b171ef07caba5ca3c097fa516d
-2009-11-07T18:22:47.037122Z
-31
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3027
-
-double_coset_reps.fig
-file
-55
-
-
-
-2010-03-22T13:32:49.000000Z
-f137fd7bc5c915abab22d41bce56aed6
-2009-12-24T16:15:10.486674Z
-55
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2054
-
-3rdyeardraft.latex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig3_make_long.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig8_unbd_grow.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-conj_quad_1.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig2_bdd_zoom.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-conj_quad_2.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-resolve_straight.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-ball.fig
-file
-43
-
-
-
-2010-03-22T13:32:49.000000Z
-6cc9a92eb3a1910a0c61dbf1326cf989
-2009-12-07T02:37:51.581874Z
-43
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2684
-
-1k_tri.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig9_minitri.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-1k_close_geo.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_self_corr.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig4_unbd_start.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-quad_end.fig
-file
-57
-
-
-
-2010-03-22T13:32:50.000000Z
-c5b1d7efc4fc9c9f936abb65b503116c
-2010-01-02T00:51:54.749395Z
-57
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1723
-
-thin_quad_zoom.fig
-file
-54
-
-
-
-2010-03-22T13:32:50.000000Z
-595eea48ffb32dd7cfb253cd7326dae7
-2009-12-20T04:44:37.324956Z
-54
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1544
-
-not_hyp.fig
-file
-58
-
-
-
-2010-03-22T13:32:50.000000Z
-05bc32ee47570735f53355eec738c988
-2010-01-02T19:00:57.372790Z
-58
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1638
-
-conj_quad_2.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-resolve_straight.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-resolve_nonvertex.fig.bak
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig9_fin_order.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_near_corr.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-1k_close_geo.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-fig1_bdd_inf.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_tri_in_cay.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-coset_thin_tri_in_ccay.fig.bak
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-geodesic_outside_GIB.fig
-file
-59
-
-
-
-2010-03-22T13:32:49.000000Z
-fca2a6a7ce753777c8127fb8e543d002
-2010-01-03T16:04:30.373060Z
-59
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2360
-
-shorten_tri.fig
-file
-57
-
-
-
-2010-03-22T13:32:50.000000Z
-2dbff9b01a34ac5e73dae59aa004f983
-2010-01-02T00:51:54.749395Z
-57
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1487
-
-fig8_unbd_grow.pstex
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-ball_not_iso.fig
-file
-61
-
-
-
-2010-03-22T13:32:49.000000Z
-7bffc8c24dd5df7730e621b3343e2cf1
-2010-03-22T13:35:34.114184Z
-61
-bucko
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3841
-
-fig3_make_long.fig
-file
-0
-
-
-
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-deleted
-
-fig11_quad_zoom.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
-3rdyeardraft.dvi
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 double_coset_h_k_long.fig
 file
-55
+
 
 
 
@@ -3174,40 +1148,16 @@ bucko
 
 5021
 
-resolve_nonvertex.pstex_t
-file
-43
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 4thyeardraft.latex
 file
-62
+66
 
 
 
-2010-05-06T14:42:05.000000Z
-55d96f5f27dbf136aa451387e7aeee56
-2010-05-06T14:46:20.035995Z
-62
+2010-06-03T18:49:22.000000Z
+060544e92142f7c822d571f258e52b6d
+2010-06-03T18:56:20.118866Z
+66
 bucko
 has-props
 
@@ -3230,11 +1180,19 @@ has-props
 
 
 
-259263
+259575
 
-undb_large_scale.fig
+thin_triangles.fig
 file
-0
+
+
+
+
+2010-03-22T13:32:50.000000Z
+af8e3dfb7ea93b40a5e45b74cf8db4b9
+2010-01-03T16:04:30.373060Z
+59
+bucko
 
 
 
@@ -3254,5 +1212,7 @@ file
 
 
 
-deleted
+
+
+3196
 
