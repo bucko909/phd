@@ -158,6 +158,7 @@ $A$-DFA & A deterministic $A$-FSA. \\
 $x =^y z$ & Shorthand for $|x - z| \le y$. \\
 $u =_G v$ & Words $u$ and $v$ represent the same group element. \\
 $u =_F v$ & Words $u$ and $v$ represent the same free group element. \\
+$\slex(w)$ & The short-lex reduction of a word $w$. \\
 \end{supertabular}
 
 
@@ -591,7 +592,7 @@ There are a number of constants which will be used throughout this chapter (as w
 
 \label{section:inf_order}
 
-In this section, we will assume that we are given two equal length lists $A$ and $B$ whose elements $X$-words, and that all elements of $A$ and $B$ have length at most $\mu$. We will also assume that the first element of $A$ is of infinite order.
+In this section, we will assume that we are given two equal length lists $A$ and $B$ whose elements are $X$-words, and that all elements of $A$ and $B$ have length at most $\mu$. We will also assume that the first element of $A$ is of infinite order.
 
 The aim of the section is to test which elements $g \in G$ have $A^g =_G B$. The method is something of a combination of those methods outlined in \cite{epstein2006linearity} and \cite{bridson2005conjugacy}.
 
@@ -781,7 +782,7 @@ It is at this point that we break from the method in \cite{epstein2006linearity}
 
 \subsection{Finding Long Powers of Infinite Order Elements}
 
-In this section, we will show that given an $X$-word $w$ which represents an infinite order element of $G$, we can find a word $w'$ which is equal in $G$ to a conjugate of a power of $w$, for which $\slex(w'_C)$ is longer than $2L$. Thus given two infinite order words $u$ and $v$ we may find conjugates of powers of $u$ and $v$ to which we may apply \textsc{GetConjugationCandidatesEH}.
+In this section, we will show that given an $X$-word $w$ which represents an infinite order element of $G$, we can find a short-lex reduced word $w'$ which is conjugate in $G$ to a power of $w$ and for which $\slex(w'_C)$ is longer than $2L$. Thus given two infinite order words $u$ and $v$ we may find conjugates of powers of $u$ and $v$ to which we may apply \textsc{GetConjugationCandidatesEH}.
 
 We begin by recalling some well-known properties of word-hyperbolic groups and hyperbolic spaces; these results are taken from \cite{alonso1990notes} although similar results appear in many other expositions of the subject area. The exact values in the statements are taken from the proofs in \cite{alonso1990notes} (the statements generally simply state that the constants in question exist). The first is Proposition 3.2 of \cite{alonso1990notes}. 
 
@@ -872,7 +873,7 @@ There exists a point $\vertex{p'} := \vertex{x} \cdot w^M(i)$ on $\gamma$ where 
 \end{proof}
 
 \begin{remark}
-The value of $M$ used above is of course by no means optimal. If nothing else, The powers of $L$, $V$ and $\delta$ used in $D$ can be reduced at the cost of a potentially larger constant by increasing the degree in the polynomial bound for $e^n$, and in any case for a particular group and presentation, it is likely that a much lower bound can be obtained by solving the problem algorithmically. However, the above bound illustrates that there is a definite computable value.
+The value of $M$ used above is of course by no means optimal. If nothing else, the powers of $L$, $V$ and $\delta$ used in $D$ can be reduced at the cost of a potentially larger constant by increasing the degree in the polynomial bound for $e^n$, and in any case for a particular group and presentation, it is likely that a much lower bound can be obtained by solving the problem algorithmically. However, the above bound illustrates that there is a definite computable value.
 \end{remark}
 
 By Proposition \ref{prop:inf_order_qgeo}, short infinite order words can be raised to large powers to get an appropriate input for \textsc{GetConjugationCandidatesEH}. We also wish to confirm that words which are already appropriate inputs stay appropriate when raised to the power of $M$.
@@ -938,17 +939,17 @@ Suppose $u$ is an $X$-word which is of infinite order in $G$.
 \begin{proof}
 Let $u_1 := \slex(u)$, let $u_2 := \slex(((u_1)_C)^M)$ and let $u_3 := \slex((u_2)_C)$. By Proposition \ref{prop:make_long} or Proposition \ref{prop:long_stays_long} we know that $|u_3| > 2L$.
 
-By Proposition \ref{prop:short_conj}, all positive powers of $u_3$ label $L$-local $(1, 2\delta)$-quasigeodesics and then by Proposition \ref{prop:long_conj_slex} we know that $u_4 := \slex(k^{-1}u_3^lk)$ is short-lex straight for some $l \le Q^2$ and some $X$-word $k$ of length at most $4\delta$. Notice that $u_4 =_G (u^{lM})^{w_u}$ where $w_u := k(u_2)_L(u_1)_L$ so that $|w_u| \le \frac{(M+1)|u|}{2}+4\delta$. This proves the first part.
+By Proposition \ref{prop:short_conj}, all positive powers of $u_3$ label $L$-local $(1, 2\delta)$-quasigeodesics and then by Proposition \ref{prop:long_conj_slex} we know that $u_4 := \slex(k^{-1}u_3^lk)$ is short-lex straight for some $l \le Q^2$ and some $X$-word $k$ of length at most $4\delta$. Notice that $u_4 =_G (u^{lM})^{w_u}$ where $w_u := (u_1)_L(u_2)_Lk$ so that $|w_u| \le \frac{(M+1)|u|}{2}+4\delta$. This proves the first part.
 
 We now need to prove the second part, so suppose some such $g$ has been picked.
 
-Suppose $u_4 = u_5^l$ for some integer $l$ (which we assume is maximal for this property). By Proposition \ref{prop:find_centraliser_sls} there is a set $S$ containing elements of the form $yp$, where $p$ is an $X$-word of length at most $2\delta$ and $y$ is a prefix of $u_5$ which depends only on $p$, such that every element of the centraliser of $u_4$ is of the form $u_5^nyp$. This is equal to $u_4^au_5^byp$ for some integers $a$ and $b$ with $0 \le b < l$ and some $yp \in S$. Notice that $|u_5^byp| \le |u_4| + 2\delta$.
+Suppose $u_4 = u_5^c$ for some integer $c$ (which we assume is maximal for this property). By Proposition \ref{prop:find_centraliser_sls} there is a set $S$ containing elements of the form $yp$, where $p$ is an $X$-word of length at most $2\delta$ and $y$ is a prefix of $u_5$ which depends only on $p$, such that every element of the centraliser of $u_4$ is of the form $u_5^nyp$ for some $yp \in S$. This is equal to $u_4^au_5^byp$ for some integers $a$ and $b$ with $0 \le b < c$. Notice that $|u_5^byp| \le |u_4| + 2\delta$.
 
-Construct $v_1$, $v_2$ and $v_3$ in the same way as $u_1$ through $u_3$, setting $w_v := (v_2)_L(v_1)_L$. Since $u$ and $v$ are conjugate, so are $u_4$ and $v_3^l$, so by Proposition \ref{prop:test_conj_sls} there is an $X$-word $q$ with $|q| \le 6\delta$ such that $(v_3^l)^q$ is a cyclic conjugate of $u_4$. Now any element $G$ conjugating $u_4$ to $v_3^l$ is of the form $u_4^ac$ where $c =_G u_5^bypu_4(m)q^{-1}$ for integers $b < l$, $a$ and $m$ and some $yp \in S$. Note that $|c|_G \le 2|u_4| + 8\delta$.
+Construct $v_1$, $v_2$ and $v_3$ in the same way as $u_1$ through $u_3$, setting $w_v := (v_1)_L(v_2)_L$. Since $u$ and $v$ are conjugate, so are $u_4$ and $v_3^l$, so by Proposition \ref{prop:test_conj_sls} there is an $X$-word $q$ with $|q| \le 6\delta$ such that $(v_3^l)^q$ is a cyclic conjugate of $u_4$. Now any element $G$ conjugating $u_4$ to $v_3^l$ is of the form $u_4^ar$ where $r =_G u_5^bypu_4(m)q^{-1}$ for some $yp \in S$ and some integers $a$, $b$ and $m$ with $b < c$. Note that $|r|_G \le 2|u_4| + 8\delta$.
 
-Now, $g$ must be equal to $w_uu_4^acw_v^{-1}$ where $c$ is some element as described above. Using $u_4 =_G (u^{lM})^{w_u}$, we see that $g =_G u^ih$ where $i = lMa$ and $h =_G w_ucw_v^{-1}$ is a short-lex reduced word. Using the bounds above, \begin{eqnarray*}
-        |h|_G
-& \le & |w_u|_G + |c|_G + |w_v^{-1}|_G \\
+Now, $g$ must be equal to $w_uu_4^arw_v^{-1}$ where $r$ is some element as described in the previous paragraph. Using $u_4 =_G (u^{lM})^{w_u}$, we see that $g =_G u^ih$ where $i = lMa$ and $h =_G w_urw_v^{-1}$ is a short-lex reduced word. Using the bounds above, \begin{eqnarray*}
+        |h|
+& \le & |w_u|_G + |r|_G + |w_v^{-1}|_G \\
 & \le & \frac{(M+1)|u|}{2} + 4\delta + 2MQ^2|u| + 8\delta + \frac{(M+1)|v|}{2} + 4\delta \\
 & \le & 4MQ^2(|u|+|v|)+16\delta.
 \end{eqnarray*}
@@ -1076,7 +1077,7 @@ Let $\vertex{c} := \vertex{a} \cdot g$, $\vertex{d} := \vertex{c} \cdot y^n$, $\
 
 In the first case, we know that $d(\vertex{f} \cdot y^n(i), \vertex{c} \cdot y^n(i + K)) \le 2\delta$ so there is a word $h$ of length at most $2\delta$ with $\vertex{f} \cdot y^n(i)h = \vertex{c} \cdot y^n(i + K)$. By definition, $y^n(i) = y^j$ and $y^n(i+K) =_F y^jy^\infty(K)$. Now, since $g^{y^j}$ labels a path from $\vertex{c} \cdot y^n(i)$ to $\vertex{f} \cdot y^n(i)$, we see that $g^{y^j} =_G h(y^\infty(K))^{-1}$ and we are done.
 
-For the second case, $y^n(i - K) =_G y^jy^\infty(-K)$ so by a similar argument $g^{y^j} =_F y^\infty (-K) h$ for some word $h$ of length at most $2\delta$ as required.
+For the second case, $y^n(i - K) =_G y^jy^\infty(-K)$ so by a similar argument $g^{y^j} =_G y^\infty (-K) h$ for some word $h$ of length at most $2\delta$ as required.
 
 For the third case, since $d(\vertex{d}, \vertex{e}) = |g^{y^j}|_G$ and $d(\vertex{c}, \vertex{f}) = |y|n$, the third part of this lemma is proved by the third part of Lemma \ref{lemma:trapezium}.
 
@@ -1257,21 +1258,21 @@ We are now in a position to test if there is an element of $G$ which conjugates 
 
 Use Corollary \ref{corollary:test_fin_ord} (\textsc{TestInfOrder}) to test in time $O(|b_1|)$ if $b_1$ is of infinite order. If it is not, $a_1$ and $b_1$ are not conjugate, so neither are $A$ and $B$ and we may stop.
 
-Next, apply Algorithm \ref{algorithm:getconjugationcandidates} (\textsc{GetConjugationCandidates}) on $a_1$ and $b_1$ to obtain an $X$-word $p$, a short-lex straight word $y$ and a set $S$ of $X$-words with at most $V$ elements such that $a_1^g =_G b_1$ if and only if $g =_G py^ns$ for some $n \in \mathbb{Z}$ and $s \in S$. All returned $X$-words have length $O(|a_1| + |b_1|)$ and this step takes time $O(|a_1| + |b_1|)$ and in particular $O(\mu)$.
+Next, apply Algorithm \ref{algorithm:getconjugationcandidates} (\textsc{GetConjugationCandidates}) on $a_1$ and $b_1$ to obtain an $X$-word $p$, a short-lex straight word $y$ and a set $S$ of $X$-words with at most $V$ elements such that $a_1^g =_G b_1$ only if $g =_G py^ns$ for some $n \in \mathbb{Z}$ and $s \in S$. All returned $X$-words have length $O(|a_1| + |b_1|)$ and this step takes time $O(|a_1| + |b_1|)$ and in particular $O(\mu)$.
 
 We repeat the remaining steps for each element $s \in S$. Since there are at most $V$ elements in $S$, we can do this without affecting the overall runtime of the algorithm.
 
 For each $i \in \{1, \cdots, m\}$, apply Algorithm \ref{algorithm:testconjugacybysls} (\textsc{TestConjugacyBySLS}) to $a_i^p$, $b_i^{s^{-1}}$ and $y$ to obtain values $r_i$ and $t_i$. This takes time $O(m\mu)$.\footnote{As $y$ was originally found as an element of the centraliser of a power of $a_1$, it might seem superfluous to test $i=1$ here, but we only know at this point that a power of $y$ centralises a \textit{power} of $a_1$, and in any case it is not clear what power of $y$ this is the case for.}
 
-If $r_i = \infty$ for some $i$ then $a_i$ can't be conjugated to $b_i$ for any power of $y$, so the same is true of $A$ and $B$ and we can move to the next element of $S$.
+If $r_i = \infty$ for some $i$ then $a_i^p$ can't be conjugated to $b_i^{s^{-1}}$ for any power of $y$, so the same is true of $A^p$ and $B^{s^{-1}}$ and we can move to the next element of $S$.
 
-Otherwise, a set of $m$ (possibly modular) equations must be solved simultaneously. If $t_i = \infty$ for some $i$, this is simple; it suffices to check that $r_i = r_j$ for each $j \ne i$ where $t_j = \infty$, and that $r_i \equiv r_j \mod t_j$ for each $j \ne i$ where $t_j \ne \infty$. If all of the equations are satisfied then $A^{y^{r_i}} =_G B$ and $r_i$ is the unique power of $y$ with this property; otherwise there is no power of $y$ which conjugates $A$ to $B$. Either way we may move onto the next $s$ and these checks take time $O(m)$.
+Otherwise, a set of $m$ (possibly modular) equations must be solved simultaneously. If $t_i = \infty$ for some $i$, this is simple; it suffices to check that $r_i = r_j$ for each $j \ne i$ where $t_j = \infty$, and that $r_i \equiv r_j \mod t_j$ for each $j \ne i$ where $t_j \ne \infty$. If all of the equations are satisfied then $A^{py^{r_i}s} =_G B$ and $r_i$ is the unique power of $y$ with this property; otherwise there is no power of $y$ which conjugates $A^p$ to $B^{s^{-1}}$. Either way we may move onto the next $s$ and these checks take time $O(m \mu)$ for each $s$.
 
 The remaining case is where all $t_i$ and $r_i$ are finite, in which case the set of equations $j \equiv r_i \mod t_i$ must be solved simultaneously. First, note that if $d$ and $e$ are coprime natural numbers then $j \equiv c \mod de$ if and only if $j \equiv c \mod d$ and $j \equiv c \mod e$ both hold, so each congruence $j \equiv r_i \mod t_i$ can be split into a number of congruences modulo prime powers. As $t_i \le V$ for each $i$, the time taken by this operation is independent of input for each $i$, so in $O(m)$ overall.
 
 For integers $c$ and $d$, a prime number $p$ and natural numbers $e,f$ the two equations $a \equiv c \mod p^e$ and $a \equiv d \mod p^ep^f$ are equivalent to the second if $c \equiv d \mod p^e$ and have no solution if not. Thus the equations can be either shown to be inconsistent, or reduced to a set of at most $V$ equations modulo prime powers where each prime is distinct and each prime power is at most $V$. By allocating an array with an element corresponding to each prime below $V$, this will take constant time per starting prime power equation, so again time $O(m)$ overall.
 
-Finally, the well-known Chinese Remainder Theorem yields $r'$ and $t'$ such that $j \equiv r' \mod t'$ if and only if $A^{y^j} =_G B$. Since at this point there are at most $V$ congruences modulo pairwise coprime numbers less than or equal to $V$, the running time of this final step is independent of input length.
+Finally, the well-known Chinese Remainder Theorem yields $r'$ and $t'$ such that $j \equiv r' \mod t'$ if and only if $A^{py^js} =_G B$. Since at this point there are at most $V$ congruences modulo pairwise coprime numbers less than or equal to $V$, the running time of this final step is independent of input length.
 
 Thus we have an algorithm \textsc{SolveSimultaneousModularEquations} which takes as input a list of integer pairs $(r_i, s_i)$ and solves the set of modular equations $u \equiv r_i \mod s_i$ simultaneously. We will suppose that it returns integers $r$ and $s$ such that $u \equiv r \mod s$ if and only if $u$ was a solution to the original set of equations, and returns $\infty, \infty$ if there is no solution.
 
@@ -1802,11 +1803,6 @@ Recall that $\canc{u}{v} = (\vertex{a} \cdot u, \vertex{a} \cdot v)_{\vertex{a}}
 
 A useful tool used throughout this chapter is the following one, which says that if $w$ is a long enough word which labels a geodesic in $\Gamma'$ at $H$ and $u$ is a label of a geodesic in $\Gamma$ with $\canc{w^{-1}}{u}$ small, then $wu$ labels something close to a geodesic in $\Gamma'$ when started at $H$. The bounds can be slightly improved in the case where $\canc{w^{-1}}{u} = 0$ (that is, $wu$ labels a geodesic in $\Gamma$), but the factor of $\epsilon$ is unchanged so we will simply prove the more general statement.
 
-\begin{lemma}
-\label{lemma:extend_long_coset}
-Suppose that $w_1$ and $w_2$ label geodesics in $\Gamma$. Let $k := \canc{w_1^{-1}}{w_2}$, and let $w_1'$ and $w_2'$ label geodesics in $\Gamma'$ connecting $H$ to $Hw_1$ and $H$ to $Hw_1w_2$ respectively. If $|w_1'| \ge 3\delta + \epsilon + k + 1$ then $|w_2'| \ge |w_1'| + |w_2| - 2k - 3\delta - \epsilon$.
-\end{lemma}
-
 \begin{figure}
 \begin{center}
 \input extend_word.pstex_t
@@ -1815,10 +1811,15 @@ Suppose that $w_1$ and $w_2$ label geodesics in $\Gamma$. Let $k := \canc{w_1^{-
 \end{center}
 \end{figure}
 
+\begin{lemma}
+\label{lemma:extend_long_coset}
+Suppose that $w_1$ and $w_2$ label geodesics in $\Gamma$. Let $k := \canc{w_1^{-1}}{w_2}$, and let $w_1'$ and $w_2'$ label geodesics in $\Gamma'$ connecting $H$ to $Hw_1$ and $H$ to $Hw_1w_2$ respectively. If $|w_1'| \ge 3\delta + \epsilon + k + 1$ then $|w_2'| \ge |w_1'| + |w_2| - 2k - 3\delta - \epsilon$.
+\end{lemma}
+
 \begin{proof}
 Pick $X$-words $h_1$ and $h_2$ to label geodesics in $\Gamma$ connecting $\vertex{a}$ to $\vertex{a} \cdot w_1w_1'^{-1}$ and $\vertex{a}$ to $\vertex{a} \cdot w_1w_2w_2'^{-1}$ respectively. Let $\vertex{b} := \vertex{a} \cdot w_1$, $\vertex{c} := \vertex{a} \cdot w_1w_2$, $\vertex{d} := \vertex{a} \cdot h_1$ and $\vertex{e} := \vertex{a} \cdot h_2$. Then we have a geodesic pentagon as illustrated in Figure \ref{figure:extend_word}. We let $d_1 := (\vertex{b}, \vertex{a})_{\vertex{d}}$ and $d_2 := (\vertex{c}, \vertex{a})_{\vertex{e}}$, and let $s_i := |h_i| - d_i$ for $i$ equal to $1$ or $2$. These numbers measure in some sense the length of various words which $H$ ``cancels.''
 
-Let $i := \floor{d_1}$. Let $\vertex{x} := \vertex{d} \cdot w_1'(i) \in \path{\vertex{d}}{\vertex{b}}$ so that $\vertex{x}$ corresponds to a vertex on $\path{\vertex{a}}{\vertex{d}}$. Since $H$ is $\epsilon$-quasiconvex, there is a vertex $\vertex{y}$ representing an element of $H$ such that $d(\vertex{x}, \vertex{y}) \le \delta + \epsilon$. Let $u$ be the label of a geodesic in $\Gamma$ connecting $\vertex{y}$ to $\vertex{b}$, then since $Hu = Hw_1'$ we have \begin{eqnarray*}
+Let $i := \floor{d_1}$. Let $\vertex{x} := \vertex{d} \cdot w_1'(i) \in \path{\vertex{d}}{\vertex{b}}$ so that $\vertex{x}$ corresponds to a vertex $\vertex{x'}$ on $\path{\vertex{a}}{\vertex{d}}$. Since $H$ is $\epsilon$-quasiconvex, there is a vertex $\vertex{y}$ within $\epsilon$ of $\vertex{x'}$ representing an element of $H$ such that $d(\vertex{x}, \vertex{y}) \le d(\vertex{x}, \vertex{x'}) + d(\vertex{x'}, \vertex{y}) \le \delta + \epsilon$. Let $u$ be the label of a geodesic in $\Gamma$ connecting $\vertex{y}$ to $\vertex{b}$, then since $Hu = Hw_1'$ we have \begin{eqnarray*}
         |w_1'|
 &  =  & d(H, Hu) \\
 & \le & d(\vertex{y}, \vertex{b}) \\
@@ -1834,7 +1835,7 @@ Notice that \begin{align}
   = & |w_1w_2|_G + d_2 - s_2 \notag\\
   = & |w_1| + |w_2| - 2k + d_2 - s_2 \notag\\
   = & |w_1'| + s_1 - d_1 + |w_2| - 2k + d_2 - s_2 \label{eqn:s1_bound}
-\end{align} so recalling that $d_2$ is bounded, we need only show that $s_2$ is not much larger than $s_1$ to find a lower bound on $|w_2'|$.
+\end{align} so recalling that $d_1$ is bounded, we need only show that $s_2$ is not much larger than $s_1$ to find a lower bound on $|w_2'|$.
 
 By definition, $(\vertex{b}, \vertex{c})_{\vertex{a}} = |w_1| - (\vertex{a}, \vertex{c})_{\vertex{b}} = |w_1| - k$. Since $|w_1| = |w_1'| - d_1 + s_1$, using $|w_1'| \ge 3\delta + \epsilon + k + 1$ from the hypothesis, we see that \begin{equation} \label{eqn:canc_far}
 (\vertex{b}, \vertex{c})_{\vertex{a}} \ge s_1 + 3\delta + \epsilon - d_1 + 1.
@@ -2087,6 +2088,23 @@ Construct a second geodesic triangle with corners $\vertex{a}$, $\vertex{c}$ and
 \end{eqnarray*} and we have a contradiction. Thus the proposition is proved.
 \end{proof}
 
+We now prove a brief lemma which essentially says that whenever $g$ is close to being a minimal representative for a coset $Kg$ of a quasiconvex subgroup $K$, the cancellation $\canc{k}{g}$ is small for any $k \in K$.
+
+\begin{lemma}
+\label{lemma:coset_corners}
+Suppose that $A$ is a $\sigma$-quasiconvex subgroup of $G$, that $a \in A$ and $g \in G$ with $|g| \le d(A, Ag) + C$ are words labelling geodesics $\alpha$ and $\beta$ respectively which start from the same vertex $\vertex{z}$ in $\Gamma$. If these geodesics are adjacent sides of some geodesic polygon in $\Gamma$ and, after subdivision into triangles, there exist vertices $\vertex{x} \in \alpha$ and $\vertex{y} \in \beta$ such that $\vertex{x}$ $n$-corresponds to $\vertex{y}$ then $d(\vertex{y}, \vertex{z}) \le C + \sigma + n\delta$.
+\end{lemma}
+
+\begin{proof}
+Notice that there is a vertex $\vertex{a}$ which represents an element of $A$ with $d(\vertex{a}, \vertex{x}) \le \sigma$. But then \begin{eqnarray*}
+        d(A, Ag)
+& \le & d(\vertex{a}, \vertex{z} \cdot g) \\
+& \le & d(\vertex{a}, \vertex{x}) + d(\vertex{x}, \vertex{y}) + d(\vertex{y}, \vertex{z} \cdot g) \\
+& \le & \sigma + n\delta + |g| - d(\vertex{y}, \vertex{z}) \\
+& \le & \sigma + n\delta + d(A, Ag) + C - d(\vertex{y}, \vertex{z}),
+\end{eqnarray*} and a quick cancellation and re-arrangement shows that $d(\vertex{y}, \vertex{z}) \le C + \sigma + n\delta$ as required.
+\end{proof}
+
 Armed with this tool we can now test equality of double coset representatives.
 
 \begin{theorem}
@@ -2094,11 +2112,9 @@ Suppose $K$ is a fixed $\zeta$-quasconvex subgroup. If $u$ and $v$ are $X$-words
 \end{theorem}
 
 \begin{proof}
-Let $u_1$ and $v_1$ be the words obtained by applying the second part of Proposition \ref{prop:shorten_coset_rep} on $K$ with the words $u$ and $v$ respectively. Since these words are obtained in time $O(|u| + |v|)$ and satisfy $Hu_1K = HuK$ and $Hv_1K = HvK$, we replace $u$ with $u_1$ and $v$ with $v_1$.
+Let $u_1$ and $v_1$ be the words obtained by applying the second part of Proposition \ref{prop:shorten_coset_rep} on $K$ with the words $u$ and $v$ respectively. Since these words are obtained in time $O(|u| + |v|)$ and satisfy $Hu_1K = HuK$ and $Hv_1K = HvK$, we replace $u$ with $\slex(u_1)$ and $v$ with $\slex(v_1)$.
 
-If $HuK = HvK$ then there exist $X$-words $h \in H$ and $k \in K$ with $uk =_G hv$. We may assume that $h$ and $k$ are picked to minimize $|h| + |k|$ and in particular label geodesics in $\Gamma$. Let $\vertex{b} := \vertex{a} \cdot h$, $\vertex{c} := \vertex{b} \cdot v$ and $\vertex{d} := \vertex{a} \cdot u$. Then we have a geodesic quadrilateral in $\Gamma$ with side labels $h$, $v$, $k$ and $u$. Pick some geodesic connecting $\vertex{a}$ to $\vertex{c}$ to split this quadrilateral into two geodesic triangles. This quadrilateral is illustrated in Figure \ref{figure:double_coset_reps}.
-
-The next part of the proof is to demonstrate that each corner has a meeting point close to it. This will either give a bound on the lengths of $h$ and $k$, or a bound on the lengths of $u$ and $v$. In the latter case, we will prove that the number of vertices on $\path{\vertex{d}}{\vertex{c}}$ which $2$-correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$ is also bounded to give a bound once again on the lengths of $h$ and $k$.
+If $HuK = HvK$ then there exist $X$-words $h \in H$ and $k \in K$ with $uk =_G hv$. We will assume that $h$ and $k$ are picked to be geodesics, and such that $|h| + |k|$ is minimised. Let $\vertex{b} := \vertex{a} \cdot h$, $\vertex{c} := \vertex{b} \cdot v$ and $\vertex{d} := \vertex{a} \cdot u$. Then we have a geodesic quadrilateral in $\Gamma$ with side labels $h$, $v$, $k$ and $u$. Pick some geodesic connecting $\vertex{a}$ to $\vertex{c}$ to split this quadrilateral into two geodesic triangles. This quadrilateral is illustrated in Figure \ref{figure:double_coset_reps}.
 
 \begin{figure}
 \begin{center}
@@ -2108,24 +2124,7 @@ The next part of the proof is to demonstrate that each corner has a meeting poin
 \end{center}
 \end{figure}
 
-Suppose that some vertex $\vertex{p}$ on $\path{\vertex{b}}{\vertex{c}}$ $2$-corresponds to a vertex on $\path{\vertex{c}}{\vertex{d}}$. Then since $K$ is $\zeta$-quasiconvex and $k$ labels a geodesic in $\Gamma$, we have some vertex $\vertex{q}$ in $\Gamma$ which represents an element of $K$ with $d(\vertex{p}, \vertex{q}) \le 2\delta + \zeta$. In particular, \begin{eqnarray*}
-        d(K, Kv^{-1})
-& \le & d(\vertex{q}, \vertex{p}) + d(\vertex{p}, \vertex{b}) \\
-& \le & 2\delta + \zeta + |v| - d(\vertex{p}, \vertex{c}) \\
-& \le & d(K, Kv^{-1}) + 3\delta + \zeta + 2\delta + \zeta - d(\vertex{p}, \vertex{c}),
-\end{eqnarray*} so $d(\vertex{p}, \vertex{c}) \le 5\delta + 2\zeta$. This implies no vertex $\vertex{p}$ on $\path{\vertex{b}}{\vertex{c}}$ which $2$-corresponds to a vertex on $\path{\vertex{c}}{\vertex{d}}$ can have $d(\vertex{p}, \vertex{c}) > 5\delta + 2\zeta$. This can only be the case if either $\floor{(\vertex{a}, \vertex{d})_{\vertex{c}}} \le 5\delta + 2\zeta$ or $\floor{(\vertex{a}, \vertex{b})_{\vertex{c}}} \le 5\delta + 2\zeta$.
-
-A similar argument with vertices on $\path{\vertex{b}}{\vertex{c}}$ tells us that $\floor{(\vertex{a}, \vertex{c})_{\vertex{d}}} \le 4\delta + 2\zeta$.
-
-Repeating this argument again on the remaining two corners gives $\floor{(\vertex{a}, \vertex{c})_{\vertex{b}}} \le 9\delta + 3\epsilon + \zeta$ and either $\floor{(\vertex{b}, \vertex{c})_{\vertex{a}}} \le 10\delta + 3\epsilon + \zeta$ or $\floor{(\vertex{c}, \vertex{d})_{\vertex{a}}} \le 10\delta + 3\epsilon + \zeta$.
-
-We will now prove that $|h| + |k| \le B := 28\delta + 2P(\epsilon+\zeta) + 6\epsilon + 4\zeta + 2$ where $P$ is the number of vertices in $B^\Gamma_{2\delta + \epsilon + \zeta}(\vertex{a})$.
-
-Suppose that $(\vertex{b}, \vertex{c})_{\vertex{a}} \le (\vertex{c}, \vertex{d})_{\vertex{a}}$. Then $|h| = (\vertex{b}, \vertex{c})_{\vertex{a}} + (\vertex{a}, \vertex{c})_{\vertex{b}} \le 10\delta + 3\epsilon + \zeta + 9\delta + 3\epsilon + \zeta + 1 \le 19\delta + 6\epsilon + 2\zeta + 1$ and similarly $|k| \le 9\delta + 2\zeta + 1$. Thus $|h| + |k| \le 28\delta + 6\epsilon + 4\zeta + 2 \le B$.
-
-It remains to consider the case where $(\vertex{b}, \vertex{c})_{\vertex{a}} \ge (\vertex{c}, \vertex{d})_{\vertex{a}}$.
-
-Suppose that $i$ is an integer and the vertex $\vertex{p_i} := \vertex{d} \cdot k(i)$ $2$-corresponds to a vertex $\vertex{q_i} := \vertex{a} \cdot h(i')$. Notice that $i' := (\vertex{c}, \vertex{d})_{\vertex{a}} - (\vertex{a}, \vertex{c})_{\vertex{d}} + i$.
+We now aim to bound the lengths of $h$ and $k$ by a value which does not depend on $u$ and $v$. Suppose that $i$ is an integer and the vertex $\vertex{p_i} := \vertex{d} \cdot k(i)$ $2$-corresponds to a vertex $\vertex{q_i} := \vertex{a} \cdot h(i')$. Notice that $i' := (\vertex{c}, \vertex{d})_{\vertex{a}} - (\vertex{a}, \vertex{c})_{\vertex{d}} + i$.
 
 There is a vertex $\vertex{r_i} \in \Gamma$ representing an element of $K$ such that $d(\vertex{p_i}, \vertex{r_i}) \le \zeta$ and similarly there is a vertex $\vertex{s_i} \in \Gamma$ representing an element of $H$ such that $d(\vertex{q_i}, \vertex{s_i}) \le \epsilon$. Let $w_i$ label a geodesic in $\Gamma$ connecting $\vertex{s_i}$ to $\vertex{r_i}$ and observe that $|w_i| = d(\vertex{s_i}, \vertex{r_i}) \le 2\delta + \epsilon + \zeta$. See Figure \ref{figure:double_coset_h_k_long} for a complete picture.
 
@@ -2137,7 +2136,7 @@ There is a vertex $\vertex{r_i} \in \Gamma$ representing an element of $K$ such 
 \end{center}
 \end{figure}
 
-Suppose that more than $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ $2$-correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$ so that there exist integers $i < j - \epsilon - \zeta$ with $w_i = w_j$. Let $k_1$, $k_2$ and $k_3$ label geodesics in $\Gamma$ connecting $\vertex{a}$ to $\vertex{r_i}$, $\vertex{r_i}$ to $\vertex{r_j}$ and $\vertex{r_j}$ to $\vertex{c}$ respectively. Define $h_1$, $h_2$ and $h_3$ to label geodesics connecting $\vertex{a}$, $\vertex{s_i}$, $\vertex{s_j}$ and $\vertex{b}$ similarly.
+Let $P$ be the number of vertices in $B^\Gamma_{2\delta + \epsilon + \zeta}(\vertex{a})$. Suppose that more than $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ $2$-correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$ so that there exist integers $i < j - \epsilon - \zeta$ with $w_i = w_j$. Let $k_1$, $k_2$ and $k_3$ label geodesics in $\Gamma$ connecting $\vertex{a}$ to $\vertex{r_i}$, $\vertex{r_i}$ to $\vertex{r_j}$ and $\vertex{r_j}$ to $\vertex{c}$ respectively. Define $h_1$, $h_2$ and $h_3$ to label geodesics connecting $\vertex{a}$, $\vertex{s_i}$, $\vertex{s_j}$ and $\vertex{b}$ similarly.
 
 Then $w_i =_G h_2w_jk_2^{-1} = h_2w_ik_2^{-1}$ and $w_i =_G h_3vk_3^{-1}$ so that \begin{eqnarray*}
         u
@@ -2146,9 +2145,13 @@ Then $w_i =_G h_2w_jk_2^{-1} = h_2w_ik_2^{-1}$ and $w_i =_G h_3vk_3^{-1}$ so tha
 & =_G & h_1h_2w_ik_2^{-1}k_1^{-1} \\
 & =_G & h_1w_ik_1^{-1} \\
 & =_G & h_1h_3vk_3^{-1}k_1^{-1},
-\end{eqnarray*} but then $|h_1h_3| + |k_1k_3| \le |h| + 2\epsilon + |k| + 2\zeta - 2(j-i) < |h| + |k|$ and $h_1h_3v =_G uk_1k_3$ which contradicts minimality of $|h| + |k|$. Thus at most $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ can correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$ and by counting corresponding vertices we have $|h| \le 19\delta + 6\epsilon + 2\zeta + P(\epsilon + \zeta) + 1$ and $|k| \le 9\delta + 2\zeta + P(\epsilon + \zeta) + 1$. But then $|h| + |k| \le 28\delta + 6\epsilon + 4\zeta + 2P(\epsilon + \zeta) + 2 = B$ as required and the claim is proved.
+\end{eqnarray*} but then $|h_1h_3| + |k_1k_3| \le |h| + 2\epsilon + |k| + 2\zeta - 2(j-i) < |h| + |k|$ and $h_1h_3v =_G uk_1k_3$ which contradicts minimality of $|h| + |k|$. Thus at most $P(\epsilon + \zeta)$ vertices on $\path{\vertex{d}}{\vertex{c}}$ can correspond to vertices on $\path{\vertex{a}}{\vertex{b}}$.
 
-We thus test, for each pair of $X$-words $h$ and $k$ with $|h| + |k| \le B$ whether $h \in H$, $k \in K$ and $uk =_G hv$. If for some pair of words all three of these checks succeed, the double cosets are equal. If this does not happen then $HuK \ne HvK$. These checks can be performed in time $O(|u| + |v|)$, and the number of them is independent of $u$ and $v$, so the whole operation takes time $O(|u| + |v|)$. The theorem is proved.
+Applying Lemma \ref{lemma:coset_corners} with $\sigma = \epsilon + \zeta$ and $C = 8\delta + 2\epsilon + \zeta$, and using setting the triple $(A, g, a)$ to each of $(H, u, h)$, $(H, v, h^{-1})$, $(K, u^{-1}, k)$ and $(K, v^{-1}, k^{-1})$ we see that vertices on the sides of the quadrilateral which chain-correspond to vertices on adjacent sides must be at worst $10\delta + 3\epsilon + 2\zeta$ from the common corner of those two sides. For instance, any vertex on $\path{\vertex{d}}{\vertex{c}}$ which $2$-corresponds to a vertex on $\path{\vertex{a}}{\vertex{d}}$ must be withing $10\delta + 3\epsilon + 2\zeta$ of $\vertex{d}$.
+
+Now, all vertices on $\path{\vertex{d}}{\vertex{c}}$ are either within $10\delta + 3\epsilon + 2\zeta$ of $\vertex{c}$ or $\vertex{d}$, or $2$-correspond to a vertex on $\path{\vertex{a}}{\vertex{b}}$. By counting vertices, we find that $|k| = d(\vertex{d}, \vertex{c}) \le 10\delta + 3\epsilon + 2\zeta + P(\epsilon + \zeta) + 10\delta + 3\epsilon + 2\zeta + 1 = 20\delta + 6\epsilon + 4\zeta + P(\epsilon + \zeta) + 1$. Similarly, all vertices on $\path{\vertex{a}}{\vertex{b}}$ are either within $10\delta + 3\epsilon + 2\zeta$ of $\vertex{c}$ or $\vertex{d}$, or are $2$-corresponded to by a vertex on $\path{\vertex{d}}{\vertex{c}}$, so $|h| \le 20\delta + 6\epsilon + 4\zeta + P(\epsilon + \zeta) + 1$.
+
+We thus test, for each pair of $X$-words $h$ and $k$ with $|h|$ and $|k|$ both less than or equal to $20\delta + 6\epsilon + 4\zeta + P(\epsilon + \zeta) + 1$ whether $h \in H$, $k \in K$ and $uk =_G hv$. If for some pair of words all three of these checks succeed, the double cosets are equal. If this never happens then $HuK \ne HvK$. These checks can each be performed in time $O(|u| + |v|)$ and the number of them is independent of $u$ and $v$, so the whole operation takes time $O(|u| + |v|)$. The theorem is proved.
 \end{proof}
 
 \section{Conclusion and Possible Further Work}
