@@ -1,0 +1,37 @@
+P9 -> P7, paragraph 5
+
+P10 -> P7, paragraph -3 (first line of definition)
+
+P18 -> P13, last paragraph
+
+P24 -> P19, second paragraph
+
+P25a -> P19, second last paragraph
+
+P25b -> P19, Sec 2.2, 3rd paragraph
+
+P32 -> P25, line 3
+
+P41 -> P31, last line
+
+P63 -> P48, just after paragraph 3
+
+P75a -> P57, paragraph 1
+
+P75b -> P57, paragraph 5
+
+P85 -> P65, last paragraph
+
+P86 -> P66, just after (3.3)
+
+P89 -> P69, paragraph 1
+
+P100 -> P76, paragraph -2
+
+P110 -> P85, paragraph -4
+
+P152a -> P118, first 2 paragraphs
+
+P152b -> P119, paragraph 2 to end of proof
+
+P153 -> P119, Prop 5.3.2
