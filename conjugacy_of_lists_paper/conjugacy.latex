@@ -62,12 +62,12 @@
 
 \title{The Conjugacy Problem for Lists}
 
-\author{David J.\ Buckley}
+\author{D.J.\ Buckley \& D.F.\ Holt}
 
 \maketitle
 
 \begin{abstract}
-Given a word-hyperbolic group $G$ with generating set $X$ for which various standard structures and constants have been pre-computed, an (non-practical) algorithm is outlined which will, given input of two lists $A$ and $B$ each composed of $n$ words in the generators and their inverses, determine whether or not the lists are conjugate and return a conjugating element should one exist. The algorithm will run in time linear in $n\mu$, where $\mu$ is an upper bound on the length of elements in each list. Similarly, an algorithm is outlined which will compute the centraliser of $A$ with the same bound on running time.
+Given a word-hyperbolic group $G$ with generating set $X$ for which various standard structures and constants have been pre-computed, a (non-practical) algorithm is outlined which will, given input of two lists $A$ and $B$ each composed of $n$ words in the generators and their inverses, determine whether or not the lists are conjugate and return a conjugating element should one exist. The algorithm will run in time linear in $n\mu$, where $\mu$ is an upper bound on the length of elements in each list. Similarly, an algorithm is outlined which will compute the centraliser of $A$ with the same bound on running time.
 \end{abstract}
 
 \section{Introduction}
@@ -78,21 +78,23 @@ The aim here is to both improve the bound on running time to $O(m\mu)$, and to t
 
 The ideas used here closely relate to the ideas in \cite{epstein2006linearity}, in which Epstein and Holt show that the conjugacy problem for single elements in a word-hyperbolic group can be solved in linear time if one assumes a RAM model of computing. They do so by showing that infinite order elements tend to be well-behaved when raised to large powers, and finite order elements can be conjugated to elements of short length whose conjugacy can be precomputed. In fact, a number of results from that paper which relate to these facts are used to establish the result here.
 
+This work is outlined in more detail in \cite{buckley2010thesis} and as such, the reader will occasionally be referred there for some of the more tedious details.
+
 The main theorem proved is:
 
 \begin{theorema}
 \label{thm:linear_conj}
-Given integers $\delta \ge 1$ and $l$, there is an algorithm which, given a $\delta$-hyperbolic group $G=<X|R>$ with $|X| \le l$, a number $m \ge 0$ and lists $A = (a_1, \cdots, a_m)$ and $B = (b_1, \cdots, b_m)$, each containing words in the generators of $G$, can find an element $g \in G$ such that $A^g =_G B$ or determine that no such element $g$ exists. If $|a_i| \le \mu$ and $|b_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
+Given a hyperbolic group $G=<X|R>$, there is an algorithm which, given a number $m \ge 0$ and lists $A = (a_1, \cdots, a_m)$ and $B = (b_1, \cdots, b_m)$, each containing words in the generators of $G$, will find an element $g \in G$ such that $A^g =_G B$ or determine that no such element $g$ exists. If $|a_i| \le \mu$ and $|b_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
 \end{theorema}
 
 Due to the exhaustive search required to verify that two lists are not conjugate, the method will in fact allow computation of all conjugating elements -- in particular, a simple modification yields the following additional result:
 
 \begin{theoremb}
 \label{thm:linear_cent}
-Given integers $\delta \ge 1$ and $l$, there is an algorithm which, given a $\delta$-hyperbolic group $G=<X|R>$ with $|X| \le l$, a number $m \ge 0$, a list $A = (a_1, \cdots, a_m)$ containing words in the generators of $G$ will return a generating set for the centraliser $C_G(A)$. If $|a_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
+Given a hyperbolic group $G=<X|R>$, there is an algorithm which, there is an algorithm which, given a number $m \ge 0$ and a list $A = (a_1, \cdots, a_m)$ containing words in the generators of $G$ will return a generating set for the centraliser $C_G(A)$. If $|a_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
 \end{theoremb}
 
-The technicalities behind the proof in the case where one element, say $a_1$, has infinite order are largely covered by solving the conjugacy problem $a_1^h =_G b_1$ for $h$ as in \cite{epstein2006linearity}. In the process of doing so, a useful description of elements of the centraliser $C$ of $a_1$ is found, and then used to test if for some $c \in C$ we have $A^{ch} =_G B$. Of course $C$ is infinite, so it is important to perform this testing efficiently. Section \ref{section:inf_order} describes a way of doing so.
+The technicalities behind the proof in the case where one element, say $a_1$, has infinite order are largely covered by solving the conjugacy problem $a_1^h =_G b_1$ for $h$ as in \cite{epstein2006linearity}. In the process of doing so, a useful description of elements of the centraliser $C$ of $a_1$ is found, and then used to test if $A^{ch} =_G B$ for some $c \in C$. Of course $C$ is infinite, so it is important to perform this testing efficiently. Section \ref{section:inf_order} describes a way of doing so.
 
 Unfortunately, the methods below only allow this form of the centraliser to be found for infinite order elements, so cannot be used when both lists contain only torsion elements. It is, however, possible to show that provided the number of elements in our lists is bounded above, a pair of lists $A'$ and $B'$ can be efficiently found such that $A^h =_G B$ if and only if $A'^h =_G B'$ and such that either $A'$ or $B'$ contains an infinite order element, or each element in $A'$ and $B'$ is of bounded length. In the latter case, the exponential algorithm given in \cite{bridson2005conjugacy} finishes the solution in constant time.
 
@@ -104,9 +106,9 @@ The disadvantage of computing in this way is that for lists with more elements, 
 
 A very brief introduction to hyperbolicity as well as some definitions made for convenience is sketched below. If the reader is not familiar with hyperbolic groups, it may be helpful for them to refer to \cite{alonso1990notes} for instance for a more thorough introduction.
 
-A \textbf{path} $\alpha : \path{a}{b} \to X$ is an arc-length parametrization of a connected curve in a metric space $X$. Where $\alpha$ is described as connecting a point $x$ to a point $y$, we assume that $\alpha(a) = x$ and $\alpha(b) = y$; we will also normally assume that $a=0$ in this case. If $x = \alpha(t)$ for some $t \in \path{a}{b}$, we write $x \in \alpha$. If $x = \alpha(c)$ and $y = \alpha(d)$ for $c, d \in \path{a}{b}$, write $\path{x}{y}$ to denote the restriction $\alpha|_{\path{c}{d}}$ and then define $d_\alpha(x, y) = d - c$. This definition is a little loose where $\alpha$ is not a simple curve; in order to deal with this ambiguity assume that whenever a point $x \in \alpha$ is picked, a specific value $t_x \in \path{a}{b}$ with $\alpha(t_x) = x$ is also picked for use with these definitions.
+A \textbf{path} $\alpha : \path{a}{b} \to X$ is an arc-length parametrization of a connected curve in a metric space $X$. If $\alpha$ is described as connecting a point $x$ to a point $y$ then $\alpha(a) = x$ and $\alpha(b) = y$; it will normally be assumed that $a=0$ in this case. If $x = \alpha(t)$ for some $t \in \path{a}{b}$ then write $x \in \alpha$. If $x = \alpha(c)$ and $y = \alpha(d)$ for $c, d \in \path{a}{b}$, write $\path{x}{y}$ to denote the restriction $\alpha|_{\path{c}{d}}$ and then define $d_\alpha(x, y) = d - c$. This definition is a little loose where $\alpha$ is not a simple curve; in order to deal with this ambiguity assume that whenever a point $x \in \alpha$ is picked, a specific value $t_x \in \path{a}{b}$ with $\alpha(t_x) = x$ is also picked for use with these definitions.
 
-A path $\alpha$ is \textbf{$(\lambda, \epsilon)$-quasigeodesic} if $d_\alpha(x, y) \le \lambda d(x, y) + \epsilon$ for all $x, y \in \alpha$. A path is \textbf{geodesic} if it is $(1, 0)$-quasigeodesic. A \textbf{geodesic metric space} is a metric space in which each pair of points is connected by a geodesic. A \textbf{geodesic triangle} in a metric space is a collection of 3 points along with 3 geodesic paths, one connecting each pair of corners.
+A path $\alpha$ is \textbf{$(\lambda, \epsilon)$-quasigeodesic} if $d_\alpha(x, y) \le \lambda d(x, y) + \epsilon$ for all $x, y \in \alpha$. A path is \textbf{geodesic} if it is $(1, 0)$-quasigeodesic. A \textbf{geodesic metric space} is a metric space in which each pair of points is connected by a geodesic. A \textbf{geodesic triangle} in a metric space is a collection of 3 points (the corners) along with 3 geodesic paths, one path connecting each pair of corners.
 
 The Gromov inner product of points $x$ and $y$ at a point $z$ in a metric space is defined as \[ (x, y)_z = \frac{d(x, z) + d(y, z) - d(x, y)}{2}. \]
 
@@ -122,11 +124,13 @@ All geometric constructions occur inside the Cayley graph $\Gamma$ of $G$ with r
 
 A \textbf{word} is a finite sequence of elements of $X$ and their symbolic inverses, written as a concatenation (for example if $X = \{ a, b \}$ then $u = ab^2 = abb$ and $v = b^{-1}a$ are words). If $w$ is a sequence of length $n$ then then length of $w$, written $|w|$ is $n$. For each $1 \le a \le |w|$, write $w[a]$ to refer to the $a$\th{} letter of $w$. For each $0 \le a \le |w|$, write $w(a) = w[1] w[2] \cdots w[a]$ to refer to the subword given by the first $a$ letters of $w$ and let $w(a:b) = w[a+1] w[a+2] \cdots w[b]$ so that $w(b) = w(a) w(a:b)$ whenever $0 \le a \le b \le |w|$.
 
-Given a starting vertex in $\Gamma$, a word $w$ uniquely labels a path in $\Gamma$. By taking $\vertex{e}$ as the starting vertex, each word defines an element of the group (although multiple words will correspond to a group element).
+One frequent operation used throughout is that of finding the ``half-cyclic conjugate'' of a word. Given a word $w = a_1 \cdots a_n$, let $l := \floor{\frac{n}{2}}$, let $w_L := w(l)$ and let $w_R := w(l:n)$. Now the half-cyclic conjugate is defined as $w_C := w_R w_L$. For example, if $w = abcde$ then $w_C = cdeab$. In cases where a subscript and power are both used, it is assumed that the subscript takes precedence, so for instance $w_C^2 = cdeabcdeab$.
 
-There is an obvious map sending words to elements of $G$; if two words $u$ and $v$ map to the same element of $G$, write $u =_G v$. The length of an element $g \in G$, written $|g|_G$, is the minimum length of a word which maps to $g$. The generating set $X$ is assumed to be ordered, so that the notion of a short-lex least representative word for each group element exists (that is, the lexicographically least word of all words of shortest length which map to the given element). A \textbf{straight} word $w$ is a word for which $|w^n|_G = |w^n|$ for any positive integer $n$. Similarly, a \textbf{short-lex straight} word is a word for which $w^n$ is a short-lex least representative for any positive integer $n$.
+Given a starting vertex in $\Gamma$, a word $w$ uniquely labels a path in $\Gamma$. By taking $\vertex{e}$ as the starting vertex, each word defines an element $\evaluate{w}$ of the group (multiple words will correspond to a single group element). If two words $u$ and $v$ map to the same element of $G$, write $u =_G v$. The length of an element $g \in G$, written $|g|_G$, is the minimum length of a word which maps to $g$ -- since words map to unique elements of $G$, the length of a word $w$ in $G$, written $|w|_G$ is well-defined. A word is reduced if $|w| = |w|_G$, that is, $w$ is a shortest representative of $g$.
 
-In \cite{epstein2006conjugacy}, the following result due to Shapiro is given:
+The generating set $X$ is assumed to be ordered, so that the notion of a short-lex least representative word for each group element exists (that is, the lexicographically least word of all words of shortest length which map to the given element). A \textbf{straight} word $w$ is a word for which $|w^n|_G = |w^n|$ for any positive integer $n$. Similarly, a \textbf{short-lex straight} word is a word for which $w^n$ is a short-lex least representative for any positive integer $n$.
+
+In \cite{epstein2006linearity}, the following result due to Shapiro is given:
 
 \begin{lemma}
 \label{lemma:short_lex}
@@ -135,17 +139,21 @@ Then there is an algorithm which given a word $w$ will return the short-lex leas
 
 This algorithm will be written as a function $\slex$ mapping words to words. Importantly, it allows a number of other operations to be computed in linear time; namely testing length and equality of words and whether or not a given word is the identity.
 
-Various constructions related to the group (for instance, the short-lex word acceptor) need to be made in order to use results from \cite{epstein2006conjugacy}; it is assumed that such constructions have already been computed (see \cite{epstein2001computation} for a method of computing these). % TODO
+Various constructions related to the group (for instance, the short-lex word acceptor) need to be made in order to use results from \cite{epstein2006linearity}; it is assumed that such constructions have already been computed (see \cite{epstein2001computation} for a method of computing these). % TODO
 
 There are a number of constants which will be used throughout this paper. Upper bounds on these constants can all be found explicitly in terms of $\delta$; they are named only for convenience. They are:
 
 \begin{itemize}
 \item $L := 34\delta + 2$
-\item $V$, the number of vertices in the $2\delta$-ball around $\vertex{e}$
+\item $V$, the number of vertices in the closed $2\delta$-ball around $\vertex{e}$
 \item $M := 10^3\delta^2V^3L^2$
 \end{itemize}
 
-One frequent operation used throughout is that of finding the ``half-cyclic conjugate'' of a word. Given a word $w = a_1 \cdots a_n$, let $l := \floor{\frac{n}{2}}$, let $w_L := a_1 \cdots a_l$ and let $w_R := a_{l+1} \cdots a_n$. Now we may define the half-cyclic conjugate $w_C := w_R w_L$. For example, if $w = abcde$ then $w_C = cdeab$. In cases where a subscript and power are both used, it is assumed that the subscript takes precedence, so for instance $w_C^2 = cdeabcdeab$.
+Finally, it is necessary to indicate what is meant by a Turing machine. The Turing machines here are standard Turing machines, except that they have multiple tapes, and may have multiple heads on each tape (both the number of tapes and the number of heads will be in $O(1)$). The heads are independent; that is, while they all start in the same place, they need not behave in the same way: one may be moved and used to read and write on the tape while another remains stationary and later moves to read said area of tape.
+
+An instance of the above Turing machine is a set of $n$ tapes $T_i$, each of which is a sequence of elements of $A$ indexed by $\mathbb{Z}$.
+
+$T$ is a set of $n$ sequences $T_{i}$ indexed by $\mathbb{Z}$ with $T_{i,j} \in A$ for each $i,j$, and $m$ is a positive integer (the ``head count'') for some positive integers $n$ and $m$, a sequence of $n$ of tapes $T_i$, each of which has $m$ heads labelled $H_{i,j}$.  with each $H_{i,j}$
 
 \section{The Infinite Order Case}
 
@@ -155,21 +163,21 @@ The aim of the section is to prove the following special cases of Theorems A and
 
 \begin{proposition}
 \label{prop:linear_conj_inf}
-Given integers $\delta \ge 1$ and $l$, there is an algorithm which, given a $\delta$-hyperbolic group $G=<\!\!X|R\!\!>$ with $|X| \le l$, a number $m \ge 0$ and lists $A = (a_1, \cdots, a_m)$ and $B = (b_1, \cdots, b_m)$, each containing words in the generators of $G$ with $a_1$ representing an element of infinite order in $G$, can find an element $g \in G$ such that $A^g =_G B$ or determine that no such element $g$ exists. If $|a_i| \le \mu$ and $|b_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
+Given a hyperbolic group $G=<\!\!X|R\!\!>$, there is an algorithm which, given a number $m \ge 0$ and lists $A = (a_1, \cdots, a_m)$ and $B = (b_1, \cdots, b_m)$ each containing words in the generators of $G$ such that $a_1$ maps to an element of infinite order in $G$, will find an element $g \in G$ such that $A^g =_G B$ or determine that no such element $g$ exists. If $|a_i| \le \mu$ and $|b_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
 \end{proposition}
 
 \begin{proposition}
-\label{prop:linear_cent}
-Given integers $\delta \ge 1$ and $l$, there is an algorithm which, given a $\delta$-hyperbolic group $G=<\!\!X|R\!\!>$ with $|X| \le l$, a number $m \ge 0$ and a list $A = (a_1, \cdots, a_m)$ containing words in the generators of $G$ with $a_1$ mapping to an element of infinite order, will return a generating set for the centraliser $C_G(A)$. If $|a_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
+\label{prop:linear_cent_inf}
+Given a hyperbolic group $G=<\!\!X|R\!\!>$, there is an algorithm which, given a number $m \ge 0$ and a list $A = (a_1, \cdots, a_m)$ containing words in the generators of $G$ such that $a_1$ maps to an element of infinite order in $G$, will return a generating set for the centraliser $C_G(A)$. If $|a_i| \le \mu$ for each $1 \le i \le m$ then the algorithm will run in time $O(m\mu)$.
 \end{proposition}
 
-The method is something of a combination of those methods outlined in \cite{epstein2006linearity} and \cite{bridson2005conjugacy}. The next three sections concern testing conjugacy between single elements only; Section \ref{section:holt} is in particular just a summary of some of \cite{epstein2006linearity}. The motivation here is to use these methods on $a_1$ and $b_1$ as any element conjugating $A$ to $B$ must necessarily conjugate $a_1$ to $b_1$.
+The method is something of a combination of those methods outlined in \cite{epstein2006linearity} and \cite{bridson2005conjugacy}. The next three sections concern testing conjugacy between single elements only; Section \ref{section:holt} is in particular just a summary of some of \cite{epstein2006linearity}. The motivation here is to use these methods on $a_1$ and $b_1$, as any element conjugating $A$ to $B$ must necessarily conjugate $a_1$ to $b_1$.
 
 \subsection{Results From \cite{epstein2006linearity}}
 
 \label{section:holt}
 
-In \cite{epstein2006linearity} (Section 3), it's proved that the conjugacy problem for single elements is linear in the total input element length. The proof has several steps. The first few will be followed here as well.
+In \cite{epstein2006linearity} (Section 3), it's proved that the conjugacy problem for single elements is linear in the total input element length. The proof has several steps. The first few will be followed here as well; they are outlined in this subsection.
 
 The authors of \cite{epstein2006linearity} first show that elements that are ``difficult to shorten'' are actually of infinite order, and behave nicely when raised to large powers. This result is Lemma 3.1 of \cite{epstein2006linearity}.
 
@@ -223,7 +231,7 @@ This is all of the information which will be required from \cite{epstein2006line
 
 \begin{proposition}
 \label{prop:eh_solve_conj}
-There exists an algorithm which, given words $u$ and $v$ with $|u_C|_G > 2L$ and $|v_C|_G > 2L$ will compute words $a$ and $y$, and a set $S$ of at most $V$ words such that $y$ is short-lex straight and $u^g =_G v$ implies that $g =_G u_Lay^ns$ for some $s \in S$. All output words have length in $O(|u| + |v|)$ and the algorithm will run in time $O(|u| + |v|)$.
+There exists an algorithm which, given reduced words $u$ and $v$ with $|u_C|_G > 2L$ and $|v_C|_G > 2L$ will compute words $a$ and $y$, and a set $S$ of at most $V$ words such that $y$ is short-lex straight and $u^g =_G v$ implies that $g =_G ay^ns$ for some $s \in S$. All output words have length in $O(|u| + |v|)$ and the algorithm will run in time $O(|u| + |v|)$.
 \end{proposition}
 
 \begin{proof}
@@ -231,7 +239,7 @@ Proposition \ref{prop:nice_qgeo} implies that all positive powers of both $\slex
 
 Using the K-M-P algorithm from \cite{galil1976real}, find the second instance of $z$ as a substring of $z^2$. If this match is found at position $j$ then $z = z(j:|z|) z(j)$, so $z = (z(j))^l$ for some $l$ and $l$ is maximal for words of this form. Let $y = z(j)$.
 
-If $u$ is conjugate to $v$ then $u^i$ is conjugate to $v^i$ and so $z$ is conjugate to $(v_C)^i$. Applying Proposition \ref{prop:test_conj_sls} we see that if this is the case then $((v_C)^i)^b$ is equal in $G$ to a cyclic conjugate of $z$ for some word $b$ of length less than $6\delta$. Test for all words $b$ with $|b| \le 6\delta$ whether $\slex(((v_C)^i)^b)$ is a substring of $z^2$ using the K-M-P algorithm again. There are $O(1)$ tests and each test takes time $O(|u| + |v|)$ so a specific $b$ satisfying this property, if one exists, can be found in time $O(|u| + |v|)$. If all tests fail, $u$ and $v$ are not conjugate so the algorithm can stop. Otherwise a subword $z(k)$ is found such that $((v_C)^i)^{bz(k)^{-1}} =_G z$. Let $c = z(k)b^{-1}$ for the first $b$ found and continue.
+If $u$ is conjugate to $v$ then $u^i$ is conjugate to $v^i$ and so $z$ is conjugate to $(v_C)^i$. Applying Proposition \ref{prop:test_conj_sls} implies that if this is the case then $((v_C)^i)^b$ is equal in $G$ to a cyclic conjugate of $z$ for some word $b$ of length less than $6\delta$. Test for all words $b$ with $|b| \le 6\delta$ whether $\slex(((v_C)^i)^b)$ is a substring of $z^2$ using the K-M-P algorithm again. There are $O(1)$ tests and each test takes time $O(|u| + |v|)$ so a specific $b$ satisfying this property, if one exists, can be found in time $O(|u| + |v|)$. If all tests fail, $u$ and $v$ are not conjugate so the algorithm can stop. Otherwise a subword $z(k)$ is found such that $((v_C)^i)^{bz(k)^{-1}} =_G z$. Let $c = z(k)b^{-1}$ for the first $b$ found and continue.
 
 Apply Proposition \ref{prop:find_centraliser_sls} to compute a set $S'$ of words $y_1h$ such that $z^d =_G z$ implies that $d =_G y^n s'$ for some $n \in \mathbb{Z}$ and $s' \in S'$. This will again take time $O(|u| + |v|)$.
 
@@ -251,13 +259,13 @@ Given elements $u$ and $v$ with $|u_C|_G$ and $|v_C|_G$ ``large enough'', this g
 
 \subsection{Finding Long Powers of Infinite Order Elements}
 
-The aim of this section is to show that given a word $w$ which represents an infinite order element of $G$, there exists an efficiently computable short-lex least representative word $w'$ which is equal in $G$ to a conjugate of a power of $w$, and for which $\slex(w'_C)$ is longer than $2L$. Given two infinite order words $u$ and $v$, finding these conjugates of powers of $u$ and $v$ allows Proposition \ref{prop:eh_solve_conj} to be applyied, thus giving a description of conjugating elements for any pair of infinite order words.
+The aim of this section is to show that given a word $w$ which represents an infinite order element of $G$, there exists an efficiently computable short-lex least representative word $w'$ which is equal in $G$ to a conjugate of a power of $w$, and for which $\slex(w'_C)$ is longer than $2L$. Given two infinite order words $u$ and $v$, finding these conjugates of powers of $u$ and $v$ allows Proposition \ref{prop:eh_solve_conj} to be applied, thus giving a description of conjugating elements for any pair of infinite order words.
 
 The next three results are reasonably well-known properties of word-hyperbolic groups and hyperbolic spaces; these results are taken from \cite{alonso1990notes} although similar results appear in many other expositions of the subject area. The exact values in the statements are taken from the proofs in \cite{alonso1990notes} (the statements generally simply state that the constants in question exist). The first is Proposition 3.2 of \cite{alonso1990notes}. 
 
 \begin{proposition}
 \label{prop:inf_order_qgeo}
-For any $X$-word $w$ which is of infinite order in $G$ and labels a geodesic in $\Gamma$, all positive powers of $w$ label $(\lambda, \epsilon)$-quasigeodesics in $\Gamma$, where $\lambda = |w|V$ and $\epsilon = 2|w|^2V^2 + 2|w|V$.
+For any word $w$ which maps to an element of infinite order in $G$ and labels a geodesic in $\Gamma$, all positive powers of $w$ label $(\lambda, \epsilon)$-quasigeodesics in $\Gamma$, where $\lambda = |w|V$ and $\epsilon = 2|w|^2V^2 + 2|w|V$.
 \end{proposition}
 
 The next is Theorem 2.19 of \cite{alonso1990notes}.
@@ -274,15 +282,15 @@ Finally, Proposition 3.3 of \cite{alonso1990notes}.
 In a hyperbolic space with divergence function $e$, given constants $\lambda \ge 1$ and $\epsilon \ge 0$, there exists $D = D(\lambda, \epsilon, e)$ such that if $\alpha$ is an $(\lambda,\epsilon)$-quasigeodesic and $\gamma$ is a geodesic starting and ending at the same points as $\alpha$ then every point on $\gamma$ is within a distance $D$ of a point on $\alpha$. It suffices to take $D$ satisfying $e(\frac{D - e(0)}{2}) \ge 4D + 6\lambda D + \epsilon$.
 \end{proposition}
 
-We now use these results to find some power $n$ of an infinite order word $w$ such that $|(w^n)_C|_G$ is large. Recall $M$ from Section \ref{section:notation}.
+These results can be used to find some power $n$ of an infinite order word $w$ such that $|(w^n)_C|_G$ is large. Recall $M$ from Section \ref{section:notation}.
 
 \begin{proposition}
 \label{prop:make_long}
-Let $w$ be any $X$-word which is of infinite order in $G$, labels a geodesic in $\Gamma$ and has $|w| \le 2L$. Then $|(\slex(w^M))_C|_G > 2L$.
+Let $w$ be any word which maps to an element of infinite order in $G$, labels a geodesic in $\Gamma$ and has $|w| \le 2L$. Then $|(\slex(w^M))_C|_G > 2L$.
 \end{proposition}
 
 \begin{proof}
-By Proposition \ref{prop:hyperbolic_divergence}, the function $e(0)=\delta$, $e(l)=2^{\frac{l}{\delta}-2}$ for $l > 0$ is a divergence function for $\Gamma$. By Proposition \ref{prop:inf_order_qgeo} we see that $w^{2M}$ labels a $(\lambda, \epsilon)$-quasigeodesic $\gamma$ starting at the identity, where $\lambda = |w|V$ and $\epsilon = 2|w|^2V^2 + 2|w|V$. It turns out that $D := 10^4\delta^2LV$ is sufficient to solve the equation in Proposition \ref{prop:qgeo_close_to_geo} with these parameters; the proof requires some rather tedious approximations which the interested reader may find in \cite{buckley2010thesis}. Recall that $M =10^3\delta^2 V^3L^2$. % TODO full ref to thesis.
+By Proposition \ref{prop:hyperbolic_divergence}, the function $e(0)=\delta$, $e(l)=2^{\frac{l}{\delta}-2}$ for $l > 0$ is a divergence function for $\Gamma$. Proposition \ref{prop:inf_order_qgeo} implies that $w^{2M}$ labels a $(\lambda, \epsilon)$-quasigeodesic $\gamma$ starting at the identity, where $\lambda = |w|V$ and $\epsilon = 2|w|^2V^2 + 2|w|V$. It turns out that $D := 10^4\delta^2LV$ is sufficient to solve the equation in Proposition \ref{prop:qgeo_close_to_geo} with these parameters; the proof requires some rather tedious approximations which the interested reader may find in \cite{buckley2010thesis}. Recall that $M =10^3\delta^2 V^3L^2$. % TODO full ref to thesis.
 
 Let $u := \slex(w^M)$ and let $\alpha$ be a geodesic path starting at the identity vertex $\vertex{x}$ and ending at the vertex $\vertex{y} := \evaluate{u}$. Let $\gamma$ be the path between these vertices whose label is $w^M$. By Proposition \ref{prop:qgeo_close_to_geo}, the vertex $\vertex{p} := \evaluate{u_C}$ on $\alpha$ lies within $D$ of some vertex $\vertex{p'}$ on $\gamma$.
 
@@ -296,7 +304,7 @@ Now let $a$ be the label of the path along $\gamma$ between $\vertex{x}$ and $\v
 \end{center}
 \end{figure}
 
-Now \begin{eqnarray*}
+Observe that \begin{eqnarray*}
         |u_C|
 &  =  & d(\vertex{p}, \vertex{q}) \\
 & \ge & d(\vertex{p'},\vertex{q'}) - 2D \\
@@ -317,7 +325,7 @@ Suppose that $w$ is a word labelling a geodesic in $\Gamma$ and $|w_C|_G > 2L$. 
 \begin{proof}
 Let $u := \slex((w_C)^n)$, and let $\gamma$ be the path starting at $\vertex{x} := \vertex{e}$ labelled by $(\slex(w_C))^{2n}$. Let $\vertex{y} := \evaluate{u}$ and $\vertex{z} := \evaluate{u^2}$. Now let $\vertex{p} := \evaluate{u_L}$ and let $\vertex{q} := \evaluate{uu_L}$ so that $\vertex{p}$ and $\vertex{q}$ are mid-vertices on the short-lex geodesic paths $\path{\vertex{x}}{\vertex{y}}$ and $\path{\vertex{y}}{\vertex{z}}$ respectively and $u_C$ labels a path from $\vertex{p}$ to $\vertex{q}$. Figure \ref{figure:make_long} provides a suitable diagram once again.
 
-Note that $\gamma$ is an $L$-local $(1, 2\delta)$-quasigeodesic by Proposition \ref{prop:short_conj}, so Proposition \ref{prop:nice_qgeo} applies. Then there is a vertex $\vertex{p'} = \vertex{x} \cdot (w_C)^n(i)$ for some $i$ with $d(\vertex{p'}, \vertex{p}) \le 4\delta$. Let $\vertex{q'} := \vertex{y} \cdot (w_C)^n(i)$ so that $d(\vertex{q'}, \vertex{q}) \le 4\delta$ also. Since $d_\gamma(\vertex{p'}, \vertex{q'}) = n|w_C|_G \ge L$, Proposition \ref{prop:nice_qgeo} also gives a lower bound on $d(\vertex{p'}, \vertex{q'})$ as follows: \begin{eqnarray*}
+Note that $\gamma$ is an $L$-local $(1, 2\delta)$-quasigeodesic by Proposition \ref{prop:short_conj}, so Proposition \ref{prop:nice_qgeo} applies. Then there is a vertex $\vertex{p'} = \vertex{x} \cdot (w_C)^n(i)$ for some $i$, with $d(\vertex{p'}, \vertex{p}) \le 4\delta$. Let $\vertex{q'} := \vertex{y} \cdot (w_C)^n(i)$ so that $d(\vertex{q'}, \vertex{q}) \le 4\delta$ also. Since $d_\gamma(\vertex{p'}, \vertex{q'}) = n|w_C|_G \ge L$, Proposition \ref{prop:nice_qgeo} also gives a lower bound on $d(\vertex{p'}, \vertex{q'})$ as follows: \begin{eqnarray*}
         d(\vertex{p}, \vertex{q})
 & =^{8\delta} & d(\vertex{p'},\vertex{q'}) \\
 & \ge & \frac{7}{17}d_\gamma(\vertex{p'}, \vertex{q'}) \\
@@ -358,16 +366,16 @@ There is an algorithm which tests whether or not an input word $w$ maps to an el
 \end{corollary}
 
 \begin{proof}
-First replace $w$ with $\slex(w)$. Now if $|(\slex(w_C^M))_C|_G > 2L$ then $w_C^M$ and therefore $w$ is of infinite order by Proposition \ref{prop:short_conj} and we return true. If not, $w$ cannot be of infinite order by Proposition \ref{prop:make_long} or Proposition \ref{prop:long_stays_long} and we return false.
+First replace $w$ with $\slex(w)$. Now if $|(\slex(w_C^M))_C|_G > 2L$ then $w_C^M$ and therefore $w$ is of infinite order by Proposition \ref{prop:short_conj} and the algorithm should return true. If not, $w$ cannot be of infinite order by Proposition \ref{prop:make_long} or Proposition \ref{prop:long_stays_long} and the algorithm should return false.
 
 Since $|w_C^M| = M|w|$, this test takes time at worst $O(|w|)$.
 \end{proof}
 
 \subsection{Conjugating by a Power of a Short-lex Straight Word}
 
-In this subsection, suppose that word $g$ and $y$ are given which are shortest representatives of element of $G$, and that $y$ is straight. The aim is to find a useful description of the conjugates $g^{y^n}$ that allows, for any $g' \in G$, those values $n \in \mathbb{Z}$ which have $g' =_G g^{y^n}$ to be efficiently found.
+In this subsection, suppose that words $g$ and $y$ are given which are shortest representatives of element of $G$, and that $y$ is straight. The aim is to find a useful description of the conjugates $g^{y^n}$ that allows, for any $g' \in G$, those values $n \in \mathbb{Z}$ which have $g' =_G g^{y^n}$ to be efficiently found.
 
-We begin by proving a result which is true of general hyperbolic graphs.
+The following preliminary result is true of general hyperbolic graphs, and will be specialised to the situation described above afterwards.
 
 \begin{figure}
 \begin{center}
@@ -468,9 +476,9 @@ If $|y|j \ge |g|$ then at least one of the three cases applies.
 \end{lemma}
 
 \begin{proof}
-Let $\vertex{a} := \evaluate{g}$, $\vertex{b} := \evaluate{gy^n}$, $\vertex{c} := \evaluate{y^n}$ and $\vertex{d} := \vertex{e}$, and note that the three cases of Lemma \ref{lemma:trapezium} (with $i = |y| j$) correspond exactly to the three cases here. Notice that $\evaluate(gy^n(k)) = \alpha_1(k)$ and $\evaluate(y^n(k)) = \alpha_2(k)$ for each $k$.
+Let $\vertex{a} := \evaluate{g}$, $\vertex{b} := \evaluate{gy^n}$, $\vertex{c} := \evaluate{y^n}$ and $\vertex{d} := \vertex{e}$, and note that the three cases of Lemma \ref{lemma:trapezium} (with $i = |y| j$) correspond exactly to the three cases here. Notice that $\evaluate{gy^n(k)} = \alpha_1(k)$ and $\evaluate{y^n(k)} = \alpha_2(k)$ for each $k$.
 
-In the first case, $d(\evaluate(y^n(i)), \evaluate(gy^n(i + K))) \le 2\delta$ so there is a word $h$ of length at most $2\delta$ with $\vertex{d} \cdot y^n(i)h = \vertex{a} \cdot y^n(i + K)$. By definition, $y^n(i) = y^j$ and $y^n(i+K) =_G y^jy^n(K)$. Now, $g^{y^j}$ labels a path from $\evaluate(gy^n(i))$ to $\evaluate(y^n(i))$ so $g^{y^j} =_G h(y^n(K))^{-1}$ as required.
+In the first case, $d(\evaluate{y^n(i)}, \evaluate{gy^n(i + K)}) \le 2\delta$ so there is a word $h$ of length at most $2\delta$ with $\vertex{d} \cdot y^n(i)h = \vertex{a} \cdot y^n(i + K)$. By definition, $y^n(i) = y^j$ and $y^n(i+K) =_G y^jy^n(K)$. Now, $g^{y^j}$ labels a path from $\evaluate{gy^n(i)}$ to $\evaluate{y^n(i)}$ so $g^{y^j} =_G h(y^n(K))^{-1}$ as required.
 
 For the second case, $y^n(i - K) =_G y^jy^{-n}(K)$ so by a similar argument $g^{y^j} =_G y^{-n} (K) h$ for some word $h$ of length at most $2\delta$ as required.
 
@@ -583,7 +591,7 @@ Recall that $A = (a_1, \ldots, a_m)$ and $B = (b_1, \ldots, b_m)$, that $a_1$ is
 
 Use Corollary \ref{corollary:test_fin_ord} to test in time $O(|b_1|)$ if $b_1$ is of infinite order. If it is not, $a_1$ and $b_1$ are not conjugate, so neither are $A$ and $B$ and the algorithm may stop.
 
-Next, apply Proposition \ref{prop:conj_candidates} to $a_1$ and $b_1$ to obtain an word $p$, a short-lex straight word $y$ and a set $S$ of at most $V$ words such that $a_1^g =_G b_1$ only if $g =_G py^ns$ for some $n \in \mathbb{Z}$ and $s \in S$. All returned $X$-words have length $O(|a_1| + |b_1|)$ and this step takes time $O(|a_1| + |b_1|)$ and in particular $O(\mu)$.
+Next, apply Proposition \ref{prop:conj_candidates} to $a_1$ and $b_1$ to obtain an word $p$, a short-lex straight word $y$ and a set $S$ of at most $V$ words such that $a_1^g =_G b_1$ only if $g =_G py^ns$ for some $n \in \mathbb{Z}$ and $s \in S$. All returned words have length $O(|a_1| + |b_1|)$ and this step takes time $O(|a_1| + |b_1|)$ and in particular $O(\mu)$.
 
 The following steps should be completed once for each element $s \in S$. Since there are at most $V$ elements in $S$, if each loop takes time $O(n\mu)$ so will the whole algorithm.
 
@@ -708,13 +716,13 @@ Suppose $|c_{k-1}| \ge |a_kc_{k-1}|_G$. Notice that $|c_{k-1}^{-1}a_kc_{k-1}|_G 
 & \le & |c_{k-1}| + \frac{|a_k|}{2} + \delta + 1.
 \end{eqnarray*} In either case, then, $|c_k| \le |c_{k-1}| + \frac{|a_k|}{2} + \delta + 1$.
 
-Repeating this argument starting at $c_0$ yields $|c_k| \le k(\frac{\mu}{2} + \delta + 1)$ as required.
+Repeating this argument until $c_0$ is reached yields $|c_k| \le k(\frac{\mu}{2} + \delta + 1)$ as required.
 
 It can now be shown that the algorithm runs in time $O(m^3\mu)$. Note that $|c_{k-1}^{-1}a_j\cdots a_kc_{k-1}| \le k\mu+2|c_{k-1}| \le 2k(\mu + \delta + 1)$ so the checks on line \ref{line:conj_finite_check} each run in time $O(k\mu)$. There are $k$ such steps per loop and a total of $m$ loops, so the overall running time is in $O(m^3\mu)$ for this step.
 
 Similarly, $|c_{k-1}c_{k-1}^{-1}a_kc_{k-1}| \in O(k\mu)$ so line \ref{line:conj_finite_extend} runs in time $O(k\mu)$ and the overall time taken in this step is in $O(m^2\mu)$. Therefore the whole algorithm runs in time $O(m^3\mu)$ as required.
 
-It remains to show that the bound on the length of the elements $(a_i\cdots a_m)^{c_m}$ is satisfied. This can be shown by induction on $m$. First, for each $k\in\{1,\ldots,m\}$, define $K_{k,k}:=2L$. Now let $K_{i, k+1}: = 3K_{i,k} + 10L + 2\delta + 1$ for any $1 < i\le k$. The aim is to use induction on $k$ to show that $|c_k^{-1}a_i \cdots a_k c_k|_G \le K_{i, k}$ for any $1 \le i \le k$ and then show that $K_{i,m}$ is within the required bound.
+It remains to show that the bound on the length of the elements $(a_i\cdots a_m)^{c_m}$ is satisfied. An induction on $k$ will give a proof of this: first, for each $k\in\{1,\ldots,m\}$, define $K_{k,k}:=2L$. Now let $K_{i, k+1}: = 3K_{i,k} + 10L + 2\delta + 1$ for any $1 < i\le k$. The aim is to use induction on $k$ to show that $|c_k^{-1}a_i \cdots a_k c_k|_G \le K_{i, k}$ for any $1 \le i \le k$ and then show that $K_{i,m}$ is within the required bound.
 
 In the $k = i$ case, $a_k^{c_k} =_G d^{d_L} =_F d_C$ where $d = \slex(a_k^{c_{k-1}})$. But then line \ref{line:conj_finite_check} ensures that $|a_k^{c_k}|_G \le K_{k,k} = 2L$.
 
@@ -731,7 +739,7 @@ Pick some specific $i$, and let $e := \slex(c_k^{-1}a_i \ldots a_{k+1} c_k)$ and
 The checks on line \ref{line:conj_finite_check} ensure that $|e_C|_G \le 2L$, and $|g_C|_G \le 2L$, so we know that $|e_C^{e_L^{-1}g_R^{-1}}|_G \le 2|g_Re_L|_G + 6L$. In particular, the induction will be complete if it can be shown that \begin{equation} \label{eqn:short_grel}
 |g_Re_L|_G \le \frac{3}{2}K_{i,k} + 2L + \delta + \frac{1}{2}. \end{equation}
 
-Let $f := \slex(c_k^{-1}a_i\ldots a_k c_k) =_G eg^{-1} $ and recall that $|f|\le K_{i,k}$ by our earlier assumption. Consider a geodesic triangle with corners $\vertex{e}$, $\vertex{b} := \evaluate{g}$ and $\vertex{c} := \evaluate{ge_L}$ illustrated in Figure \ref{figure:shorten_tri}. Note that \begin{eqnarray*}
+Let $f := \slex(c_k^{-1}a_i\ldots a_k c_k) =_G eg^{-1} $ and recall that $|f|\le K_{i,k}$ by the inductive assumption. Consider a geodesic triangle with corners $\vertex{e}$, $\vertex{b} := \evaluate{g}$ and $\vertex{c} := \evaluate{ge_L}$ illustrated in Figure \ref{figure:shorten_tri}. Note that \begin{eqnarray*}
         d(\vertex{e}, \vertex{c})
 &  =  & |ge_L|_G \\
 &  =  & |f^{-1} ee_L|_G \\
@@ -774,7 +782,7 @@ Therefore $|(a_i \cdots a_k)^{c_k}|_G \le K_{i,k}$ for each $1 \le i \le k \le m
 \end{eqnarray*} and the proof is complete.
 \end{proof}
 
-We end this subsection by noting that by repeated application of Lemma \ref{lemma:replace}, the conjugacy problem remains unchanged between studying the lists $(a_1, \ldots, a_m)$ and $(b_1, \ldots, b_m)$, and the lists $(a_1', a_2', \ldots, a_m')$ and $(b_1', b_2', \ldots, b_m)$ where $a_i' = a_i \cdots a_m$ and $b_i' = b_i \cdots b_m$. This is critical to our solution later.
+Note that by repeated application of Lemma \ref{lemma:replace}, the conjugacy problem remains unchanged between studying the lists $(a_1, \ldots, a_m)$ and $(b_1, \ldots, b_m)$, and the lists $(a_1', a_2', \ldots, a_m')$ and $(b_1', b_2', \ldots, b_m)$ where $a_i' = a_i \cdots a_m$ and $b_i' = b_i \cdots b_m$. This is critical to the solution below.
 
 \subsection{Some Worse than Linear Time Algorithms}
 
